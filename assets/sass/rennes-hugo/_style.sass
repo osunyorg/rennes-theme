@@ -46,6 +46,14 @@ main
         .breadcrumb li
             &, a, span
                 color: $color-text
+    @include media-breakpoint-up(desktop)
+        .post-sidebar
+            opacity: 0
+            padding-top: var(--block-space-y)
+            .post-infos,
+            .posts-taxonomies
+                > li:first-child
+                    padding-top: 0
 
 .post-infos
     a
