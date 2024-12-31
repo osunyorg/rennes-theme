@@ -8,8 +8,8 @@ params:
   search:
     active: true
   logo:
-    header: "/assets/images/logo.svg"
-    footer: "/assets/images/monogramme-blanc.svg"
+    header: "/assets/images/logo-black.svg"
+    footer: "/assets/images/logo.svg"
   menu:
     dropdown:
       linkToLevel1: true
