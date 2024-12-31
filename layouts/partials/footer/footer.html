@@ -1,0 +1,45 @@
+<footer id="document-footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-logo">
+            {{ partial "footer/logo.html" }}
+
+            <!-- Todo check if good href -->
+            <a href="/contact" class="footer-contact icon-arrow-right">Nous contacter</a>
+        </div>
+
+        {{- partial "footer/nav.html"
+            (dict
+                "menu" "vos-services-par-thematiques"
+                "name" "thematic"
+                "with_item_classes" true
+            )
+        . -}}
+
+        {{- partial "footer/nav.html"
+            (dict
+                "menu" "nos-sites-pour-les-professionnels"
+                "name" "pro"
+            )
+        . -}}
+
+        {{- partial "footer/nav.html"
+            (dict
+                "menu" "actualites-et-reseaux-sociaux"
+                "name" "news"
+            )
+        . -}}
+
+        {{- partial "footer/nav.html"
+            (dict
+                "menu" "a-propos-du-site"
+                "name" "apropos"
+            )
+        . -}}
+
+        <div>
+            <p class="footer-menu-label">Un site soutenu par</p>
+            <!--  Todo add logo -->
+            [ LOGO ]
+        </div>
+    </div>
+</footer>
