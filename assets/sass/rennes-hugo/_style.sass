@@ -8,53 +8,6 @@ main
             @include h3
             font-weight: bold
 
-.page__home
-    .hero
-        h1
-            font-weight: normal
-    .block-call_to_action
-        --cta-background-color: #{$color-background}
-    @include media-breakpoint-up(desktop)
-        .hero:not(.hero--with-image)
-            .content
-                .hero-text
-                    width: columns(9)
-        .block-call_to_action:first-child
-            margin-top: -$spacing-5
-
-.posts__page
-    &:not(.full-width)
-        .block-summary
-            background: $color-accent
-            .block-content
-                padding: $spacing-3 0
-            @include media-breakpoint-up(desktop)
-                position: relative
-                z-index: $zindex-aside + 1
-                text-align: center
-                margin-top: -$spacing-5
-                .block-content
-                    padding: $spacing-5 offset(1) !important
-    .hero
-        background: $color-background
-        color: $color-text
-        .content
-            figure figcaption
-                &::before,
-                .credit
-                    background: $color-background
-        .breadcrumb li
-            &, a, span
-                color: $color-text
-    @include media-breakpoint-up(desktop)
-        .post-sidebar
-            opacity: 0
-            padding-top: var(--block-space-y)
-            .post-infos,
-            .posts-taxonomies
-                > li:first-child
-                    padding-top: 0
-
 .post-infos
     a
         color: inherit
@@ -71,46 +24,6 @@ main
         transition: background 0.35s
         &:hover
             background: $color-accent
-
-.block-call_to_action
-    .call_to_action
-        .description p
-            @include h3
-        .actions
-            a:first-child
-                border: $btn-border
-                &::after
-                    display: none
-                &[href^="mailto:"]
-                    &::before
-                        content: url(../images/mail.svg)
-                        display: inline-block
-                        vertical-align: middle
-                        line-height: 1
-                        margin-right: space(3)
-                        transition: 0.3s
-                    &:hover
-                        &::before
-                            filter: invert(1)
-    @include in-page-without-sidebar
-        border-bottom: 1px solid $color-border
-        .block-content
-            padding-top: 0
-            padding-bottom: 0
-            figure
-                grid-column: 7 / 13
-                margin-right: var(--grid-gutter-negative)
-                img
-                    height: 100%
-                    width: 100%
-                    object-fit: cover
-            .call_to_action
-                > div
-                    display: flex
-                    flex-direction: column
-                    justify-content: center
-                    padding-top: $spacing-5
-                    padding-bottom: $spacing-5
 
 .posts.posts--list
     @include media-breakpoint-down(desktop)
