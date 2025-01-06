@@ -4,16 +4,25 @@ enableRobotsTXT: true
 removePathAccents: true
 params:
   summary:
-    position: content
+    position: hero
   search:
-    active: true
+    active: false
   logo:
-    header: "/assets/images/logo.svg"
-    footer: "/assets/images/monogramme-blanc.svg"
+    header: "/assets/images/logo-black.svg"
+    footer: "/assets/images/logo.svg"
   menu:
     dropdown:
       linkToLevel1: true
   posts:
     index:
-      show_categories: true
-      show_description: true
+      options:
+        categories: true
+    single:
+      options:
+        categories: true
+  image_sizes:
+    blocks:
+      call_to_action:
+        mobile: 150
+        tablet: 250
+        desktop: 448

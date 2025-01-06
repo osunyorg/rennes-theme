@@ -1,0 +1,34 @@
+////
+/// @file
+/// Partial - footer.
+////
+
+$footer-thematic-icon-set: ("enfance" "close-line", "logement" "skip-right-fill")
+
+footer#document-footer
+  .footer-contact
+    @include icon(arrow-right, after)
+
+  .footer-menu-label
+    font-size: pxToRem(14)
+
+  .container
+    padding-bottom: 0
+    @include grid(4, desktop, pxToRem(64), pxToRem(48))
+
+  .footer-menu-thematic
+    grid-column: span 3
+
+    ul
+      @include media-breakpoint-up(desktop)
+        @include grid(3, desktop, pxToRem(14), pxToRem(48))
+
+    li
+      margin-top: 0!important
+
+      @each $class, $icon in $footer-thematic-icon-set
+        &[class*="#{$class}"]
+          @include icon($icon, before)
+
+      &::before
+        font-size: 1.7em
