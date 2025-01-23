@@ -1,14 +1,19 @@
-@mixin icon-site($icon, $pseudo-element: before)
+////
+/// Rennes Hugo theme
+/// @file Design-system - Icons.
+////
+
+@mixin custom-icon($icon, $pseudo-element: before)
   @include icon($pseudo-element: $pseudo-element)
-    content: map-get($icons-site, $icon)
-    font-family: 'Icon-site'
+    content: map-get($custom-icons, $icon)
+    font-family: 'Custom-icon'
     font-size: 1em
 
-@each $name, $glyph in $icons-site
-  .icon-custom-#{$name}
-    @include icon-site($name, before)
+@each $name, $glyph in $custom-icons
+  .custom-icon-#{$name}
+    @include custom-icon($name, before)
 
 %icon-containing-class
-  @each $name, $glyph in $icons-site
+  @each $name, $glyph in $custom-icons
     [class*="#{$name}"]
-      @include icon-site($name, before)
+      @include custom-icon($name, before)
