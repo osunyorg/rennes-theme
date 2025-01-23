@@ -3,11 +3,10 @@
 /// @file Design-system - Blocks.
 ////
 
-body
-  &[class*="fiches-pratiques"]
-    --color-background-accent : #C0D4FF
-    --color-background-alt: #D9E5FF
+@each $selector, $color in $theme-color-background-accent
+  #{$selector}
+    --color-background-accent : #{$color}
 
-  &[class*="nos-actions"]
-    --color-background-accent : #D9FFCC
-    --color-background-alt: #ECFFE6
+@each $selector, $color in $theme-color-background-alt
+  #{$selector}
+    --color-background-alt : #{$color}
