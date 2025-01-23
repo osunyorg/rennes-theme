@@ -1,0 +1,131 @@
+//// HEADING
+// Under desktop breakpoint
+$heading-margin-top: pxToRem(16)
+$heading-margin-bottom:  pxToRem(28)
+// Upper desktop breakpoint without sidebar
+$heading-margin-top-desktop: pxToRem(64)
+$heading-margin-bottom-desktop: pxToRem(48)
+// Upper desktop breakpoint with sidebar
+$heading-margin-top-with-sidebar: $heading-margin-top-desktop
+$heading-margin-bottom-with-sidebar: $heading-margin-bottom-desktop
+
+//// BLOCKS
+//// Under desktop breakpoint
+$block-space-y: space(36)
+//// Upper desktop breakpoint without sidebar
+$block-space-y-desktop: space(128)
+
+//// Upper desktop breakpoint with sidebar
+$block-space-y-with-sidebar: space(64)
+
+//// Block call to action
+//$block-call-to-action-color: var(--color-text) !default
+//$block-call-to-action-button-background: var(--color-text) !default
+//$block-call-to-action-button-border: pxToRem(1) solid $block-call-to-action-button-background !default
+//$block-call-to-action-button-color: var(--color-background) !default
+//$block-call-to-action-button-hover-background: var(--color-text-alt) !default
+//$block-call-to-action-button-hover-border: pxToRem(1) solid $block-call-to-action-button-hover-background !default
+//$block-call-to-action-button-hover-color: var(--color-background) !default
+//$block-call-to-action-all-actions-as-buttons: false !default
+
+//$block-call-to-action-accent-background: var(--color-accent) !default
+//$block-call-to-action-accent-color: var(--color-background) !default
+//$block-call-to-action-accent-button-background: var(--color-background) !default
+//$block-call-to-action-accent-button-border: pxToRem(1) solid $block-call-to-action-accent-button-background !default
+//$block-call-to-action-accent-button-color: var(--color-text) !default
+//$block-call-to-action-accent-button-hover-background: var(--color-text-alt) !default
+//$block-call-to-action-accent-button-hover-border: pxToRem(1) solid $block-call-to-action-accent-button-hover-background !default
+//$block-call-to-action-accent-button-hover-color: var(--color-background) !default
+
+//// Block chapter
+//$block-chapter-layout-accent-background: var(--color-accent) !default
+//$block-chapter-layout-accent-color: var(--color-background) !default
+//$block-chapter-layout-alt-background: var(--color-background-alt) !default
+//$block-chapter-layout-alt-color: var(--color-text) !default
+
+//// Block definitions
+//$block-definition-border-color: var(--color-border) !default
+//$block-definition-border-color-hovered: var(--color-accent) !default
+//$block-definition-color-hovered: var(--color-accent) !default
+//$block-definition-font-size: $body-size !default
+//$block-definition-font-size-desktop: $body-size-desktop !default
+
+//// Block pages
+$block-pages-card-background: var(--color-background) !default
+//$block-pages-card-page-background: var(--color-background) !default
+//$block-pages-card-page-color: var(--color-text) !default
+//$block-pages-card-page-background-hover: var(--color-accent) !default
+//$block-pages-card-page-color-hover: var(--color-background) !default
+
+//// Block posts
+//$block-posts-grid-columns: 3 !default
+
+//// Block programs
+//$block-programs-aspect-ratio: 16/9 !default
+
+//// Block title
+//$block-title-border-bottom: 1px solid var(--color-border)
+
+//// Block timeline
+//$block-timeline-horizontal-background: var(--color-background-alt) !default
+//$block-timeline-horizontal-color: var(--color-text) !default
+
+//// Block testimonials
+//$block-testimonials-xl-font-size: $quote-size-desktop-short !default
+//$block-testimonials-xl-line-height: $quote-line-height !default
+//$block-testimonials-xl-font-size-long-text: $quote-size-desktop-long !default
+//$block-testimonials-xl-line-height-long-text: $quote-line-height !default
+//$block-testimonials-color: var(--color-accent) !default
+//$block-testimonials-font-family: $quote-font-family !default
+//$block-testimonials-font-size: $quote-size !default
+//$block-testimonials-line-height: $quote-line-height !default
+//$block-testimonials-style: $quote-style !default
+//$block-testimonials-pagination-background: var(--color-border) !default
+//$block-testimonials-pagination-progress-background: var(--color-accent) !default
+
+//// Block key_figures
+
+//// TODO : overkill ?
+//$block-key_figures-number-font-family: $heading-font-family !default
+//$block-key_figures-unit-font-weight: normal !default
+//$block-key_figures-number-font-weight: bold !default
+//$block-key_figures-image-max-width-desktop: pxToRem(128) !default
+//$block-key_figures-image-max-width: pxToRem(48) !default
+//$block-key_figures-icon-max-width: pxToRem(60) !default
+
+//$block-key_figures-font-size: pxToRem(16) !default
+//$block-key_figures-number-font-size: pxToRem(32) !default
+
+//$block-key_figures-font-size-desktop: pxToRem(18) !default
+//$block-key_figures-number-font-size-desktop: pxToRem(40) !default
+
+//$block-key_figures-font-size-lg: pxToRem(20) !default
+//$block-key_figures-number-font-size-lg: pxToRem(50) !default
+
+//$block-key_figures-font-size-xl: $block-key_figures-font-size-lg !default
+//$block-key_figures-number-font-size-xl: pxToRem(60) !default
+
+//$block-key_figures-font-size-xxl: $block-key_figures-font-size-xl !default
+//$block-key_figures-number-font-size-xxl: pxToRem(80) !default
+
+//// Block gallery
+//$block-gallery-carousel-background: var(--color-background-alt) !default
+//$block-gallery-carousel-height: 350px !default
+//$block-gallery-carousel-height-desktop: calc(60 * var(--rvh)) !default
+
+//// Block image
+//$block-image-max-height-with-sidebar: calc(100vh - var(--header-height)) !default
+//$block-image-max-height-without-sidebar: none !default
+
+//// Block video
+//$block-video-background: var(--color-background-alt) !default
+
+//// Block liens
+//$block-links-card-background: var(--color-background-alt) !default
+//$block-links-card-color: var(--color-text) !default
+//$block-links-card-hover-background: var(--color-accent) !default
+//$block-links-card-hover-color: var(--color-background) !default
+//$block-links-icon-max-width: pxToRem(40) !default
+
+//// Bloc fonctionnalités
+//$block-features-icon-max-width: pxToRem(80) !default

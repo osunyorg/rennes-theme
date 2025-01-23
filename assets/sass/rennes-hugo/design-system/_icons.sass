@@ -1,0 +1,14 @@
+@mixin icon-site($icon, $pseudo-element: before)
+  @include icon($pseudo-element: $pseudo-element)
+    content: map-get($icons-site, $icon)
+    font-family: 'Icon-site'
+    font-size: 1em
+
+@each $name, $glyph in $icons-site
+  .icon-custom-#{$name}
+    @include icon-site($name, before)
+
+%icon-containing-class
+  @each $name, $glyph in $icons-site
+    [class*="#{$name}"]
+      @include icon-site($name, before)

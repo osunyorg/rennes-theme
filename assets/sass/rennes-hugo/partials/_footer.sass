@@ -3,7 +3,8 @@
 /// Partial - footer.
 ////
 
-$footer-thematic-icon-set: ("enfance" "close-line", "logement" "skip-right-fill")
+.footer-menu-thematic
+  @extend %icon-containing-class
 
 footer#document-footer
   .footer-contact
@@ -25,10 +26,6 @@ footer#document-footer
 
     li
       margin-top: 0!important
-
-      @each $class, $icon in $footer-thematic-icon-set
-        &[class*="#{$class}"]
-          @include icon($icon, before)
 
       &::before
         font-size: 1.7em
