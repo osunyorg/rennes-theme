@@ -1,5 +1,18 @@
+////
+/// Rennes Hugo theme
+/// @file Fonts.
+////
+
 @include font-face("Condate", Condate-Light, $exts: (woff2 woff))
-@include font-face("Condate", Condate-Medium, $weight: bold, $exts: (woff2 woff))
+@include font-face("Condate", Condate-Medium, $weight: 500, $exts: (woff2 woff))
 @include font-face("DMSans", DMSans-Regular, $exts: (woff2 woff))
 @include font-face("DMSans", DMSans-Italic, $style: italic, $exts: (woff2 woff))
 @include font-face("DMSans", DMSans-Bold, $weight: bold, $exts: (woff2 woff))
+
+// Icons
+@font-face
+  font-display: block
+  font-family: 'Icomoon'
+  font-style: normal
+  font-weight: 400
+  src: url('/assets/fonts/Icomoon/icomoon.woff2') format("woff2"), url('/assets/fonts/custom-icon/icomoon.woff') format("woff"), url('/assets/fonts/custom-icon/icomoon.ttf') format("truetype")

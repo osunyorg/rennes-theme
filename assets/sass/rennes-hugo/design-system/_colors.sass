@@ -1,0 +1,12 @@
+////
+/// Rennes Hugo theme
+/// @file Design-system - Blocks.
+////
+
+@each $selector, $color in $theme-color-background-accent
+  #{$selector}
+    --color-background-accent : #{$color}
+
+@each $selector, $color in $theme-color-background-alt
+  #{$selector}
+    --color-background-alt : #{$color}

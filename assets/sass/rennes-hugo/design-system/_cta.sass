@@ -1,0 +1,14 @@
+////
+/// Rennes Hugo theme
+/// @file Design-system - CTAs.
+////
+
+a.btn[target="_blank"]
+  @include button-icon(external-link-line)
+
+a,
+.link
+  &[target="_blank"]:not(.icon)
+    @include icon(external-link-line, after, true)
+      vertical-align: baseline
+      font-size: 0.8em

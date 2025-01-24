@@ -1,18 +1,48 @@
 theme: osuny
 paginate: 18
-enableRobotsTXT: true
+enableRobotsTXT: false
 removePathAccents: true
 params:
+  debug:
+    active: true # todo change value before MEP
+
+  # RENNES THEME CUSTOM
+  custom:
+    logo_link:
+    logo_title:
+
+  # DESIGN SYSTEM
+  logo:
+    header: "/assets/images/logo-black.svg"
+    footer: "/assets/images/logo-white.svg"
+  menu:
+    primary:
+      level_2:
+        title:
+          active: true
+  breadcrumb:
+    position: hero-start
   summary:
     position: hero
   search:
     active: false
-  logo:
-    header: "/assets/images/logo-black.svg"
-    footer: "/assets/images/logo.svg"
-  menu:
-    dropdown:
-      linkToLevel1: true
+  # We can also specify this options for each sharable Section
+  share_links:
+    enabled: true
+    email: true
+    facebook: true
+    linkedin: true
+    mastodon: false
+    telegram: false
+    twitter: false
+    whatsapp: false
+
+  # SECTIONS
+  pages:
+    single:
+      taxonomies:
+        position: hero
+
   posts:
     index:
       options:
@@ -20,9 +50,14 @@ params:
     single:
       options:
         categories: true
+
+  # BLOCKS
+  # Todo
+
+  # IMAGES SIZES
   image_sizes:
     blocks:
       call_to_action:
-        mobile: 150
+        mobile: 330
         tablet: 250
         desktop: 448

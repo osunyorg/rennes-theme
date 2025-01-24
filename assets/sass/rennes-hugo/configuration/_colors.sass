@@ -1,0 +1,48 @@
+////
+/// Rennes Hugo theme
+/// @file Configuration - Colors.
+////
+
+/// MAIN COLORS OVERRIDES
+$color-accent: #052E2E
+$color-text: #1A1A1D
+$color-text-alt: rgba(0, 0, 0, 0.8)
+$color-background: #FFFFFF
+$color-background-alt: #FDFCFC
+$color-border: rgba(0, 0, 0, 0.50)
+
+$link-color: var(--color-accent) !default
+
+/// THEME COLORS
+$theme-color-background-accent: ()
+$theme-color-background-alt: ()
+
+// Generic pages
+$theme-color-background-accent: map-merge($theme-color-background-accent, ('body.pages__section': "#EECCFF"))
+$theme-color-background-alt: map-merge($theme-color-background-alt, ('body.pages__section': "#F7E5FF"))
+
+// Organizations ("Annuaire") and Persons ("Élus")
+$theme-color-background-accent: map-merge($theme-color-background-accent, ('body.organizations__page, body.persons__page': "#D9DDE8"))
+$theme-color-background-alt: map-merge($theme-color-background-alt, ('body.organizations__page, body.persons__page': "#EBF1FF"))
+
+// Posts
+$theme-color-background-accent: map-merge($theme-color-background-accent, ('body.posts__page': "#FFCCBF"))
+$theme-color-background-alt: map-merge($theme-color-background-alt, ('body.posts__page': "#FFE0D9 "))
+
+// Events
+$theme-color-background-accent: map-merge($theme-color-background-accent, ('body.events__page': "#FFF2B2"))
+$theme-color-background-alt: map-merge($theme-color-background-alt, ('body.events__page': "#FFF9D9"))
+
+// "Fiches pratiques"
+$theme-color-background-accent: map-merge($theme-color-background-accent, ('body[class*="fiches-pratiques"]': "#C0D4FF"))
+$theme-color-background-alt: map-merge($theme-color-background-alt, ('body[class*="fiches-pratiques"]': "#D9E5FF"))
+
+// "Nos actions"
+$theme-color-background-accent: map-merge($theme-color-background-accent, ('body[class*="nos-actions"]': "#D9FFCC"))
+$theme-color-background-alt: map-merge($theme-color-background-alt, ('body[class*="nos-actions"]': "#ECFFE6"))
+
+// Add possibility to add custom values
+$custom-theme-color-background-accent: () !default
+$custom-theme-color-background-alt: () !default
+$theme-color-background-accent: map-merge($theme-color-background-accent, $custom-theme-color-background-accent)
+$theme-color-background-alt: map-merge($theme-color-background-alt, $custom-theme-color-background-alt)
