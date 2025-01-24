@@ -1,0 +1,29 @@
+.block-posts
+  article
+    .post-meta
+      > * + .post-author p::before,
+      > * + .post-reading-time::before
+        content: '\00a0\00a0'
+
+  &--highlight
+    .highlight
+      &-post
+        .media
+          margin-bottom: $spacing-3
+
+          img
+            aspect-ratio: 1
+
+      article
+        .post-title
+          a
+            @include stretched-link(before)
+            @include icon(arrow-right-line, after, true)
+            @include hover-translate-icon
+            font-weight: 500
+
+            &::after
+              position: static
+
+        .post-subtitle
+          font-weight: 500
