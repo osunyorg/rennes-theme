@@ -1,24 +1,10 @@
 .block-key_figures
   li
-    + li
-      @include media-breakpoint-down(desktop)
-        margin-top: space(9)
-
-    > span
-      margin-bottom: space(1)
-
-      strong
-        margin-right: space(1)
-
-      picture
-        display: block
-        margin-bottom: space(6)
-
-    > span,
-    > span strong
-      font-size: pxToRem(14)
-      font-weight: 500
+    > span:has(picture)
       text-transform: uppercase
 
-      @include media-breakpoint-up(desktop)
-        font-size: pxToRem(18)
+      strong
+        font-size: $block-key_figures-font-size
+
+        @include media-breakpoint-up(desktop)
+          font-size: $block-key_figures-font-size-lg
