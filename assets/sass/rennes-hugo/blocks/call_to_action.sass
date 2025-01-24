@@ -1,0 +1,47 @@
+body.full-width
+  .block-call_to_action
+    .container
+      @include media-breakpoint-down(desktop)
+        padding-inline: space(4)
+
+    .block-content
+      padding: var(--grid-gutter)
+
+      @include media-breakpoint-down(desktop)
+        padding: 0
+
+    .call_to_action--with-image
+      @include media-breakpoint-down(desktop)
+        flex-direction: column-reverse
+        gap: space(11)
+        padding: space(9) 0
+
+      > div
+        grid-column: 1/8
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+      > figure
+        grid-column: 9/13
+
+        @include media-breakpoint-down(desktop)
+          margin-bottom: 0
+
+    .block-title
+      margin-bottom: space(8)
+      text-transform: uppercase
+
+      @include media-breakpoint-down(desktop)
+        margin-bottom: space(5)
+
+    .description
+      p
+        font-size: pxToRem(24)
+
+        @include media-breakpoint-down(desktop)
+          font-size: pxToRem(20)
+
+    .actions
+      @include media-breakpoint-down(desktop)
+        margin-top: space(1)
