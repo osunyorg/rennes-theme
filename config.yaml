@@ -4,7 +4,7 @@ enableRobotsTXT: false
 removePathAccents: true
 params:
   debug:
-    active: true # todo change value
+    active: true # todo change value before MEP
 
   # RENNES THEME CUSTOM
   custom:
@@ -28,7 +28,6 @@ params:
     active: false
   # We can also specify this options for each sharable Section
   share_links:
-    # todo add copy link option
     enabled: true
     email: true
     facebook: true
