@@ -1,0 +1,28 @@
+.block-pages
+  &--large
+    & > .container
+      padding: 0
+
+    .page
+      .page-content
+        @include media-breakpoint-down(desktop)
+          padding-inline: var(--grid-gutter)
+          padding-bottom: var(--grid-gutter)
+
+        @include in-page-without-sidebar
+          width: columns(6)
+
+      .page-title
+        a
+          &::after
+            content: ''
+            background-color: var(--color-background-accent)
+            z-index: -1
+
+          &:hover
+            &::after
+              transform: none
+
+    .media
+      @include media-breakpoint-up(desktop)
+        margin-bottom: 0
