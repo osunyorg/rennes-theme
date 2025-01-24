@@ -1,0 +1,30 @@
+.hero
+  .breadcrumb
+    margin-top: pxToRem(28)
+    @include media-breakpoint-up(desktop)
+      margin-top: $spacing-5
+      height: $spacing-6
+
+  .content
+    margin-top: pxToRem(20)
+    @include media-breakpoint-up(desktop)
+      margin-top: pxToRem(32)
+
+    .hero-text
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-top: 0
+
+      .chip
+        order: -1
+        margin-bottom: $spacing-3
+
+        @include media-breakpoint-up(desktop)
+          margin-bottom: $spacing-4
+
+  &--image-portrait, &--image-square
+    .content
+      figure
+        @include media-breakpoint-up(desktop)
+          width: columns(4)
