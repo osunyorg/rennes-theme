@@ -1,16 +1,37 @@
 {{- $block := .block -}}
 {{- $block_class := partial "GetBlockClass" .block -}}
 
+<!-- Var for collapsible -->
+{{- $title := $block.top.title.value -}}
+{{- $id := delimit (shuffle (seq 1 9)) "" -}}
+{{- $is_collapsible :=  in $block_class "datatable-collapsible" -}}
+{{- $is_collapsible_open :=  in $block_class "datatable-collapsible-open" -}}
+
 {{- with .block.data -}}
 <div class="{{ $block_class }}">
     <div class="container">
         <div class="block-content">
             {{ partial "blocks/top.html" $block.top }}
+
+            {{ if and $is_collapsible .caption }}
+            <div id="collapse-cta-{{- $id -}}" class="collapse-cta"
+                 aria-controls="collapse-{{- $id -}}"
+                 aria-expanded="{{ $is_collapsible_open }}"
+                 role="button"
+                 tabindex="0"
+                 aria-label="{{ partial "PrepareHTML" .caption }}">
+            <p aria-hidden="true">{{ partial "PrepareHTML" .caption }}</p>
+        </div>
+
+        <div id="collapse-{{- $id -}}" class="collapse">
+            {{ end }}
+
             <div class="table-responsive">
-                <table>
-                    {{- if .caption }}
+                <table {{ if and .caption $is_collapsible }}aria-labeledby="collapse-cta-{{- $id -}}"{{ end }}>
+                    {{- if and .caption (not $is_collapsible) }}
                     <caption>{{ partial "PrepareHTML" .caption }}</caption>
                     {{ end -}}
+
                     <thead>
                     <tr>
                         {{ range .columns }}
@@ -30,7 +51,11 @@
                     </tbody>
                 </table>
             </div>
+
+            {{ if $is_collapsible}}
         </div>
+        {{ end }}
     </div>
+</div>
 </div>
 {{- end -}}
