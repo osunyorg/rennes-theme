@@ -1,0 +1,27 @@
+.block-organizations
+  .organizations.with-summaries
+    .organization
+      padding: $spacing-3 $spacing-3 $spacing-5
+      border: 1px solid var(--color-border)
+      border-radius: pxToRem(2)
+
+      .organization-content
+        .chip
+          margin-bottom: space(4)
+          background-color: var(--color-background-accent)
+
+        .organization-title
+          @include h3
+
+          a
+            @include icon(arrow-right-line, before)
+            @include hover-translate-icon(before)
+
+            &::before
+              position: absolute
+              right: $spacing-3
+              bottom: $spacing-3
+
+      .organization-summary
+        font-size: $body-size-desktop
+        line-height: $body-line-height
