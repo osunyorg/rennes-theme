@@ -6,6 +6,9 @@
 {{ $latitude := "" }}
 {{- $layout := .block.data.layout | default "grid" }}
 
+{{ $section := site.GetPage .block.template }}
+{{ $mon_titre := $section.Title }}
+
 {{ if site.Params.organizations.dark_logo_background }}
 {{ $logo_index = "logo_on_dark_background" }}
 {{ end }}
@@ -23,6 +26,7 @@
             "logo_index" $logo_index
             "organizations" .organizations
             "options" $options
+            "mon_titre" $mon_titre
             )}}
         </div>
     </div>
@@ -30,12 +34,15 @@
 {{- end -}}
 
 {{- define "organization" -}}
+
 {{ $options := .options }}
+
 <article class="organization" data-title="{{ .title }}" {{ if .longitude }}data-longitude="{{ .longitude }}"{{ end }} {{ if .latitude }}data-latitude="{{ .latitude }}"{{ end }}>
     {{ $title := "" }}
     <div class="organization-content">
         {{ if .title }}
         {{ $title = partial "PrepareHTML" .title -}}
+        <span class="chip">{{ .mon_titre }}</span>
         <p class="organization-title">
             {{- if and .url $options.link }}
             <a href="{{ .url }}" {{ if .external }} target="_blank" rel="noopener" {{ end }} title="{{ safeHTML (i18n "commons.link.blank_aria" (dict "Title" $title)) }}">
