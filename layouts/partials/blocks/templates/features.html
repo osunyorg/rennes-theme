@@ -13,13 +13,15 @@
                 {{- range $features }}
                 <li>
                     <div>
-                        {{- $heading_tag := partial "GetHeadingTag" (dict
-                        "level" $block.ranks.children
-                        "attributes" "class='name'"
-                        ) -}}
-                        {{ $heading_tag.open -}}
-                        {{ .title | safeHTML }}
-                        {{ $heading_tag.close -}}
+                        {{- if .title -}}
+                            {{- $heading_tag := partial "GetHeadingTag" (dict
+                            "level" $block.ranks.children
+                            "attributes" "class='name'"
+                            ) -}}
+                            {{ $heading_tag.open -}}
+                            {{ .title | safeHTML }}
+                            {{ $heading_tag.close -}}
+                        {{- end -}}
                         <div>{{ partial "PrepareHTML" .description }}</div>
                     </div>
                     {{- if .image -}}
