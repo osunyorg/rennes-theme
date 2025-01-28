@@ -1,0 +1,43 @@
+.block.block-class-datatable-collapsible
+  margin-bottom: 0
+
+  .block-content
+    border-bottom: 1px solid var(--color-border)
+
+  .collapse-cta
+    align-items: center
+    cursor: pointer
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    position: relative
+    padding-block: $spacing-2
+
+    @include media-breakpoint-up(md)
+      padding-block: $spacing-3
+
+    p
+      flex: 1
+
+    @include icon(arrow-down-s-line, after)
+      font-size: pxToRem(25)
+
+    // When collapse is closed
+    &[aria-expanded="false"]
+      + .collapse
+        display: none
+
+        + &
+          margin-top: 0
+
+    // When collapse is opened
+    &[aria-expanded="true"]
+      @include icon(arrow-up-s-line, after)
+
+  // Table styles
+  .collapse
+    margin-bottom: $spacing-3
+  th
+    font-weight: normal
+  td
+    font-size: var(--small-size)
