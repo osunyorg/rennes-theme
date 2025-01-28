@@ -7,11 +7,41 @@
   @extend %icon-containing-class
 
 footer#document-footer
+  a
+    &:has(img)
+      &::after
+        display: none
+        
+  nav:not(.footer-menu-thematic)
+    ul
+      li
+        a:not([target="_blank"])
+          @include icon(arrow-right-line, after)
+          @include hover-translate-icon(after)
+
+  ul
+    li
+      a
+        font-family: $heading-font-family
+        font-size: pxToRem(14)
+
+        @include media-breakpoint-up(desktop)
+          font-size: pxToRem(16)
+
   .footer-contact
-    @include icon(arrow-right, after)
+    display: block
+    margin-top: $spacing-1
+
+    @include icon(arrow-right-line, after)
+    @include hover-translate-icon(after)
 
   .footer-menu-label
-    font-size: pxToRem(14)
+    margin-bottom: $spacing-1
+    color: alphaColor($color-background, 0.8)
+    font-size: pxToRem(15)
+
+    @include media-breakpoint-up(desktop)
+      font-size: pxToRem(18)
 
   .container
     padding-bottom: 0
@@ -22,10 +52,16 @@ footer#document-footer
 
     ul
       @include media-breakpoint-up(desktop)
-        @include grid(3, desktop, pxToRem(14), pxToRem(48))
+        @include grid(3, desktop, $spacing-3, $spacing-4)
 
     li
-      margin-top: 0!important
+      display: flex
+      align-items: flex-start
+      gap: pxToRem(4)
+
+      @include media-breakpoint-up(desktop)
+        margin-top: 0 !important
 
       &::before
-        font-size: 1.7em
+        margin-top: pxToRem(6)
+        font-size: 1rem

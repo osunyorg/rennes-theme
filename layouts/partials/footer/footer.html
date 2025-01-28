@@ -3,8 +3,7 @@
         <div class="footer-logo">
             {{ partial "footer/logo.html" }}
 
-            <!-- Todo check if good href -->
-            <a href="/contact" class="footer-contact icon-arrow-right">Nous contacter</a>
+            <a href="{{ site.Params.custom.contact_link }}" class="footer-contact icon-arrow-right">Nous contacter</a>
         </div>
 
         {{- partial "footer/nav.html"
@@ -38,8 +37,10 @@
 
         <div>
             <p class="footer-menu-label">Un site soutenu par</p>
-            <!--  Todo add logo -->
-            [ LOGO ]
+            <a href="{{ site.Params.custom.footer_europe_link }}" target="_blank" title="europe-en-france.gouv.fr - nouvelle fenêtre">
+                <img src="{{ site.Params.custom.footer_europe }}" alt="Union Européenne">
+            </a>
+            <p class="footer-menu-label">Un site éco-conçu par <a href="https://cocoricommun.fr/" target="_blank" title="cocoricommun.fr - nouvelle fenêtre">Cocoricommun</a> avec <a href="https://www.osuny.org/" title="osuny.org - nouvelle fenêtre" target="_blank">Osuny</a></p>
         </div>
     </div>
 </footer>
