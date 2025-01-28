@@ -4,7 +4,12 @@
       display: block
 
     img
-      margin-bottom: $spacing-1
+      @include media-breakpoint-down(md)
+        width: pxToRem(20)
 
-      & + img
-        margin-left: $spacing-1
+    ul
+      display: flex
+      flex-wrap: wrap
+      column-gap: $spacing-1
+      margin: 0
+      list-style: none
