@@ -6,7 +6,7 @@ window.rennes.MenuCanteen = function () {
   const labels = ["[BIO]", "[FR]", "[LOC]", "[VEGE]", "[DUR]", "[UEL]", "[UEF]"];
 
   this.menus.forEach((menu) => {
-    const items = menu.querySelectorAll('td');
+    const items = menu.querySelectorAll('td, legend');
 
     items.forEach((item) => {
       let itemContent = item.textContent;
