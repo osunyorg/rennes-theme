@@ -1,8 +1,12 @@
 {{- $title := or .Params.header_text .Title -}}
+{{ $section := site.GetPage .Section }}
+{{ $type_name := $section.Title }}
+
 {{- partial "header/hero.html"
     (dict
-        "title" $title
-        "image" .Params.image
-        "sizes" site.Params.image_sizes.sections.organizations.hero
-        "context" .
-    ) -}}
+    "title" $title
+    "image" .Params.image
+    "sizes" site.Params.image_sizes.sections.organizations.hero
+    "context" .
+    "type_name" $type_name
+) -}}

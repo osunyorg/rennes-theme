@@ -4,6 +4,8 @@
 {{ $display_breadcrumb := .breadcrumb | default true }}
 {{ $subtitle := .subtitle }}
 {{ $description := .description }}
+{{ $type_name := .type_name }}
+
 {{ if .image }}
     {{ $direction = partial "GetImageDirection" .image }}
 {{ end }}
@@ -31,6 +33,9 @@
         {{ end }}
         <div class="content">
             <div class="hero-text">
+                {{ if $type_name }}
+                <span class="chip">{{ $type_name }}</span>
+                {{ end }}
                 {{ if or $subtitle $description }}
                 <hgroup {{ if $subtitle_is_summary -}} class="has-lead" {{- end }}>
                     <h1 {{ $title_attribute }}>{{ partial "PrepareHTML" .title }}</h1>
