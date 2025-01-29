@@ -1,0 +1,15 @@
+.block.block-class-canteen-menu
+  td:has(span)
+    span
+      display: block
+
+    img
+      @include media-breakpoint-down(md)
+        width: pxToRem(20)
+
+    ul
+      display: flex
+      flex-wrap: wrap
+      column-gap: $spacing-1
+      margin: 0
+      list-style: none
