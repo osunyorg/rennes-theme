@@ -3,4 +3,92 @@
 /// @file Design-system - Header.
 ////
 
-// Todo before custom styles : adjust confs inf assets/sass/rennes-hugo/configuration/components.sass
+header#document-header
+  // On mobile, show upper-menu before primary-menu
+  @include media-breakpoint-down(sm)
+  display: flex
+  flex-direction: column
+  nav.primary-menu
+    @include media-breakpoint-down(sm)
+      order: 2
+  .header-mobile-nav
+    @include media-breakpoint-down(sm)
+      order: 3
+    @include media-breakpoint-up(sm)
+      display: none
+
+  // Unset scroll sticky effect on mobile
+  html.is-scrolling-down:not(.has-menu-opened, .has-modal-opened) &
+    @include media-breakpoint-down(sm)
+      transform: none
+
+  // Thematic logo (desktop and mobile)
+  .logo
+    .logo-text
+      @include custom-icon($site-icon, before)
+        font-size: 1.5em
+
+      @include h4
+
+  // Mobile logo
+  .header-mobile-logo
+    @include media-breakpoint-up(sm)
+      display: none
+
+  // Desktop logos
+  nav
+    .logo
+      @include media-breakpoint-down(sm)
+        display: none
+
+  // Mobile nav
+  .header-mobile-nav
+    @include media-breakpoint-down(sm)
+      position: fixed
+      bottom: 0
+      right: 0
+      background-color: $color-background
+      width: 100%
+      .container
+        display: flex
+        justify-content: flex-end
+
+  // Primary menu
+  nav.primary-menu
+    @include media-breakpoint-down(sm)
+      padding-block: 0
+
+    html.has-menu-opened &
+      // Logo height
+      top: 2rem
+
+    .menu
+      padding-top: 0
+      margin-top: 0
+
+    // Move header collapsible button to the bottom nav
+    .header-button
+      @include media-breakpoint-down(sm)
+        position: fixed
+        bottom: 0
+        background-color: $color-background
+
+  nav.upper-menu
+    // Unset absolute position
+    @include media-breakpoint-down(sm)
+      position: unset
+
+    // Hide native search on mobile (feature in bottom nav)
+    .nav-search
+      @include media-breakpoint-down(sm)
+        display: none
+
+    .container
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+
+    ul
+      @include media-breakpoint-up(desktop)
+        justify-content: flex-start
+        width: auto

@@ -3,13 +3,15 @@ paginate: 18
 enableRobotsTXT: false
 removePathAccents: true
 params:
-  debug:
-    active: true # todo change value before MEP
-
   # RENNES THEME CUSTOM
   custom:
-    logo_link:
-    logo_title:
+    external_logo_link:
+      active: true
+      url: "https://metropole.rennes.fr"
+      title: "Rennes Ville et Métropole"
+    search_global:
+      active: false
+      url: "https://chercher.metropole.rennes.fr"
     footer_europe: "/assets/images/footer_europe.png"
     footer_europe_link: "https://www.europe-en-france.gouv.fr/"
     footer_europe_alt: "Union Européenne"
@@ -30,6 +32,9 @@ params:
     position: hero
   search:
     active: false
+    positions:
+      - upper-menu #Only desktop
+      - custom-fixed #Only mobile
   # We can also specify this options for each sharable Section
   share_links:
     enabled: true
