@@ -10,6 +10,10 @@ params:
   custom:
     logo_link:
     logo_title:
+    footer_europe: "/assets/images/footer_europe.png"
+    footer_europe_link: "https://www.europe-en-france.gouv.fr/"
+    footer_europe_alt: "Union Européenne"
+    contact_link: '/contact'
 
   # DESIGN SYSTEM
   logo:
