@@ -4,46 +4,46 @@
 ////
 
 header#document-header
-  // On mobile, show upper-menu before primary-menu
-  @include media-breakpoint-down(sm)
-  display: flex
-  flex-direction: column
-  nav.primary-menu
-    @include media-breakpoint-down(sm)
+  @include media-breakpoint-down(desktop)
+    // Unset scroll sticky effect on mobile
+    transform: none !important
+
+    // On mobile, show upper-menu before primary-menu
+    display: flex
+    flex-direction: column
+    nav.primary-menu
       order: 2
-  .header-mobile-nav
-    @include media-breakpoint-down(sm)
+    .header-mobile-nav
       order: 3
-    @include media-breakpoint-up(sm)
-      display: none
 
-  // Unset scroll sticky effect on mobile
-  html.is-scrolling-down:not(.has-menu-opened, .has-modal-opened) &
-    @include media-breakpoint-down(sm)
-      transform: none
-
-  // Thematic logo (desktop and mobile)
+  // Thematic logo (for desktop and mobile)
   .logo
-    .logo-text
+    &:has(.logo-text)
+      display: flex
+      align-items: flex-end
+      gap: space(1)
       @include custom-icon($site-icon, before)
         font-size: 1.5em
-
+    .logo-text
       @include h4
+      line-height: 1
 
   // Mobile logo
   .header-mobile-logo
-    @include media-breakpoint-up(sm)
+    padding-block: $spacing-2
+
+    @include media-breakpoint-up(desktop)
       display: none
 
   // Desktop logos
   nav
     .logo
-      @include media-breakpoint-down(sm)
-        display: none
+      @include media-breakpoint-down(desktop)
+        display: none !important
 
   // Mobile nav
   .header-mobile-nav
-    @include media-breakpoint-down(sm)
+    @include media-breakpoint-down(desktop)
       position: fixed
       bottom: 0
       right: 0
@@ -52,43 +52,59 @@ header#document-header
       .container
         display: flex
         justify-content: flex-end
+    @include media-breakpoint-up(desktop)
+      display: none
 
   // Primary menu
   nav.primary-menu
-    @include media-breakpoint-down(sm)
+    z-index: $zindex-header + 1
+    position: relative
+    @include media-breakpoint-down(desktop)
       padding-block: 0
-
-    html.has-menu-opened &
-      // Logo height
-      top: 2rem
-
     .menu
       padding-top: 0
       margin-top: 0
 
     // Move header collapsible button to the bottom nav
     .header-button
-      @include media-breakpoint-down(sm)
+      @include media-breakpoint-down(desktop)
         position: fixed
         bottom: 0
         background-color: $color-background
 
+  // Thematic menu
   nav.upper-menu
     // Unset absolute position
-    @include media-breakpoint-down(sm)
+    @include media-breakpoint-down(desktop)
       position: unset
-
-    // Hide native search on mobile (feature in bottom nav)
-    .nav-search
-      @include media-breakpoint-down(sm)
-        display: none
 
     .container
       display: flex
       align-items: center
       flex-wrap: wrap
+      padding-block: $header-upper-menu-padding-y
+      column-gap: space(8)
+
+      &::before
+        content: ""
+        flex: 0 0 100%
+        border-bottom: 1px solid $color-border
+        margin-block: -$header-upper-menu-padding-y $header-upper-menu-padding-y
+
+        html.has-menu-opened &
+          display: none
+
+    // Hide native search on mobile (feature in bottom nav)
+    .nav-search
+      @include media-breakpoint-down(desktop)
+        display: none
 
     ul
       @include media-breakpoint-up(desktop)
         justify-content: flex-start
         width: auto
+
+    // Hide native search on mobile (feature in bottom nav)
+    .nav-search
+      @include media-breakpoint-down(desktop)
+        display: none

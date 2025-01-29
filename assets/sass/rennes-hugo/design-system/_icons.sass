@@ -18,3 +18,7 @@
   @each $name, $glyph in $custom-icons
     [class*="#{$name}"]
       @include custom-icon($name, before)
+
+      display: flex
+      align-items: flex-start
+      gap: pxToRem(4)
