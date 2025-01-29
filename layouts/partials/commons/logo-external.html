@@ -1,6 +1,6 @@
 <!-- @DEV inspired by Osuny commons/logo.html-->
 {{ $logo := . }}
-{{ $file := false}}
+{{ $file := false }}
 {{ $file_darkmode := false }}
 {{ if eq (printf "%T" $logo) "string" }}
     {{ $file = $logo }}
@@ -9,15 +9,25 @@
     {{ $file_darkmode = $logo.darkmode }}
 {{ end }}
 
-<a class="logo {{- if $file_darkmode }} with-darkmode {{ end -}}" href="{{ site.Home.Permalink }}" title="{{ i18n "commons.index" (dict "Title" site.Title )}}">
+<a class="logo {{- if $file_darkmode }} with-darkmode {{ end -}}"
+   href="{{ site.Params.custom.external_logo_link.url }}"
+   title="{{ site.Params.custom.external_logo_link.title }}">
+
     {{ if $file }}
         {{ $fileDimensions := partial "GetImageDimensions" (dict "context" . "file" $file "static" true) }}
-        <img src="{{ $file }}" alt="{{ site.Title }}" height="{{ index $fileDimensions 1 }}" width="{{ index $fileDimensions 0 }}">
+        <img src="{{ $file }}"
+             alt="{{ site.Params.custom.external_logo_link.title }}"
+             height="{{ index $fileDimensions 1 }}"
+             width="{{ index $fileDimensions 0 }}">
         {{ if $file_darkmode }}
             {{ $fileDimensions := partial "GetImageDimensions" (dict "context" . "file" $file_darkmode "static" true) }}
-            <img class="logo-darkmode" src="{{ $file_darkmode }}" alt="{{ site.Title }}" height="{{ index $fileDimensions 1 }}" width="{{ index $fileDimensions 0 }}">
+            <img class="logo-darkmode"
+                 src="{{ $file_darkmode }}"
+                 alt="{{ site.Params.custom.external_logo_link.title }}"
+                 height="{{ index $fileDimensions 1 }}"
+                 width="{{ index $fileDimensions 0 }}">
         {{ end }}
     {{ else }}
-        <span class="logo-text">{{ site.Title }}</span>
+        <span class="logo-text">{{ site.Params.custom.external_logo_link.title }}</span>
     {{ end }}
 </a>
