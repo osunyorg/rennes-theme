@@ -1,0 +1,81 @@
+---
+title: Menu principal
+items:
+  - title: Vos services
+    target: ''
+    kind: blank
+    new_tab: false
+    children:
+      - title: Rennes Ville et Métropole
+        target: "/actualites/"
+        kind: page
+        new_tab: false
+        children: []
+        path: "/posts"
+        file: content/fr/posts/_index.html
+      - title: Aides et solidarités
+        target: "/equipe/"
+        kind: page
+        new_tab: false
+        children: []
+        path: "/persons"
+        file: content/fr/persons/_index.html
+      - title: Démarches administratives
+        target: ''
+        kind: blank
+        new_tab: false
+        children: []
+      - title: Transport et circulation
+        target: ''
+        kind: blank
+        new_tab: false
+        children: []
+      - title: Enfance, éducation, jeunesse
+        target: ''
+        kind: blank
+        new_tab: false
+        children: []
+      - title: Déchets et propreté
+        target: ''
+        kind: blank
+        new_tab: false
+        children: []
+      - title: Logement urbanisme
+        target: ''
+        kind: blank
+        new_tab: false
+        children: []
+      - title: Numérique et recherche
+        target: ''
+        kind: blank
+        new_tab: false
+        children: []
+  - title: Votre métropole
+    target: ''
+    kind: blank
+    new_tab: false
+    children:
+      - title: Agenda
+        target: "/agenda/"
+        kind: page
+        new_tab: false
+        children: []
+        path: "/events"
+        file: content/fr/events/_index.html
+      - title: Organisations
+        target: "/annuaire/"
+        kind: page
+        new_tab: false
+        children: []
+        path: "/organizations"
+        file: content/fr/organizations/_index.html
+  - title: Votre commune
+    target: https://rennes-ville-et-metropole.rennes-staging.osuny.site/
+    kind: url
+    new_tab: false
+    children: []
+  - title: Votre quartier
+    target: https://rennes-ville-et-metropole.rennes-staging.osuny.site/
+    kind: url
+    new_tab: true
+    children: []

@@ -1,12 +1,17 @@
+
+{{ $ecosystem := partial "GetMenu" "ecosystem" }}
 {{ $primary := partial "GetMenu" "primary" }}
-{{ $upper_menu := partial "GetMenu" "upper-menu" }}
+{{ if site.Params.is_main }}
+    {{ $ecosystem = partial "GetMenu" "primary" }}
+    {{ $primary = false }}
+{{ end }}
 
 {{ $home_url := site.Home.Permalink  }}
 {{ if site.Params.custom.external_logo_link.active }}
     {{ $home_url = site.Params.custom.external_logo_link.url }}
 {{ end }}
 
-<header id="document-header" role="banner" {{ if $upper_menu.items }} class="has-upper-menu" {{ end }}>
+<header id="document-header" role="banner" {{ if $primary.items }} class="has-upper-menu" {{ end }}>
     <!-- Thematic logo on top on mobile -->
     <div class="header-mobile-logo">
         <div class="container">
@@ -20,31 +25,29 @@
 
             <!-- Todo add custom search form -->
 
-            {{ if $primary.items }}
+            {{ if $ecosystem.items }}
                 {{ partial "header/button.html" }}
                 <div class="menu" id="navigation">
                     {{ partial "commons/menu.html"
-                    (dict
-                        "kind" "primary"
-                        "dropdown" true
-                        "level" 1
-                        "context" .
-                    )}}
+                        (dict
+                            "kind" "ecosystem"
+                            "dropdown" true
+                            "level" 1
+                            "context" .
+                        )}}
                 </div>
             {{ end }}
         </div>
     </nav>
 
-    {{ if $upper_menu.items }}
+    {{ if $primary.items }}
         <nav class="upper-menu" aria-label="{{ i18n "commons.menu.upper" }}">
             <div class="container">
                 {{ partial "commons/logo.html" }}
                 {{ partial "commons/menu.html" (dict
                     "context" .
                     "ignore_externals" true
-                    "kind" "upper-menu"
-                    "level" 1
-                    "stop" 1
+                    "kind" "primary"
                 )}}
             </div>
         </nav>

@@ -26,6 +26,10 @@ params:
       level_2:
         title:
           active: true
+    ecosystem:
+      level_2:
+        title:
+          active: true
   breadcrumb:
     position: hero-start
   summary:
