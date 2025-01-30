@@ -1,4 +1,7 @@
 {{- $title := or .Params.header_text .Title -}}
+{{ $section := site.GetPage .Section }}
+{{ $type_name := $section.Title }}
+
 {{- $hero_text_complement := "" -}}
 {{ if eq site.Params.persons.single.taxonomies.position "hero" }}
     {{ $hero_text_complement = "taxonomies/single-list.html" }}
@@ -11,4 +14,5 @@
         "context" .
         "sizes" site.Params.image_sizes.sections.persons.hero_single
         "hero_text_complement" $hero_text_complement
+        "type_name" $type_name
     ) -}}
