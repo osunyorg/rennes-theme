@@ -2,8 +2,9 @@ window.rennes = window.rennes || {};
 
 window.rennes.MenuCanteen = function () {
     this.menus = document.querySelectorAll('.block-class-canteen-menu');
+    this.legends = document.querySelectorAll('.block-class-canteen-legend');
 
-    if (this.menus.length > 0) {
+    if (this.menus.length > 0 && this.legends.length > 0) {
         const labels = ["[BIO]", "[FR]", "[LOC]", "[VEGE]", "[DUR]", "[UEL]", "[UEF]"];
         const labelAlts = {
             "[BIO]": "Agriculture biologique",
@@ -51,6 +52,30 @@ window.rennes.MenuCanteen = function () {
                     });
                     item.appendChild(iconContainer);
                 }
+            });
+        });
+
+        this.legends.forEach((legend) => {
+            const descs = legend.querySelectorAll('ul p');
+
+            descs.forEach((desc) => {
+                let descContent = desc.textContent;
+                let icon = null;
+
+                labels.forEach((label) => {
+                    if (descContent.includes(label)) {
+                        descContent = descContent.replace(label, '').trim();
+                        const cleanLabel = label.replace(/\[|\]/g, '');
+                        icon = document.createElement('img');
+                        icon.src = `/assets/images/icons/${cleanLabel}.png`;
+                        icon.alt = labelAlts[label];
+                    }
+                });
+                const container = desc.closest('div');
+                container.insertBefore(icon, desc);
+                const p = document.createElement('p');
+                p.textContent = descContent;
+                desc.replaceWith(p);
             });
         });
     }
