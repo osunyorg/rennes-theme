@@ -10,6 +10,13 @@
           margin-bottom: space(4)
           background-color: var(--color-background-accent)
 
+        &::before
+          @extend .chip
+
+          content: $organization-custom-tag
+          margin-bottom: space(4)
+          background-color: $hero-background-color !important
+
         .organization-title
           @include h3
 
