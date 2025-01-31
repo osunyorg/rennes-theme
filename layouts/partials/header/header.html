@@ -12,8 +12,6 @@
     {{ $home_url = site.Params.custom.external_logo_link.url }}
 {{ end }}
 
-
-
 <header id="document-header" role="banner">
     <!-- Thematic logo on top on mobile -->
     <div class="header-mobile-logo">
@@ -59,6 +57,8 @@
                         "context" .
                     )}}
                 </div>
+
+                {{ partial "commons/search/button.html" "custom-menu" }}
             </div>
         </nav>
     {{ end }}
@@ -66,7 +66,7 @@
     <div class="header-mobile-nav">
         <div class="container">
             <!-- Search CTA (native or custom) -->
-            {{ partial "commons/search/button.html" "custom-fixed" }}
+            {{ partial "commons/search/button.html" "custom-menu" }}
             {{ if site.Params.custom.search_global.active }}
                 <a href="{{ site.Params.custom.search_global.url }}">Recherche</a>
             {{ end }}
@@ -75,8 +75,5 @@
             <a href="{{ $home_url }}">Accueil</a>
         </div>
     </div>
-
-<!--    <pre>{{ debug.Dump $ecosystem_menu }}</pre>-->
-
 </header>
 

@@ -38,8 +38,7 @@ params:
   search:
     active: false
     positions:
-      - upper-menu #Only desktop
-      - custom-fixed #Only mobile
+      - custom-menu
   # We can also specify this options for each sharable Section
   share_links:
     enabled: true
