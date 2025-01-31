@@ -8,7 +8,7 @@ header#document-header
     // Unset scroll sticky effect on mobile
     transform: none !important
 
-    // On mobile, show upper-menu before primary-menu
+    // On mobile, show thematic menu before ecosystem menu
     display: flex
     flex-direction: column
     nav.primary-menu
@@ -16,6 +16,7 @@ header#document-header
     .header-mobile-nav
       order: 3
 
+  /* LOGOS */
   // Thematic logo (for desktop and mobile)
   .logo
     &:has(.logo-text)
@@ -41,7 +42,7 @@ header#document-header
       @include media-breakpoint-down(desktop)
         display: none !important
 
-  // Mobile nav
+  /* MOBILE NAV */
   .header-mobile-nav
     @include media-breakpoint-down(desktop)
       position: fixed
@@ -55,15 +56,12 @@ header#document-header
     @include media-breakpoint-up(desktop)
       display: none
 
-  // Primary menu
-  nav.primary-menu
+  /* ECOSYSTEM NAV */
+  nav.ecosystem-menu
     z-index: $zindex-header + 1
     position: relative
     @include media-breakpoint-down(desktop)
       padding-block: 0
-    .menu
-      padding-top: 0
-      margin-top: 0
 
     // Move header collapsible button to the bottom nav
     .header-button
@@ -72,11 +70,14 @@ header#document-header
         bottom: 0
         background-color: $color-background
 
-  // Thematic menu
-  nav.upper-menu
-    // Unset absolute position
+  /* THEMATIC NAV */
+  nav.thematic-menu
+    //
     @include media-breakpoint-down(desktop)
-      position: unset
+      display: none
+      html.has-menu-opened &
+        &, .menu
+          display: block
 
     .container
       display: flex
@@ -103,6 +104,18 @@ header#document-header
       @include media-breakpoint-up(desktop)
         justify-content: flex-start
         width: auto
+
+    .nav-level-1
+      > li
+        > a, > span[role="button"]
+          text-decoration-thickness: 4px
+          text-decoration-skip-ink: none
+          text-underline-offset: 0.5em
+
+          &:hover
+            text-decoration-color: var(--color-border)
+          &.active
+            text-decoration-color: var(--color-background-active, var(--color-border))
 
     // Hide native search on mobile (feature in bottom nav)
     .nav-search

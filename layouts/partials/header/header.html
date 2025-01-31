@@ -1,12 +1,20 @@
-{{ $primary := partial "GetMenu" "primary" }}
-{{ $upper_menu := partial "GetMenu" "upper-menu" }}
+{{ $ecosystem_menu := partial "GetMenu" "ecosystem" }}
+{{ $thematic_menu := partial "GetMenu" "primary" }}
+
+<!-- Use BO primary menu on main website -->
+{{ if site.Params.custom.is_main }}
+    {{ $ecosystem_menu = partial "GetMenu" "primary" }}
+    {{ $thematic_menu = false }}
+{{ end }}
 
 {{ $home_url := site.Home.Permalink  }}
 {{ if site.Params.custom.external_logo_link.active }}
     {{ $home_url = site.Params.custom.external_logo_link.url }}
 {{ end }}
 
-<header id="document-header" role="banner" {{ if $upper_menu.items }} class="has-upper-menu" {{ end }}>
+
+
+<header id="document-header" role="banner">
     <!-- Thematic logo on top on mobile -->
     <div class="header-mobile-logo">
         <div class="container">
@@ -14,38 +22,43 @@
         </div>
     </div>
 
-    <nav class="primary-menu" aria-label="{{ i18n " commons.menu.main" }}">
+    <nav class="primary-menu ecosystem-menu" aria-label="{{ i18n " commons.menu.main" }}">
         <div class="container">
             {{ partial "header/logo.html" }}
 
             <!-- Todo add custom search form -->
 
-            {{ if $primary.items }}
+            {{ if $ecosystem_menu }}
                 {{ partial "header/button.html" }}
                 <div class="menu" id="navigation">
                     {{ partial "commons/menu.html"
-                    (dict
-                        "kind" "primary"
-                        "dropdown" true
-                        "level" 1
-                        "context" .
+                        (dict
+                            "items" $ecosystem_menu.items
+                            "options" site.Params.menu.ecosystem
+                            "dropdown" true
+                            "level" 1
+                            "context" .
                     )}}
                 </div>
             {{ end }}
         </div>
     </nav>
 
-    {{ if $upper_menu.items }}
-        <nav class="upper-menu" aria-label="{{ i18n "commons.menu.upper" }}">
+    {{ if $thematic_menu }}
+        <nav class="thematic-menu" aria-label="{{ i18n "commons.menu.upper" }}">
             <div class="container">
                 {{ partial "commons/logo.html" }}
-                {{ partial "commons/menu.html" (dict
-                    "context" .
-                    "ignore_externals" true
-                    "kind" "upper-menu"
-                    "level" 1
-                    "stop" 1
-                )}}
+
+                <div class="menu">
+                    {{ partial "commons/menu.html" (dict
+                        "items" $thematic_menu.items
+                        "options" site.Params.menu.thematic
+                        "dropdown" true
+                        "level" 1
+                        "ignore_externals" true
+                        "context" .
+                    )}}
+                </div>
             </div>
         </nav>
     {{ end }}
@@ -62,4 +75,8 @@
             <a href="{{ $home_url }}">Accueil</a>
         </div>
     </div>
+
+<!--    <pre>{{ debug.Dump $ecosystem_menu }}</pre>-->
+
 </header>
+

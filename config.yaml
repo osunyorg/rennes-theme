@@ -5,6 +5,7 @@ removePathAccents: true
 params:
   # RENNES THEME CUSTOM
   custom:
+    is_main: false
     external_logo_link:
       active: true
       url: "https://metropole.rennes.fr"
@@ -22,7 +23,11 @@ params:
     header: "/assets/images/logo-black.svg"
     footer: "/assets/images/logo-white.svg"
   menu:
-    primary:
+    ecosystem:
+      level_2:
+        title:
+          active: true
+    thematic:
       level_2:
         title:
           active: true

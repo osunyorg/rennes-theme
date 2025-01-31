@@ -1,26 +1,29 @@
 .menu
+  @include media-breakpoint-down(desktop)
+    margin-top: 0
+
   // Dropdown menu
   .dropdown-menu
-    .primary-menu &
-      &.is-titled
+    &.is-titled
+      @include media-breakpoint-up(desktop)
+        .dropdown-menu-heading
+          width: columns(4) !important
+        .nav-level-2
+          width: columns(8) !important
+
+    &-title
+      @include h5
+
+    .nav-level-2
+      @include media-breakpoint-up(desktop)
+        columns: 2
+
+      > li + li
+        margin-top: space(5)
         @include media-breakpoint-up(desktop)
-          .dropdown-menu-heading
-            width: columns(4) !important
-          .nav-level-2
-            width: columns(8) !important
+          margin-top: $spacing-3
 
-      &-title
-        @include h5
-
-      .nav-level-2
-        @include media-breakpoint-up(desktop)
-          columns: 2
-
-        > li + li
-          margin-top: space(5)
-          @include media-breakpoint-up(desktop)
-            margin-top: $spacing-3
-
+  // Links styles
   .nav-level-1, .nav-level-2
     > li
       > a, > span[role="button"]
@@ -29,7 +32,7 @@
   span:not([role="button"])
     cursor: auto
 
-  //  Add icons
+  //  Add custom icons
   #dropdown-vos-services
     + .dropdown-menu
       @extend %icon-containing-class
