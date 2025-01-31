@@ -95,8 +95,8 @@ header#document-header
         html.has-menu-opened &
           display: none
 
-    // Hide native search on mobile (feature in bottom nav)
-    .nav-search
+    // Hide native search on mobile (feature is in bottom nav)
+    .search-button--custom-menu
       @include media-breakpoint-down(desktop)
         display: none
 
@@ -116,8 +116,3 @@ header#document-header
             text-decoration-color: var(--color-border)
           &.active
             text-decoration-color: var(--color-background-active, var(--color-border))
-
-    // Hide native search on mobile (feature in bottom nav)
-    .nav-search
-      @include media-breakpoint-down(desktop)
-        display: none
