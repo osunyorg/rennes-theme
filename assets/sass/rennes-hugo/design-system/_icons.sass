@@ -8,6 +8,7 @@
     content: map-get($custom-icons, $icon)
     font-family: 'Icomoon'
     font-size: 1em
+    @content
 
 @each $name, $glyph in $custom-icons
   .custom-icon-#{$name}
@@ -17,3 +18,7 @@
   @each $name, $glyph in $custom-icons
     [class*="#{$name}"]
       @include custom-icon($name, before)
+
+      display: flex
+      align-items: flex-start
+      gap: pxToRem(4)

@@ -3,6 +3,10 @@
 /// @file Design-system - Blocks.
 ////
 
+@each $selector, $color in $theme-color-background-active
+  #{$selector}
+    --color-background-active : #{$color}
+
 @each $selector, $color in $theme-color-background-accent
   #{$selector}
     --color-background-accent : #{$color}
