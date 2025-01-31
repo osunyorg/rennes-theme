@@ -1,3 +1,3 @@
 import './theme/';
-import './header/';
+import './icon-nav/';
 import './canteen-menu/';

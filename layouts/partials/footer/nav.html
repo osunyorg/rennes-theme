@@ -6,10 +6,24 @@
     <nav class="footer-menu footer-menu-{{ $name }}" aria-labelledby="menu-label-{{ $name }}">
         <p id="menu-label-{{ $name }}" class="footer-menu-label">{{ $menu.title }}</p>
 
-        {{ partial "commons/menu.html"
-            (dict
-                "kind" .menu
-                "level" 1
-        )}}
+        {{ with $menu }}
+            <ul class="nav-legal nav-level-1">
+                {{ range .items -}}
+                    {{- $link_class := "" -}}
+                    {{- $attr := "" -}}
+                    {{- $attr_title := "" -}}
+                    {{- $item_class := anchorize .title -}}
+                    {{- $item_class := replace (anchorize .title) "é" "e" -}}
+
+                    {{ if eq .context.RelPermalink .target }}
+                        {{ $link_class = "active" }}
+                    {{ end }}
+
+                    <li {{ if $with_item_classes }}class="{{ $item_class }}"{{ end }}>
+                        <a href="{{ .target }}"{{ if ne $link_class ""}} class="{{ $link_class }}"{{ end }} {{ safeHTMLAttr $attr }} {{ safeHTMLAttr $attr_title }}>{{ .title }}</a>
+                    </li>
+                {{ end -}}
+            </ul>
+        {{ end }}
     </nav>
 {{ end }}
