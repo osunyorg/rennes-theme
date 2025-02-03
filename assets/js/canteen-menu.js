@@ -4,7 +4,7 @@ window.rennes.MenuCanteen = function () {
     this.menus = document.querySelectorAll('.block-class-canteen-menu');
     this.legends = document.querySelectorAll('.block-class-canteen-legend');
 
-    if (this.menus.length > 0 && this.legends.length > 0) {
+    if (this.menus.length > 0 || this.legends.length > 0) {
         const labels = ["[BIO]", "[FR]", "[LOC]", "[VEGE]", "[DUR]", "[UEL]", "[UEF]"];
         const labelAlts = {
             "[BIO]": "Agriculture biologique",
