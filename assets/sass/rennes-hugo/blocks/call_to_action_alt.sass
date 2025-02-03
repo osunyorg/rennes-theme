@@ -1,3 +1,4 @@
+body,
 body.full-width
   .block.block-class-call_to_action_alt
     background-color: var(--color-background-accent)
@@ -54,6 +55,7 @@ body.full-width
           width: 100%
 
         img
+          width: 100%
           object-fit: cover
           object-position: center
 
@@ -75,4 +77,5 @@ body.full-width
         @extend .button-alt
         @include button-icon(arrow-right-line)
 
+        --btn-background: var(--color-text)
         min-width: auto

@@ -62,9 +62,9 @@ params:
   image_sizes:
     blocks:
       call_to_action:
-        mobile: 330
+        mobile: 500
         tablet: 605
-        desktop: 555
+        desktop: 768
     sections:
       posts:
         item:
