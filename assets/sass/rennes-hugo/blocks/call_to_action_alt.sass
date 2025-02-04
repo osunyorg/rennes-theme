@@ -1,0 +1,81 @@
+body,
+body.full-width
+  .block.block-class-call_to_action_alt
+    background-color: var(--color-background-accent)
+
+    & + .block.block-class-call_to_action_alt
+      margin-top: 0
+
+      .call_to_action
+        @include media-breakpoint-up(sm)
+          flex-direction: row
+
+        figure
+          picture
+            justify-content: flex-end
+
+    .block-content
+      padding: 0
+
+      @include media-breakpoint-down(lg)
+        margin-left: var(--grid-gutter-negative)
+        margin-right: var(--grid-gutter-negative)
+
+    .call_to_action
+      flex-direction: column-reverse
+      padding: 0
+
+      @include media-breakpoint-up(sm)
+        display: flex
+        flex-direction: row-reverse
+        justify-content: space-between
+        gap: 0
+
+      & > div
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: space(4)
+        order: 1
+
+        @include media-breakpoint-up(sm)
+          padding: $spacing-5
+
+      figure
+        flex-grow: 1
+        display: flex
+        margin: 0
+
+        @include media-breakpoint-down(lg)
+          width: 100%
+
+        picture
+          display: flex
+          height: 100%
+          width: 100%
+
+        img
+          width: 100%
+          object-fit: cover
+          object-position: center
+
+    .block-title
+      @include h1
+
+      color: $color-text
+
+    .description
+      p
+        @include body-text
+
+        color: $color-text
+
+    .actions
+      margin-top: 0
+
+      a
+        @extend .button-alt
+        @include button-icon(arrow-right-line)
+
+        --btn-background: var(--color-text)
+        min-width: auto
