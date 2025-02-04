@@ -61,8 +61,11 @@ header#document-header
         justify-content: flex-end
         height: 100%
 
+        &:has(.search)
+          justify-content: space-between
+          padding-left: 31vw
+
       a
-        @include custom-icon($home, before)
         display: flex
         flex-direction: column
         align-items: center
@@ -73,8 +76,18 @@ header#document-header
         text-decoration: none
         background-color: var(--color-background)
 
-        &::before
-          font-size: pxToRem(18)
+        &.home
+          @include custom-icon($home, before)
+
+          &::before
+            font-size: pxToRem(18)
+
+        &.search
+          @include icon(search-line, before)
+          padding: pxToRem(10) pxToRem(30)
+
+          &::before
+            font-size: pxToRem(20)
 
   /* ECOSYSTEM NAV */
   nav.ecosystem-menu

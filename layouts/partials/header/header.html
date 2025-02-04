@@ -24,15 +24,17 @@
         <div class="container">
             {{ partial "header/logo.html" }}
 
-            <form role="search" class="search-form" accept-charset="UTF-8">
-                <div class="search-form-input">
-                    <label for="search-input" class="sr-only">Rechercher sur le site</label>
-                    <input id="search-input" type="search" placeholder="Rechercher...">
-                </div>
-                <div class="search-form-button">
-                    <button type="submit"><span class="sr-only">Recherche</span></button>
-                </div>
-            </form>
+            {{ if not site.Params.custom.search_global.active }}
+                <form role="search" class="search-form" accept-charset="UTF-8">
+                    <div class="search-form-input">
+                        <label for="search-input" class="sr-only">Rechercher sur le site</label>
+                        <input id="search-input" type="search" placeholder="Rechercher...">
+                    </div>
+                    <div class="search-form-button">
+                        <button type="submit"><span class="sr-only">Recherche</span></button>
+                    </div>
+                </form>
+            {{ end }}
             <!-- Todo add custom search form -->
 
             {{ if $ecosystem_menu }}
@@ -77,11 +79,11 @@
             <!-- Search CTA (native or custom) -->
             {{ partial "commons/search/button.html" "custom-menu" }}
             {{ if site.Params.custom.search_global.active }}
-                <a href="{{ site.Params.custom.search_global.url }}">Recherche</a>
+                <a href="{{ site.Params.custom.search_global.url }}" class="search">Recherche</a>
             {{ end }}
 
             <!-- Home CTA (current site or external) -->
-            <a href="{{ $home_url }}">Accueil</a>
+            <a href="{{ $home_url }}" class="home">Accueil</a>
         </div>
     </div>
 </header>
