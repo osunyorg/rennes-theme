@@ -17,6 +17,7 @@ $link-color: var(--color-accent) !default
 $theme-color-background-active: ()
 $theme-color-background-accent: ()
 $theme-color-background-alt: ()
+$theme-color-background-chip: ()
 
 // Generic pages
 $theme-color-background-active: map-merge($theme-color-background-active, ('body.pages__section': "#CFA1E5"))
@@ -47,16 +48,20 @@ $theme-color-background-alt: map-merge($theme-color-background-alt, ('body.event
 $theme-color-background-active: map-merge($theme-color-background-active, ('body[class*="fiches-pratiques"], .page-fiches-pratiques': "#80A7FF"))
 $theme-color-background-accent: map-merge($theme-color-background-accent, ('body[class*="fiches-pratiques"], .page-fiches-pratiques': "#C0D4FF"))
 $theme-color-background-alt: map-merge($theme-color-background-alt, ('body[class*="fiches-pratiques"], .page-fiches-pratiques': "#D9E5FF"))
+$theme-color-background-chip: map-merge($theme-color-background-chip, ('.chip-fiches-pratiques': "#C0D4FF"))
 
 // "Nos actions"
 $theme-color-background-active: map-merge($theme-color-background-active, ('body[class*="nos-actions"], .page-nos-actions': "#9CD38C"))
 $theme-color-background-accent: map-merge($theme-color-background-accent, ('body[class*="nos-actions"], .page-nos-actions': "#D9FFCC"))
 $theme-color-background-alt: map-merge($theme-color-background-alt, ('body[class*="nos-actions"], .page-nos-actions': "#ECFFE6"))
+$theme-color-background-chip: map-merge($theme-color-background-chip, ('.chip-nos-actions': "#D9FFCC"))
 
 // Add possibility to add custom values
 $custom-theme-color-background-active: () !default
 $custom-theme-color-background-accent: () !default
 $custom-theme-color-background-alt: () !default
+$custom-color-background-chip: () !default
 $theme-color-background-active: map-merge($theme-color-background-active, $custom-theme-color-background-active)
 $theme-color-background-accent: map-merge($theme-color-background-accent, $custom-theme-color-background-accent)
 $theme-color-background-alt: map-merge($theme-color-background-alt, $custom-theme-color-background-alt)
+$theme-color-background-chip: map-merge($theme-color-background-chip, $custom-color-background-chip)

@@ -1,0 +1,13 @@
+{{ $kind := "page" }}
+{{ $categories_kind := printf "%ss_categories" $kind }}
+{{ $categories := .GetTerms $categories_kind }}
+
+{{- if $categories -}}
+    {{- range $categories -}}
+        {{ if strings.Contains .Slug site.Params.custom.pages.tag_taxonomy }}
+            <p><a href="{{ .Permalink }}" class="chip {{ printf "chip-%s" (.Title | anchorize) }}">
+                {{- safeHTML .Title -}}
+            </a></p>
+        {{ end }}
+    {{- end }}
+{{- end -}}

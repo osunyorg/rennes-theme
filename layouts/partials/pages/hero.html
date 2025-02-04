@@ -1,9 +1,6 @@
 {{- $title := or .Params.header_text .Title -}}
 
-{{- $hero_text_complement := "" -}}
-{{ if eq site.Params.pages.single.taxonomies.position "hero" }}
-{{ $hero_text_complement = "taxonomies/single-list.html" }}
-{{ end }}
+{{ $hero_text_complement := "pages/hero-info.html" }}
 
 {{- partial "header/hero.html" (dict
 "title" $title

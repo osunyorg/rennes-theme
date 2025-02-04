@@ -5,11 +5,13 @@
 {{- if $categories -}}
   <ul class="{{ $kind }}-categories" aria-label="{{ i18n "categories.label" }}">
     {{- range $categories -}}
-      <li>
-        <a href="{{ .Permalink }}">
-          {{- safeHTML .Title -}}
-        </a>
-      </li>
+      {{ if not (strings.Contains .Slug site.Params.custom.pages.tag_taxonomy) }}
+        <li>
+          <a href="{{ .Permalink }}">
+            {{- safeHTML .Title -}}
+          </a>
+        </li>
+      {{ end }}
     {{- end }}
   </ul>
 {{- end -}}

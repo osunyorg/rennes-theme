@@ -1,3 +1,6 @@
 commons:
   menu:
     upper: Menu thématique
+dates:
+  published : Publié le
+  updated: Mis à jours le
