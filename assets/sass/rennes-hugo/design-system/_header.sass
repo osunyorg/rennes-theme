@@ -61,9 +61,10 @@ header#document-header
         justify-content: flex-end
         height: 100%
 
-        &:has(.search)
+        &:has(.search-button)
           justify-content: space-between
-          padding-left: 31vw
+          width: 66vw
+          margin-left: 33vw
 
       a
         display: flex
@@ -71,20 +72,24 @@ header#document-header
         align-items: center
         padding: pxToRem(10) pxToRem(15)
         font-size: pxToRem(13)
+        font-family: DMSans, sans-serif
         line-height: 1.9
         color: var(--color-text)
         text-decoration: none
         background-color: var(--color-background)
 
         &.home
-          @include custom-icon($home, before)
+          @include custom-icon(home, before)
 
           &::before
             font-size: pxToRem(18)
 
-        &.search
+        &.search-button
           @include icon(search-line, before)
-          padding: pxToRem(10) pxToRem(30)
+
+          padding: pxToRem(4) 0 0
+          justify-content: center
+          gap: 0
 
           &::before
             font-size: pxToRem(20)
@@ -157,6 +162,8 @@ header#document-header
         width: auto
 
     .nav-level-1
+      @include media-breakpoint-down(desktop)
+        border-bottom: 1px solid $color-border
       > li
         > a, > span[role="button"]
           text-decoration-thickness: 4px

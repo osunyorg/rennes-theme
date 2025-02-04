@@ -24,7 +24,7 @@
         <div class="container">
             {{ partial "header/logo.html" }}
 
-            {{ if not site.Params.custom.search_global.active }}
+            {{ if site.Params.custom.search_global.active }}
                 <form role="search" class="search-form" accept-charset="UTF-8">
                     <div class="search-form-input">
                         <label for="search-input" class="sr-only">Rechercher sur le site</label>
@@ -78,7 +78,7 @@
             <!-- Search CTA (native or custom) -->
             {{ partial "commons/search/button.html" "custom-menu" }}
             {{ if site.Params.custom.search_global.active }}
-                <a href="{{ site.Params.custom.search_global.url }}" class="search">Recherche</a>
+                <a href="{{ site.Params.custom.search_global.url }}" class="search-button">Recherche</a>
             {{ end }}
 
             <!-- Home CTA (current site or external) -->

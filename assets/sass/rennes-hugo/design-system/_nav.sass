@@ -2,6 +2,11 @@
   @include media-breakpoint-down(desktop)
     margin-top: 0
 
+  .nav-level-1
+    & > li
+      @include media-breakpoint-down(desktop)
+        border: none !important
+
   // Dropdown menu
   .dropdown-menu
     &.is-titled

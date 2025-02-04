@@ -4,6 +4,9 @@
   margin-inline: $spacing-2
   max-width: pxToRem(280)
 
+  @include media-breakpoint-down(desktop)
+    display: none
+
   @include media-breakpoint-down(xl)
     margin-inline: $spacing-1
     max-width: pxToRem(200)
@@ -36,30 +39,41 @@
       @extend .button-alt
       @include button-icon(search-line)
 
-      @include media-breakpoint-down(desktop)
-        display: flex
-        flex-direction: column-reverse
-        align-items: center
-        gap: 0
-        padding: 0
-        background-color: transparent !important
-        color: var(--color-text) !important
-        font-family: DMSans, sans-serif
-        font-size: pxToRem(13)
-
-        &::after
-          font-size: pxToRem(20)
+      background-color: var(--color-text)
 
       @include media-breakpoint-up(desktop)
         min-width: auto
         margin-left: -$spacing-3
         padding: pxToRem(14) space(4)
 
-      .sr-only
-        @include media-breakpoint-down(desktop)
-          clip-path: border-box !important
-          height: auto !important
-          overflow: visible !important
-          position: static !important
-          width: auto !important
-          white-space: normal !important
+.search-button--custom-menu
+  @include button-icon(search-line)
+
+  display: flex
+  flex-direction: column-reverse
+  justify-content: center
+  gap: pxToRem(10)
+  margin-top: pxToRem(3)
+  font-size: pxToRem(13)
+  font-family: DMSans, sans-serif
+
+  &::after
+    font-size: pxToRem(20)
+    line-height: 0.6
+
+    @include media-breakpoint-up(desktop)
+      font-size: pxToRem(24)
+      line-height: 1
+
+  span
+    @include media-breakpoint-up(desktop)
+      border: 0 !important
+      clip: rect(1px,1px,1px,1px) !important
+      clip-path: inset(50%) !important
+      height: 1px !important
+      overflow: hidden !important
+      padding: 0 !important
+      margin: 0 !important
+      position: absolute !important
+      width: 1px !important
+      white-space: nowrap !important
