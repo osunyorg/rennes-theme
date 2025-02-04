@@ -1,0 +1,5 @@
+{{ if site.Params.custom.external_logo_link.active }}
+    {{ partial "commons/logo-external.html" site.Params.logo.footer }}
+{{ else }}
+    {{ partial "commons/logo.html" site.Params.logo.footer }}
+{{ end }}
