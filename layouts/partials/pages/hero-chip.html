@@ -1,0 +1,15 @@
+{{ $taxonomies := .Params.taxonomies }}
+
+{{ if $taxonomies }}
+    {{ range $taxonomies }}
+        {{ if and .categories (eq .slug site.Params.custom.pages.tag_taxonomy) }}
+            {{ with .categories }}
+                {{ range . }}
+                    <a href="{{ .permalink }}" class="chip">
+                        {{ safeHTML .name }}
+                    </a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}

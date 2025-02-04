@@ -1,0 +1,38 @@
+.page
+  &-infos
+    @include meta
+    @include list-reset
+    @include grid(4, md)
+    width: 100%
+
+    margin-top: var(--heading-margin-top)
+
+    li
+      display: flex
+      flex-direction: column
+
+      .page-infos-title,
+      .taxonomy-title
+        color: var(--color-text-alt)
+        font-weight: 300
+
+      .page-infos-detail
+        font-family: $body-font-family
+        font-weight: 400
+
+        @include media-breakpoint-up(md)
+          font-size: pxToRem(18)
+
+    & > li:not(:first-child)
+      @include media-breakpoint-down(md)
+        margin-top: $spacing-3
+
+    .taxonomies-single
+      margin-top: 0
+      @include media-breakpoint-up(md)
+        width: unset
+
+      > li ul
+        flex-direction: column
+        text-align: left
+        gap: pxToRem(4)
