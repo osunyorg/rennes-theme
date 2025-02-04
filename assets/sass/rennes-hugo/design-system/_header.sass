@@ -50,11 +50,31 @@ header#document-header
       right: 0
       background-color: $color-background
       width: 100%
-      .container
-        display: flex
-        justify-content: flex-end
+      height: pxToRem(60)
+
     @include media-breakpoint-up(desktop)
       display: none
+
+    .container
+      @include media-breakpoint-down(desktop)
+        display: flex
+        justify-content: flex-end
+        height: 100%
+
+      a
+        @include custom-icon($home, before)
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: pxToRem(10) pxToRem(15)
+        font-size: pxToRem(13)
+        line-height: 1.9
+        color: var(--color-text)
+        text-decoration: none
+        background-color: var(--color-background)
+
+        &::before
+          font-size: pxToRem(18)
 
   /* ECOSYSTEM NAV */
   nav.ecosystem-menu
@@ -68,7 +88,24 @@ header#document-header
       @include media-breakpoint-down(desktop)
         position: fixed
         bottom: 0
+        display: flex
+        align-items: center
+        flex-direction: column-reverse
+        padding: pxToRem(10) pxToRem(15)
         background-color: $color-background
+
+        span
+          &:first-of-type
+            font-family: DMSans, sans-serif
+            font-size: pxToRem(13)
+            text-transform: capitalize
+
+          &:last-of-type
+            &::before
+              height: pxToRem(20)
+              margin: 0 !important
+              line-height: 1
+
 
   /* THEMATIC NAV */
   nav.thematic-menu
@@ -80,11 +117,12 @@ header#document-header
           display: block
 
     .container
-      display: flex
-      align-items: center
-      flex-wrap: wrap
-      padding-block: $header-upper-menu-padding-y
-      column-gap: space(8)
+      @include media-breakpoint-up(desktop)
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        padding-block: $header-upper-menu-padding-y
+        column-gap: space(8)
 
       &::before
         content: ""

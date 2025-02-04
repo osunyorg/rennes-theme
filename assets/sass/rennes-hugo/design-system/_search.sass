@@ -1,0 +1,65 @@
+.search-form
+  display: flex
+  align-items: center
+  margin-inline: $spacing-2
+  max-width: pxToRem(280)
+
+  @include media-breakpoint-down(xl)
+    margin-inline: $spacing-1
+    max-width: pxToRem(200)
+
+  @include media-breakpoint-down(lg)
+    position: fixed
+    bottom: 0
+    left: 50%
+    margin: 0
+    padding: pxToRem(9) pxToRem(20)
+    transform: translateX(-50%)
+    background-color: $color-background
+    z-index: 1
+
+  &-input
+    max-width: 100%
+
+    input[type="search"]
+      width: 100%
+      margin: 0
+      padding: $spacing-1
+      padding-right: $spacing-4
+      font-size: pxToRem(16)
+
+      @include media-breakpoint-down(lg)
+        display: none
+
+  &-button
+    button[type="submit"]
+      @extend .button-alt
+      @include button-icon(search-line)
+
+      @include media-breakpoint-down(desktop)
+        display: flex
+        flex-direction: column-reverse
+        align-items: center
+        gap: 0
+        padding: 0
+        background-color: transparent !important
+        color: var(--color-text) !important
+        font-family: DMSans, sans-serif
+        font-size: pxToRem(13)
+
+        &::after
+          font-size: pxToRem(20)
+
+      @include media-breakpoint-up(desktop)
+        min-width: auto
+        margin-left: -$spacing-3
+        padding: pxToRem(14) space(4)
+
+      .sr-only
+        @include media-breakpoint-down(desktop)
+          clip-path: border-box !important
+          height: auto !important
+          overflow: visible !important
+          position: static !important
+          width: auto !important
+          white-space: normal !important
