@@ -1,9 +1,13 @@
-body.full-width
-  .block-call_to_action
-    .call_to_action--with-image
+.block-call_to_action
+  .call_to_action--with-image
+    @include in-page-without-sidebar
       > div
         grid-column: 1/8
 
       > figure
         grid-column: 9/13
         order: 1
+
+  &.block-call_to_action--no_background
+    @include in-page-with-or-without-sidebar
+      background-color: var(--color-background-alt)
