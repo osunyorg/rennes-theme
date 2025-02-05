@@ -6,17 +6,16 @@
 /// MAIN COLORS OVERRIDES
 $color-accent: #052E2E
 $color-text: #1A1A1D
-$color-text-alt: rgba(0, 0, 0, 0.8)
+$color-text-alt: rgba(0, 0, 0, 0.7)
 $color-background: #FFFFFF
 $color-background-alt: #FDFCFC
 $color-border: rgba(0, 0, 0, 0.50)
-
-$link-color: var(--color-accent) !default
 
 /// THEME COLORS
 $theme-color-background-active: ()
 $theme-color-background-accent: ()
 $theme-color-background-alt: ()
+$theme-color-background-chip: ()
 
 // Generic pages
 $theme-color-background-active: map-merge($theme-color-background-active, ('body.pages__section': "#CFA1E5"))
@@ -27,6 +26,7 @@ $theme-color-background-alt: map-merge($theme-color-background-alt, ('body.pages
 $theme-color-background-active: map-merge($theme-color-background-active, ('body.organizations__page, body.organizations__section': "#BDBFC7"))
 $theme-color-background-accent: map-merge($theme-color-background-accent, ('body.organizations__page, body.organizations__section': "#D9DDE8"))
 $theme-color-background-alt: map-merge($theme-color-background-alt, ('body.organizations__page, body.organizations__section': "#EBF1FF"))
+$theme-color-background-chip: map-merge($theme-color-background-chip, ('.block-organizations': "#D9DDE8"))
 
 // Persons ("Élus")
 $theme-color-background-active: map-merge($theme-color-background-active, ('body.persons__section, body.persons__page': "#BDBFC7"))
@@ -47,11 +47,13 @@ $theme-color-background-alt: map-merge($theme-color-background-alt, ('body.event
 $theme-color-background-active: map-merge($theme-color-background-active, ('body[class*="fiches-pratiques"], .page-fiches-pratiques': "#80A7FF"))
 $theme-color-background-accent: map-merge($theme-color-background-accent, ('body[class*="fiches-pratiques"], .page-fiches-pratiques, .block-class-fiches-pratiques': "#C0D4FF"))
 $theme-color-background-alt: map-merge($theme-color-background-alt, ('body[class*="fiches-pratiques"], .page-fiches-pratiques, .block-class-fiches-pratiques': "#D9E5FF"))
+$theme-color-background-chip: map-merge($theme-color-background-chip, ('.chip-fiches-pratiques': "#C0D4FF"))
 
 // "Nos actions"
 $theme-color-background-active: map-merge($theme-color-background-active, ('body[class*="nos-actions"], .page-nos-actions': "#9CD38C"))
 $theme-color-background-accent: map-merge($theme-color-background-accent, ('body[class*="nos-actions"], .page-nos-actions, .block-class-nos-actions': "#D9FFCC"))
 $theme-color-background-alt: map-merge($theme-color-background-alt, ('body[class*="nos-actions"], .page-nos-actions, .block-class-nos-actions': "#ECFFE6"))
+$theme-color-background-chip: map-merge($theme-color-background-chip, ('.chip-nos-actions': "#D9FFCC"))
 
 // "Métropole"
 $theme-color-background-alt: map-merge($theme-color-background-alt, ('body.page-home-metropole': "#A7E9FB"))
@@ -60,6 +62,8 @@ $theme-color-background-alt: map-merge($theme-color-background-alt, ('body.page-
 $custom-theme-color-background-active: () !default
 $custom-theme-color-background-accent: () !default
 $custom-theme-color-background-alt: () !default
+$custom-color-background-chip: () !default
 $theme-color-background-active: map-merge($theme-color-background-active, $custom-theme-color-background-active)
 $theme-color-background-accent: map-merge($theme-color-background-accent, $custom-theme-color-background-accent)
 $theme-color-background-alt: map-merge($theme-color-background-alt, $custom-theme-color-background-alt)
+$theme-color-background-chip: map-merge($theme-color-background-chip, $custom-color-background-chip)
