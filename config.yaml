@@ -17,8 +17,6 @@ params:
     footer_europe_link: "https://www.europe-en-france.gouv.fr/"
     footer_europe_alt: "Union Européenne"
     contact_link: '/contact'
-    pages:
-      taxonomy_display_as_chip: "types-de-contenus"
 
   # DESIGN SYSTEM
   logo:
@@ -54,12 +52,6 @@ params:
 
   # SECTIONS
   pages:
-    date_format: "02/01/2006"
-    index:
-      options:
-        categories: true
-        image: false
-
     single:
       taxonomies:
         position: hero
