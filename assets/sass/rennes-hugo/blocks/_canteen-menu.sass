@@ -4,8 +4,9 @@
       display: block
 
     img
-      @include media-breakpoint-down(md)
-        width: pxToRem(20)
+      width: pxToRem(20)
+      @include media-breakpoint-up(md)
+        width: pxToRem(32)
 
     ul
       display: flex

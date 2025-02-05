@@ -2,6 +2,11 @@
   @include media-breakpoint-down(desktop)
     margin-top: 0
 
+  .nav-level-1
+    & > li
+      @include media-breakpoint-down(desktop)
+        border: none !important
+
   // Dropdown menu
   .dropdown-menu
     &.is-titled
@@ -13,6 +18,13 @@
 
     &-title
       @include h5
+
+      @include media-breakpoint-down(desktop)
+        display: none
+
+    &-heading + .nav-level-2
+      @include media-breakpoint-down(desktop)
+        margin-top: 0
 
     .nav-level-2
       @include media-breakpoint-up(desktop)
@@ -28,6 +40,11 @@
     > li
       > a, > span[role="button"]
         @include link (currentColor, false)
+
+      > a, > span
+        @include media-breakpoint-down(xl)
+          font-size: pxToRem(14)
+          padding-inline: pxToRem(5)
 
   span:not([role="button"])
     cursor: auto

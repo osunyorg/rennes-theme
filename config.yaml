@@ -11,7 +11,7 @@ params:
       url: "https://metropole.rennes.fr"
       title: "Rennes Ville et Métropole"
     search_global:
-      active: false
+      active: true
       url: "https://chercher.metropole.rennes.fr"
     footer_europe: "/assets/images/footer_europe.png"
     footer_europe_link: "https://www.europe-en-france.gouv.fr/"
@@ -79,9 +79,9 @@ params:
   image_sizes:
     blocks:
       call_to_action:
-        mobile: 330
+        mobile: 500
         tablet: 605
-        desktop: 555
+        desktop: 768
     sections:
       posts:
         item:
