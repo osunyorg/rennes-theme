@@ -3,4 +3,181 @@
 /// @file Design-system - Header.
 ////
 
-// Todo before custom styles : adjust confs inf assets/sass/rennes-hugo/configuration/components.sass
+header#document-header
+  @include media-breakpoint-down(desktop)
+
+    // Unset scroll sticky effect on mobile
+    transform: none !important
+
+    // On mobile, show thematic menu before ecosystem menu
+    display: flex
+    flex-direction: column
+    nav.primary-menu
+      order: 2
+    .header-mobile-nav
+      order: 3
+
+    // On mobile, fix header max-height + scroll behavior
+    max-height: calc(100vh - 3.75rem)
+    overflow-y: auto
+    .menu
+      overflow: hidden
+
+  /* LOGOS */
+  // Thematic logo (for desktop and mobile)
+  .logo
+    &:has(.logo-text)
+      display: flex
+      align-items: flex-end
+      gap: space(1)
+      @include custom-icon($site-icon, before)
+        font-size: 1.5em
+    .logo-text
+      @include h4
+      line-height: 1
+
+  // Mobile logo
+  .header-mobile-logo
+    padding-block: $spacing-2
+
+    @include media-breakpoint-up(desktop)
+      display: none
+
+  // Desktop logos
+  nav
+    .logo
+      @include media-breakpoint-down(desktop)
+        display: none !important
+
+  /* MOBILE NAV */
+  .header-mobile-nav
+    @include media-breakpoint-down(desktop)
+      position: fixed
+      bottom: 0
+      right: 0
+      background-color: $color-background
+      width: 100%
+      height: pxToRem(60)
+
+    @include media-breakpoint-up(desktop)
+      display: none
+
+    .container
+      @include media-breakpoint-down(desktop)
+        display: flex
+        justify-content: flex-end
+        height: 100%
+
+        &:has(.search-button)
+          justify-content: space-between
+          width: 66vw
+          margin-left: 33vw
+
+      a
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: pxToRem(10) pxToRem(15)
+        font-size: pxToRem(13)
+        font-family: DMSans, sans-serif
+        line-height: 1.9
+        color: var(--color-text)
+        text-decoration: none
+        background-color: var(--color-background)
+
+        &.home
+          @include custom-icon(home, before)
+
+          &::before
+            font-size: pxToRem(18)
+
+        &.search-button
+          @include icon(search-line, before)
+
+          padding: pxToRem(4) 0 0
+          justify-content: center
+          gap: 0
+
+          &::before
+            font-size: pxToRem(20)
+
+  /* ECOSYSTEM NAV */
+  nav.ecosystem-menu
+    z-index: $zindex-header + 1
+    position: relative
+    @include media-breakpoint-down(desktop)
+      padding-block: 0
+
+    // Move header collapsible button to the bottom nav
+    .header-button
+      @include media-breakpoint-down(desktop)
+        position: fixed
+        bottom: 0
+        display: flex
+        align-items: center
+        flex-direction: column-reverse
+        padding: pxToRem(10) pxToRem(15)
+        background-color: $color-background
+
+        span
+          &:first-of-type
+            font-family: DMSans, sans-serif
+            font-size: pxToRem(13)
+            text-transform: capitalize
+
+          &:last-of-type
+            &::before
+              height: pxToRem(20)
+              margin: 0 !important
+              line-height: 1
+
+
+  /* THEMATIC NAV */
+  nav.thematic-menu
+    //
+    @include media-breakpoint-down(desktop)
+      display: none
+      html.has-menu-opened &
+        &, .menu
+          display: block
+
+    .container
+      @include media-breakpoint-up(desktop)
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        padding-block: $header-upper-menu-padding-y
+        column-gap: space(8)
+
+      &::before
+        content: ""
+        flex: 0 0 100%
+        border-bottom: 1px solid $color-border
+        margin-block: -$header-upper-menu-padding-y $header-upper-menu-padding-y
+
+        html.has-menu-opened &
+          display: none
+
+    // Hide native search on mobile (feature is in bottom nav)
+    .search-button--custom-menu
+      @include media-breakpoint-down(desktop)
+        display: none
+
+    ul
+      @include media-breakpoint-up(desktop)
+        justify-content: flex-start
+        width: auto
+
+    .nav-level-1
+      @include media-breakpoint-down(desktop)
+        border-bottom: 1px solid $color-border
+      > li
+        > a, > span[role="button"]
+          text-decoration-thickness: 4px
+          text-decoration-skip-ink: none
+          text-underline-offset: 0.5em
+
+          &:hover
+            text-decoration-color: var(--color-border)
+          &.active
+            text-decoration-color: var(--color-background-active, var(--color-border))

@@ -1,0 +1,60 @@
+.menu
+  @include media-breakpoint-down(desktop)
+    margin-top: 0
+
+  .nav-level-1
+    & > li
+      @include media-breakpoint-down(desktop)
+        border: none !important
+
+  // Dropdown menu
+  .dropdown-menu
+    &.is-titled
+      @include media-breakpoint-up(desktop)
+        .dropdown-menu-heading
+          width: columns(4) !important
+        .nav-level-2
+          width: columns(8) !important
+
+    &-title
+      @include h5
+
+      @include media-breakpoint-down(desktop)
+        display: none
+
+    &-heading + .nav-level-2
+      @include media-breakpoint-down(desktop)
+        margin-top: 0
+
+    .nav-level-2
+      @include media-breakpoint-up(desktop)
+        columns: 2
+
+      > li + li
+        margin-top: space(5)
+        @include media-breakpoint-up(desktop)
+          margin-top: $spacing-3
+
+  // Links styles
+  .nav-level-1, .nav-level-2
+    > li
+      > a, > span[role="button"]
+        @include link (currentColor, false)
+
+      > a, > span
+        @include media-breakpoint-down(xl)
+          font-size: pxToRem(14)
+          padding-inline: pxToRem(5)
+
+  span:not([role="button"])
+    cursor: auto
+
+  //  Add custom icons
+  #dropdown-vos-services
+    + .dropdown-menu
+      @extend %icon-containing-class
+
+      li
+        &::before
+          font-size: 1.6em
+          margin-top: pxToRem(4)

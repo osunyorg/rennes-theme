@@ -1,0 +1,81 @@
+{{ $ecosystem_menu := partial "GetMenu" "ecosystem" }}
+{{ $thematic_menu := partial "GetMenu" "primary" }}
+
+<!-- Use BO primary menu on main website -->
+{{ if site.Params.custom.is_main }}
+    {{ $ecosystem_menu = partial "GetMenu" "primary" }}
+    {{ $thematic_menu = false }}
+{{ end }}
+
+{{ $home_url := site.Home.Permalink  }}
+{{ if site.Params.custom.external_logo_link.active }}
+    {{ $home_url = site.Params.custom.external_logo_link.url }}
+{{ end }}
+
+<header id="document-header" role="banner">
+    <!-- Thematic logo on top on mobile -->
+    <div class="header-mobile-logo">
+        <div class="container">
+            {{ partial "commons/logo.html" }}
+        </div>
+    </div>
+
+    <nav class="primary-menu ecosystem-menu" aria-label="{{ i18n " commons.menu.main" }}">
+        <div class="container">
+            {{ partial "header/logo.html" }}
+
+            {{ if site.Params.custom.search_global.active }}
+                {{ partial "header/search.html" }}
+            {{ end }}
+
+            {{ if $ecosystem_menu }}
+                {{ partial "header/button.html" }}
+                <div class="menu" id="navigation">
+                    {{ partial "commons/menu.html"
+                        (dict
+                            "items" $ecosystem_menu.items
+                            "options" site.Params.menu.ecosystem
+                            "dropdown" true
+                            "level" 1
+                            "context" .
+                    )}}
+                </div>
+            {{ end }}
+        </div>
+    </nav>
+
+    {{ if $thematic_menu }}
+        <nav class="thematic-menu" aria-label="{{ i18n "commons.menu.upper" }}">
+            <div class="container">
+                {{ partial "commons/logo.html" }}
+
+                <div class="menu">
+                    {{ partial "commons/menu.html" (dict
+                        "items" $thematic_menu.items
+                        "options" site.Params.menu.thematic
+                        "dropdown" true
+                        "level" 1
+                        "ignore_externals" true
+                        "context" .
+                    )}}
+                </div>
+
+                {{ partial "commons/search/button.html" "custom-menu" }}
+            </div>
+        </nav>
+    {{ end }}
+
+    <div class="header-mobile-nav">
+        <div class="container">
+            <!-- Search CTA (native or custom) -->
+            {{ partial "commons/search/button.html" "custom-menu" }}
+            {{ if site.Params.custom.search_global.active }}
+                <a href="{{ site.Params.custom.search_global.url }}" class="search-button">Recherche</a>
+            {{ end }}
+
+            <!-- Home CTA (current site or external) -->
+            <a href="{{ $home_url }}" class="home">Accueil</a>
+        </div>
+    </div>
+</header>
+
