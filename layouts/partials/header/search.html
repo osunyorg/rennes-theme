@@ -1,8 +1,9 @@
 <form role="search" class="search-form" accept-charset="UTF-8" action="{{ site.Params.custom.search_global.url }}" method="GET">
     <div class="search-form-input">
         <label for="search-input" class="sr-only">Rechercher sur le site</label>
-        <input id="search-input" type="search" name="search" placeholder="Rechercher...">
+        <input id="search-input" type="search" name="q" placeholder="Rechercher...">
     </div>
+    <input type="hidden" name="return_url" value="{{ .Permalink }}">
     <div class="search-form-button">
         <button type="submit"><span class="sr-only">Recherche</span></button>
     </div>
