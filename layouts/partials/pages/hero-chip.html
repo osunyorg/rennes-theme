@@ -2,7 +2,7 @@
 
 {{ if $taxonomies }}
     {{ range $taxonomies }}
-        {{ if and .categories (eq .slug site.Params.custom.pages.tag_taxonomy) }}
+        {{ if and .categories (eq .slug site.Params.custom.pages.taxonomy_display_as_chip) }}
             {{ with .categories }}
                 {{ range . }}
                     <a href="{{ .permalink }}" class="chip">

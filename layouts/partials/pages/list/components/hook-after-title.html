@@ -4,10 +4,12 @@
 
 {{- if $categories -}}
     {{- range $categories -}}
-        {{ if strings.Contains .Slug site.Params.custom.pages.tag_taxonomy }}
-            <p><a href="{{ .Permalink }}" class="chip {{ printf "chip-%s" (.Title | anchorize) }}">
-                {{- safeHTML .Title -}}
-            </a></p>
+        {{ if strings.Contains .Slug site.Params.custom.pages.taxonomy_display_as_chip }}
+            <p class="page-chip">
+                <a href="{{ .Permalink }}" class="chip {{ printf "chip-%s" (.Title | anchorize) }}">
+                    {{- safeHTML .Title -}}
+                </a>
+            </p>
         {{ end }}
     {{- end }}
 {{- end -}}

@@ -4,7 +4,7 @@
 {{ if $taxonomies }}
   <ul class="taxonomies-single {{ $type }}-taxonomies" aria-label="{{ i18n "categories.label" }}">
     {{ range $taxonomies }}
-      {{ if and .categories (not (eq .slug site.Params.custom.pages.tag_taxonomy)) }}
+      {{ if and .categories (not (eq .slug site.Params.custom.pages.taxonomy_display_as_chip)) }}
         <li class="terms">
           <span class="taxonomy-title">{{ .name }}</span>
           {{ with .categories }}
