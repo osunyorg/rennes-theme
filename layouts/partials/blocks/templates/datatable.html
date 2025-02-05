@@ -3,7 +3,7 @@
 
 <!-- Var for collapsible -->
 {{- $title := $block.top.title.value -}}
-{{- $id := delimit (shuffle (seq 1 9)) "" -}}
+{{- $id := .index -}}
 {{- $is_collapsible :=  in $block_class "datatable-collapsible" -}}
 {{- $is_collapsible_open :=  in $block_class "datatable-collapsible-open" -}}
 
