@@ -19,6 +19,13 @@
     &-title
       @include h5
 
+      @include media-breakpoint-down(desktop)
+        display: none
+
+    &-heading + .nav-level-2
+      @include media-breakpoint-down(desktop)
+        margin-top: 0
+
     .nav-level-2
       @include media-breakpoint-up(desktop)
         columns: 2
@@ -34,6 +41,7 @@
       > a, > span[role="button"]
         @include link (currentColor, false)
 
+      > a, > span
         @include media-breakpoint-down(xl)
           font-size: pxToRem(14)
           padding-inline: pxToRem(5)

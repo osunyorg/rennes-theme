@@ -5,6 +5,7 @@
 
 header#document-header
   @include media-breakpoint-down(desktop)
+
     // Unset scroll sticky effect on mobile
     transform: none !important
 
@@ -15,6 +16,12 @@ header#document-header
       order: 2
     .header-mobile-nav
       order: 3
+
+    // On mobile, fix header max-height + scroll behavior
+    max-height: calc(100vh - 3.75rem)
+    overflow-y: auto
+    .menu
+      overflow: hidden
 
   /* LOGOS */
   // Thematic logo (for desktop and mobile)
