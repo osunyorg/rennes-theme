@@ -25,15 +25,7 @@
             {{ partial "header/logo.html" }}
 
             {{ if site.Params.custom.search_global.active }}
-                <form role="search" class="search-form" accept-charset="UTF-8">
-                    <div class="search-form-input">
-                        <label for="search-input" class="sr-only">Rechercher sur le site</label>
-                        <input id="search-input" type="search" placeholder="Rechercher...">
-                    </div>
-                    <div class="search-form-button">
-                        <button type="submit"><span class="sr-only">Recherche</span></button>
-                    </div>
-                </form>
+                {{ partial "header/search.html" }}
             {{ end }}
 
             {{ if $ecosystem_menu }}
