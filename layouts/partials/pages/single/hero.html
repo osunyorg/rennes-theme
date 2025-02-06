@@ -2,7 +2,7 @@
 
 {{- $hero_text_complement := "" -}}
 {{ if eq site.Params.pages.single.taxonomies.position "hero" }}
-    {{ $hero_text_complement = "pages/hero-details.html" }}
+    {{ $hero_text_complement = "pages/single/hero/complement.html" }}
 {{ end }}
 
 {{- partial "header/hero.html" (dict
