@@ -1,10 +1,4 @@
 .hero
-  .page-home-metropole &,
-  .page-home-post &
-    padding-bottom: 0
-    margin-bottom: 0
-    background-color: var(--color-background-alt)
-
   .breadcrumb
     @include media-breakpoint-up(desktop)
       margin-top: $spacing-5
@@ -18,29 +12,6 @@
     @include media-breakpoint-up(desktop)
       margin-top: pxToRem(32)
 
-    .page__home &
-      align-items: center
-
-    .page-home-metropole &,
-    .page-home-post &
-      margin-top: 0
-      padding-top: 0
-
-      @include media-breakpoint-down(lg)
-        padding-block: $spacing-3
-
-    hgroup.has-lead
-      & > p
-        .page__home &
-          @include media-breakpoint-down(xl)
-            font-size: pxToRem(20)
-
-    figure
-      .page-home-metropole &,
-      .page-home-post &
-        @include media-breakpoint-up(md)
-          width: columns(6)
-
     .hero-text
       display: flex
       flex-direction: column
@@ -53,11 +24,6 @@
 
         @include media-breakpoint-up(desktop)
           margin-bottom: $spacing-4
-
-  h1
-    .page__home &
-      @include media-breakpoint-down(xl)
-        font-size: pxToRem(30)
 
   &--image-portrait, &--image-square
     .content
