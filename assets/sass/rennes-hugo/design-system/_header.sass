@@ -69,8 +69,8 @@ header#document-header
 
         &:has(.search-button)
           justify-content: space-between
-          width: 66vw
-          margin-left: 33vw
+          width: calc(50vw + (#{pxToRem(77)} / 2) + var(--grid-gutter))
+          margin-left: 0
 
       a
         display: flex
@@ -112,6 +112,7 @@ header#document-header
       @include media-breakpoint-down(desktop)
         position: fixed
         bottom: 0
+        right: var(--grid-gutter)
         display: flex
         align-items: center
         flex-direction: column-reverse
@@ -127,6 +128,7 @@ header#document-header
           &:last-of-type
             &::before
               height: pxToRem(20)
+              font-size: pxToRem(22)
               margin: 0 !important
               line-height: 1
 
