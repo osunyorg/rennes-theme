@@ -1,0 +1,38 @@
+.hero
+  .page-home-metropole &
+    margin-bottom: 0
+
+  .page-home-metropole &,
+  .page-home-post &
+    padding-bottom: 0
+    background-color: var(--color-background-accent)
+
+  .content
+    .page__home &
+      align-items: center
+
+    .page-home-metropole &,
+    .page-home-post &
+      margin-top: 0
+      padding-top: 0
+
+      @include media-breakpoint-down(lg)
+        padding-block: $spacing-3
+
+    hgroup.has-lead
+      & > p
+        .page__home &
+          @include media-breakpoint-down(xl)
+            font-size: pxToRem(20)
+
+
+    figure
+      .page-home-metropole &,
+      .page-home-post &
+        @include media-breakpoint-up(md)
+          width: columns(6)
+
+  h1
+    .page__home &
+      @include media-breakpoint-down(xl)
+        font-size: pxToRem(30)
