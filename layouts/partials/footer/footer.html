@@ -3,33 +3,33 @@
         <div class="footer-logo">
             {{ partial "footer/logo.html" }}
 
-            <a href="{{ site.Params.custom.contact_link }}" class="footer-contact icon-arrow-right">Nous contacter</a>
+            <a href="{{ site.Params.custom.contact_link }}" class="footer-contact icon-arrow-right" target="_blank" title="Nous contacter (Ouverture dans une nouvele fenêtre)">Nous contacter</a>
         </div>
 
         {{- partial "footer/nav.html"
             (dict
-                "menu" "vos-services-par-thematiques"
+                "menu" "footer-vos-services-par-thematiques"
                 "name" "thematic"
             )
         . -}}
 
         {{- partial "footer/nav.html"
             (dict
-                "menu" "nos-sites-pour-les-professionnels"
+                "menu" "footer-nos-sites-pour-les-professionnels"
                 "name" "pro"
             )
         . -}}
 
         {{- partial "footer/nav.html"
             (dict
-                "menu" "actualites-et-reseaux-sociaux"
+                "menu" "footer-actualites-et-reseaux-sociaux"
                 "name" "news"
             )
         . -}}
 
         {{- partial "footer/nav.html"
             (dict
-                "menu" "a-propos-du-site"
+                "menu" "footer-a-propos-du-site"
                 "name" "apropos"
             )
         . -}}
