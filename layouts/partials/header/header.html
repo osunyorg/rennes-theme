@@ -20,6 +20,19 @@
         </div>
     </div>
 
+    <div class="header-mobile-nav">
+        <div class="container">
+            <!-- Home CTA (current site or external) -->
+            <a href="{{ site.Params.custom.external_logo_link.url }}" class="home">Accueil</a>
+
+            <!-- Search CTA (native or custom) -->
+            {{ partial "commons/search/button.html" "custom-menu" }}
+            {{ if site.Params.custom.search_global.active }}
+            <a href="{{ site.Params.custom.search_global.url }}?q=&return_url={{ .Permalink }}" class="search-button">Recherche</a>
+            {{ end }}
+        </div>
+    </div>
+
     <nav class="primary-menu ecosystem-menu" aria-label="{{ i18n " commons.menu.main" }}">
         <div class="container">
             {{ partial "header/logo.html" }}
@@ -64,17 +77,4 @@
             </div>
         </nav>
     {{ end }}
-
-    <div class="header-mobile-nav">
-        <div class="container">
-            <!-- Search CTA (native or custom) -->
-            {{ partial "commons/search/button.html" "custom-menu" }}
-            {{ if site.Params.custom.search_global.active }}
-                <a href="{{ site.Params.custom.search_global.url }}?q=&return_url={{ .Permalink }}" class="search-button">Recherche</a>
-            {{ end }}
-
-            <!-- Home CTA (current site or external) -->
-            <a href="{{ $home_url }}" class="home">Accueil</a>
-        </div>
-    </div>
 </header>
