@@ -11,7 +11,7 @@ footer#document-footer
     &:has(img)
       &::after
         display: none
-        
+
   nav:not(.footer-menu-thematic)
     ul
       li
@@ -51,13 +51,5 @@ footer#document-footer
     grid-column: span 3
 
     ul
-      @include media-breakpoint-up(desktop)
-        @include grid(3, desktop, $spacing-3, $spacing-4)
-
-    li
-      @include media-breakpoint-up(desktop)
-        margin-top: 0 !important
-
-      &::before
-        margin-top: pxToRem(6)
-        font-size: 1rem
+      @include grid(2, md, 0, $spacing-4)
+      @include grid(3, xl, 0, $spacing-4)
