@@ -16,11 +16,9 @@
 
         .organization-title
           @include h3
-
-          a
-            @include icon(arrow-right-line, before)
-              @extend %grid-card-icon
-            @include hover-translate-icon(before)
+          @include icon(arrow-right-line, before)
+            @extend %grid-card-icon
+          @include hover-translate-icon(before)
 
         .organization-summary
           font-size: var(--body-size)
