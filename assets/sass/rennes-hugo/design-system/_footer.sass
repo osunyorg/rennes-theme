@@ -6,7 +6,22 @@
 .footer-menu-thematic
   @extend %icon-containing-class
 
+.footer-menu-news
+  li
+    &::before
+      font-size: 1rem
+    &.facebook
+      @include icon(facebook-fill, before)
+    &.instagram
+      @include icon(instagram-fill, before)
+    &.linkedin
+      @include icon(linkedin-fill, before)
+    &.youtube
+      @include icon(youtube-fill, before)
+
 footer#document-footer
+  @include media-breakpoint-down(desktop)
+    margin-bottom: var(--header-height)
   a
     &:has(img)
       &::after
@@ -15,9 +30,10 @@ footer#document-footer
   nav:not(.footer-menu-thematic)
     ul
       li
-        a:not([target="_blank"])
-          @include icon(arrow-right-line, after)
+        a
           @include hover-translate-icon(after)
+          &:not([target="_blank"])
+            @include icon(arrow-right-line, after, true)
 
   ul
     li
@@ -53,3 +69,8 @@ footer#document-footer
     ul
       @include grid(2, md, 0, $spacing-4)
       @include grid(3, xl, 0, $spacing-4)
+
+  .footer-europe-link
+    margin-bottom: $spacing-4
+    @include media-breakpoint-up(desktop)
+      margin-bottom: $spacing-6

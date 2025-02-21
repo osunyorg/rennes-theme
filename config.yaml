@@ -16,7 +16,7 @@ params:
     footer_europe: "/assets/images/footer_europe.png"
     footer_europe_link: "https://www.europe-en-france.gouv.fr/"
     footer_europe_alt: "Union Européenne"
-    contact_link: '/contact'
+    contact_link: "https://metropole.rennes.fr/contact"
     pages:
       taxonomy_display_as_chip: "types-de-contenus"
 
