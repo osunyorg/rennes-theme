@@ -2,38 +2,58 @@
 title: Vos services par thématiques
 items:
 - title: Rennes Ville et Métropole
-  target: ''
-  kind: blank
+  target: metropole.rennes.fr
+  kind: url
   new_tab: false
   children: []
-- title: Aides et solidarités
-  target: ''
-  kind: blank
+- title: Aides, solidarités et égalité
+  target: aides.metropole.rennes.fr
+  kind: url
   new_tab: false
   children: []
 - title: Démarches administratives
-  target: ''
-  kind: blank
+  target: demarches.metropole.rennes.fr
+  kind: url
   new_tab: false
   children: []
-- title: Transport et circulation
-  target: ''
-  kind: blank
+- title: Transports et circulation
+  target: transport.metropole.rennes.fr
+  kind: url
   new_tab: false
   children: []
 - title: Enfance, éducation, jeunesse
-  target: ''
-  kind: blank
+  target: education-jeunesse.metropole.rennes.fr
+  kind: url
   new_tab: false
   children: []
 - title: Déchets et propreté
-  target: ''
-  kind: blank
+  target: dechets.metropole.rennes.fr
+  kind: url
   new_tab: false
   children: []
 - title: Logement et urbanisme
-  target: www.google.com
+  target: logement.metropole.rennes.fr
   kind: url
-  new_tab: true
+  new_tab: false
+  children: []
+- title: Numérique, recherche et temps
+  target: numerique-recherche.metropole.rennes.fr
+  kind: url
+  new_tab: false
+  children: []
+- title: Santé et environnement
+  target: environnement-sante.metropole.rennes.fr
+  kind: url
+  new_tab: false
+  children: []
+- title: Culture et Sports
+  target: culture-sport.metropole.rennes.fr
+  kind: url
+  new_tab: false
+  children: []
+- title: Économie et emploi
+  target: economie.metropole.rennes.fr
+  kind: url
+  new_tab: false
   children: []
 

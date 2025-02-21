@@ -1,6 +1,6 @@
 window.rennes = window.rennes || {};
 window.rennes.IconNav = function () {
-  this.menus = document.querySelectorAll('#dropdown-vos-services + .dropdown-menu, .footer-menu-thematic');
+  this.menus = document.querySelectorAll('#dropdown-vos-services + .dropdown-menu, .footer-menu-thematic, .footer-menu-news');
 
   console.log(this.menus)
   if (this.menus.length > 0) {

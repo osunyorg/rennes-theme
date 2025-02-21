@@ -1,6 +1,5 @@
 {{ $menu := partial "GetMenu" .menu }}
 {{ $name := .name }}
-{{- $with_item_classes := .with_item_classes -}}
 
 {{ if $menu }}
     <nav class="footer-menu footer-menu-{{ $name }}" aria-labelledby="menu-label-{{ $name }}">
