@@ -1,81 +1,104 @@
 ---
 title: Menu principal
 items:
-  - title: Vos services
+  - title: Vos Services
     target: ''
     kind: blank
     new_tab: false
     children:
       - title: Rennes Ville et Métropole
-        target: "/actualites/"
-        kind: page
+        target: https://metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
-        path: "/posts"
-        file: content/fr/posts/_index.html
-      - title: Aides et solidarités
-        target: "/equipe/"
-        kind: page
+      - title: Aides, solidarités et égalité
+        target: https://aides.metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
-        path: "/persons"
-        file: content/fr/persons/_index.html
       - title: Démarches administratives
-        target: ''
-        kind: blank
+        target: https://demarches.metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
-      - title: Transport et circulation
-        target: ''
-        kind: blank
+      - title: Transports et circulation
+        target: https://transport.metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
       - title: Enfance, éducation, jeunesse
-        target: ''
-        kind: blank
+        target: https://education-jeunesse.metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
       - title: Déchets et propreté
-        target: ''
-        kind: blank
+        target: https://dechets.metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
-      - title: Logement urbanisme
-        target: ''
-        kind: blank
+      - title: Logement et urbanisme
+        target: https://logement.metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
-      - title: Numérique et recherche
-        target: ''
-        kind: blank
+      - title: Numérique, recherche et temps
+        target: https://numerique-recherche.metropole.rennes.fr
+        kind: url
         new_tab: false
         children: []
-  - title: Votre métropole
+      - title: Santé et environnement
+        target: https://environnement-sante.metropole.rennes.fr
+        kind: url
+        new_tab: false
+        children: []
+      - title: Économie et emploi
+        target: https://economie.metropole.rennes.fr
+        kind: url
+        new_tab: false
+        children: []
+      - title: Culture et Sports
+        target: https://culture-sport.metropole.rennes.fr
+        kind: url
+        new_tab: false
+        children: []
+  - title: Votre Métropole
     target: ''
     kind: blank
     new_tab: false
     children:
-      - title: Agenda
-        target: "/agenda/"
-        kind: page
+      - title: Les institutions de la Ville et de la Métropole
+        target: https://metropole.fr/les-institutions-de-la-ville-et-de-la-metropole/
+        kind: url
         new_tab: false
         children: []
-        path: "/events"
-        file: content/fr/events/_index.html
-      - title: Organisations
-        target: "/annuaire/"
-        kind: page
+        path: "/pages/les-institutions-de-la-ville-et-de-la-metropole"
+        file: content/fr/pages/les-institutions-de-la-ville-et-de-la-metropole/_index.html
+      - title: Participation citoyenne
+        target: https://metropole.fr/participation-citoyenne/
+        kind: url
         new_tab: false
         children: []
-        path: "/organizations"
-        file: content/fr/organizations/_index.html
+      - title: Appels à projets, partenariats et coopérations
+        target: https://metropole.fr/appels-a-projets-partenariats-et-cooperations/
+        kind: url
+        new_tab: false
+        children: []
+        path: "/pages/appels-a-projets-partenariats-et-cooperations"
+        file: content/fr/pages/appels-a-projets-partenariats-et-cooperations/_index.html
+      - title: Documents et archives officielles Ville et Métropole
+        target: https://metropole.fr/documents-et-archives-officielles-ville-et-metropole/
+        kind: url
+        new_tab: false
+        children: []
+        path: "/pages/documents-et-archives-officielles-ville-et-metropole"
+        file: content/fr/pages/documents-et-archives-officielles-ville-et-metropole/_index.html
   - title: Votre commune
-    target: https://rennes-ville-et-metropole.rennes-staging.osuny.site/
-    kind: url
+    target: ''
+    kind: blank
     new_tab: false
     children: []
   - title: Votre quartier
-    target: https://rennes-ville-et-metropole.rennes-staging.osuny.site/
-    kind: url
-    new_tab: true
+    target: ''
+    kind: blank
+    new_tab: false
     children: []
