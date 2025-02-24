@@ -1,0 +1,21 @@
+.categories
+  &--cards
+    min-height: unset
+
+    article
+      @extend %grid-card
+
+      .more
+        font-size: 0 // Hide text
+        line-height: pxToRem(16)
+
+        &::after
+          opacity: 1
+          font-size: pxToRem(24)
+
+      &:not(:hover)
+        .more::after
+          transform: none
+      &:hover
+        .more::after
+          transform: translateX(0.625rem)
