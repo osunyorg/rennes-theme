@@ -17,8 +17,7 @@ window.rennes.CustomIframeMap = function () {
         var latitude = parseFloat(mapElement.getAttribute('data-latitude')) || 48.1099921;
         var longitude = parseFloat(mapElement.getAttribute('data-longitude')) || -1.6844761;
         var map = L.map('map').setView([latitude, longitude], 13);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
