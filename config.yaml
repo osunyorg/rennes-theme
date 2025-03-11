@@ -5,6 +5,7 @@ removePathAccents: true
 params:
   # RENNES THEME CUSTOM
   custom:
+    active_custom_map: true
     is_main: false
     external_logo_link:
       active: true
