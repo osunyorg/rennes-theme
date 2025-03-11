@@ -3,11 +3,6 @@
 {{ if isset .Site.Params.custom "active_custom_map" }}
   {{ if .Site.Params.custom.active_custom_map }}
     {{ $isLeafletNeeded = true }}
-    <script>
-      window.siteConfig = {
-        activeCustomMap: {{ printf "%t" .Site.Params.custom.active_custom_map }}
-      };
-    </script>
   {{ end }}
 {{ end }}
 
