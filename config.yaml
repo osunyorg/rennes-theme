@@ -1,7 +1,5 @@
 theme: osuny
-paginate: 18
-enableRobotsTXT: false
-removePathAccents: true
+_merge: deep
 params:
   # RENNES THEME CUSTOM
   custom:
