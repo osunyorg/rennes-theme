@@ -5,7 +5,7 @@
 
 @mixin custom-icon($icon, $pseudo-element: before)
   @include icon($pseudo-element: $pseudo-element)
-    content: map-get($custom-icons, $icon)
+    content: map-get($custom-icons, $icon) #{/ ""}
     font-family: 'Icomoon'
     font-size: 1em
     @content
