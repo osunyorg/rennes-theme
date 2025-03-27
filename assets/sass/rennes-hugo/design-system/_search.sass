@@ -3,6 +3,10 @@
   align-items: center
   margin-inline: $spacing-2
   max-width: pxToRem(280)
+  width: 100%
+
+  @include media-breakpoint-up(xxl)
+    max-width: pxToRem(450)
 
   @include media-breakpoint-down(desktop)
     display: none
@@ -23,6 +27,7 @@
 
   &-input
     max-width: 100%
+    width: 100%
 
     input[type="search"]
       width: 100%
