@@ -10,5 +10,6 @@ a,
 .link
   &[target="_blank"]:not(.icon)
     @include icon(external-link-line, after, true)
+      content: map-get($icons, external-link-line) #{/ ""}
       vertical-align: baseline
       font-size: 0.8em
