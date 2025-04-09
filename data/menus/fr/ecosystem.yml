@@ -1,7 +1,7 @@
 ---
 title: Menu principal
 items:
-  - title: Vos Services
+  - title: Vos services
     target: ''
     kind: blank
     new_tab: false
@@ -71,8 +71,6 @@ items:
         kind: url
         new_tab: false
         children: []
-        path: "/pages/les-institutions-de-la-ville-et-de-la-metropole"
-        file: content/fr/pages/les-institutions-de-la-ville-et-de-la-metropole/_index.html
       - title: Participation citoyenne
         target: https://metropole.fr/participation-citoyenne/
         kind: url
@@ -83,22 +81,18 @@ items:
         kind: url
         new_tab: false
         children: []
-        path: "/pages/appels-a-projets-partenariats-et-cooperations"
-        file: content/fr/pages/appels-a-projets-partenariats-et-cooperations/_index.html
-      - title: Documents et archives officielles Ville et Métropole
-        target: https://metropole.fr/documents-et-archives-officielles-ville-et-metropole/
+      - title: Marchés publics et documents réglementaires
+        target: "https://metropole.fr/marches-publics-et-documents-reglementaires/"
         kind: url
         new_tab: false
         children: []
-        path: "/pages/documents-et-archives-officielles-ville-et-metropole"
-        file: content/fr/pages/documents-et-archives-officielles-ville-et-metropole/_index.html
   - title: Votre commune
-    target: ''
-    kind: blank
+    target: "https://metropole.fr/votre-commune/"
+    kind: url
     new_tab: false
     children: []
   - title: Votre quartier
-    target: ''
-    kind: blank
+    target: "https://metropole.fr/votre-quartier/"
+    kind: url
     new_tab: false
     children: []
