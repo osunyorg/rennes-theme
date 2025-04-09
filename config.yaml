@@ -1,5 +1,7 @@
 theme: osuny
 _merge: deep
+pagination:
+  pagerSize: 20
 params:
   # RENNES THEME CUSTOM
   custom:
