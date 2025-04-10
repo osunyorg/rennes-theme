@@ -19,7 +19,7 @@ params:
     footer_europe_alt: "Union Européenne"
     contact_link: "https://metropole.rennes.fr/contact"
     pages:
-      taxonomy_display_as_chip: "types-de-contenus"
+      taxonomy_display_as_chip: "rubrique"
 
   # DESIGN SYSTEM
   logo:
@@ -54,6 +54,9 @@ params:
     whatsapp: false
 
   # SECTIONS
+  categories:
+    index:
+      layout: cards
   pages:
     date_format: "02/01/2006"
     index:
@@ -74,7 +77,6 @@ params:
         categories: true
 
   # BLOCKS
-  # Todo
 
   # IMAGES SIZES
   image_sizes:
