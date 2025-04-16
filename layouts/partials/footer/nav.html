@@ -3,7 +3,7 @@
 
 {{ if $menu }}
     <nav class="footer-menu footer-menu-{{ $name }}" aria-labelledby="menu-label-{{ $name }}">
-        <p id="menu-label-{{ $name }}" class="footer-menu-label">{{ $menu.title }}</p>
+        <p id="menu-label-{{ $name }}" class="footer-menu-label" role="heading" aria-level="2">{{ $menu.title }}</p>
 
         {{ partial "commons/menu.html"
             (dict
