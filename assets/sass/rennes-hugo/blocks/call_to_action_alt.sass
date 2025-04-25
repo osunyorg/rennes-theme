@@ -89,8 +89,4 @@ body.full-width
           margin-left: pxToRem(8)
 
         &:first-child
-          --btn-color: #FFFFFF
-          --btn-hover-color: #1A1A1D
-          --btn-background: #1A1A1D
-          --btn-hover-background: #FFFFFF
-          --btn-border: 1px solid var(--color-border)
+          @extend %btn-primary

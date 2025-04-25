@@ -1,0 +1,77 @@
+.events__page
+  // HERO
+  .hero
+    &,
+    .content figure figcaption::before,
+    .content figure figcaption .credit
+      background-color: var(--color-background, #fff)
+
+    figure.image-landscape
+      @include media-breakpoint-up(desktop)
+        margin-bottom: $spacing-5
+
+    .taxonomies-single
+      .taxonomy-title
+        @include meta
+        display: block
+        color: var(--color-text-alt)
+        margin-bottom: $spacing-1
+
+    .dropdown-share
+      button
+        @extend %btn-secondary
+
+    // PORTRAIT HERO
+    &--image-portrait
+      .hero-text
+        justify-content: flex-start
+
+        .taxonomies-single
+          @include grid(1)
+          @include grid(2, desktop)
+
+        .hero-actions
+          margin-top: $spacing-5
+
+    // LANDSCAPE HERO
+    &--image-landscape
+      .hero-text
+        position: relative
+
+        .hero-actions
+          @include media-breakpoint-up(desktop)
+            position: absolute
+            top: 0
+            right: 0
+
+      .taxonomies-single
+        @include grid(1)
+        @include grid(4, desktop)
+
+  // EVENT ACCESS
+  .event-access
+    background-color: var(--color-background-accent)
+
+    & > div:last-child
+      border-bottom: none
+
+    .event-practicals
+      .btn
+        @include button-icon
+
+        &[target="_blank"]::after
+          font-size: 1em
+
+        &[href^="mailto:"]
+          @include icon(mail-fill, after)
+            content: map-get($icons, mail-fill) #{/ ""}
+
+        &[href^="tel:"]
+          @include custom-icon(phone, after)
+            font-size: 0.9em
+
+    .event-slots
+      ul + .btn,
+      .dropdown-share ul + button,
+      .events-calendar .calendar-month tbody ul + a
+        @extend %btn-secondary

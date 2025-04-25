@@ -1,0 +1,19 @@
+.block-features
+    @include in-page-with-sidebar
+        ul
+            @include grid(2, desktop, 3rem, 3rem)
+
+        li
+            flex-direction: column
+
+            + li
+                margin-top: 0
+
+            figure
+                margin-right: 0
+                margin-bottom: $spacing-2
+
+                picture.is-png
+                    padding-top: 0
+                    img
+                        margin: 0
