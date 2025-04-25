@@ -3,6 +3,21 @@
 /// @file Design-system - CTAs.
 ////
 
+%btn-primary
+  --btn-color: #FFFFFF
+  --btn-hover-color: #1A1A1D
+  --btn-background: #1A1A1D
+  --btn-hover-background: #FFFFFF
+  --btn-border: 1px solid var(--color-border)
+
+%btn-secondary
+  --btn-color: #{$color-text}
+  --btn-background: transparent
+  --btn-border: #{$btn-border-width} solid var(--btn-color)
+  --btn-hover-color: #{$color-background}
+  --btn-hover-background: #{$color-text}
+  --btn-hover-border: #{$btn-border-width} solid var(--btn-hover-background)
+
 a.btn[target="_blank"]
   @include button-icon(external-link-line)
 
