@@ -63,12 +63,15 @@
           font-size: 1em
 
         &[href^="mailto:"]
-          @include icon(mail-fill, after)
-            content: map-get($icons, mail-fill) #{/ ""}
+          @include custom-icon(mail, after)
+            font-size: 0.9em
 
         &[href^="tel:"]
           @include custom-icon(phone, after)
             font-size: 0.9em
+
+        &::after
+          margin-left: 0.5rem
 
     .event-slots
       ul + .btn,
