@@ -132,8 +132,6 @@ header#document-header
               font-size: pxToRem(22)
               margin: 0 !important
               line-height: 1
-    *:focus-visible
-      outline-offset: -1px
 
   /* THEMATIC NAV */
   nav.thematic-menu
@@ -184,3 +182,9 @@ header#document-header
             text-decoration-color: var(--color-border)
           &.active
             text-decoration-color: var(--color-background-active, var(--color-border))
+
+  .menu *,
+  nav.ecosystem-menu .header-button,
+  .header-mobile-nav *
+    &:focus-visible
+      outline-offset: -1px
