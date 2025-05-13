@@ -63,7 +63,6 @@ params:
       options:
         categories: true
         image: false
-
     single:
       taxonomies:
         position: hero
@@ -76,6 +75,10 @@ params:
       options:
         categories: true
 
+  events:
+    single:
+      taxonomies:
+        position: hero
   # BLOCKS
 
   # IMAGES SIZES
