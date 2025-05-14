@@ -11,7 +11,7 @@
 
 <a class="logo {{- if $file_darkmode }} with-darkmode {{ end -}}"
    href="{{ site.Params.custom.external_logo_link.url }}"
-   title="{{ site.Params.custom.external_logo_link.title }}">
+   title="{{ i18n "custom.home" }} - {{ site.Params.custom.external_logo_link.title }}">
 
     {{ if $file }}
         {{ $fileDimensions := partial "GetImageDimensions" (dict "context" . "file" $file "static" true) }}
