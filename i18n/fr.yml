@@ -6,3 +6,7 @@ dates:
   updated: Mis à jour le
 custom:
   home: Accueil
+  search:
+    label: Rechercher sur le site
+    placeholder: Rechercher...
+    submit: Rechercher sur le site
