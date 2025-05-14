@@ -11,7 +11,7 @@ header#document-header
     // On mobile, show thematic menu before ecosystem menu
     display: flex
     flex-direction: column
-    nav.primary-menu
+    .primary-menu
       order: 2
     .header-mobile-nav
       order: 3
@@ -43,7 +43,8 @@ header#document-header
       display: none
 
   // Desktop logos
-  nav
+  .ecosystem-menu,
+  .thematic-menu
     .logo
       @include media-breakpoint-down(desktop)
         display: none !important
@@ -101,7 +102,7 @@ header#document-header
             font-size: pxToRem(20)
 
   /* ECOSYSTEM NAV */
-  nav.ecosystem-menu
+  .ecosystem-menu
     z-index: $zindex-header + 1
     position: relative
     @include media-breakpoint-down(desktop)
@@ -134,7 +135,7 @@ header#document-header
               line-height: 1
 
   /* THEMATIC NAV */
-  nav.thematic-menu
+  .thematic-menu
     //
     @include media-breakpoint-down(desktop)
       display: none
@@ -184,7 +185,7 @@ header#document-header
             text-decoration-color: var(--color-background-active, var(--color-border))
 
   .menu *,
-  nav.ecosystem-menu .header-button,
+  div.ecosystem-menu .header-button,
   .header-mobile-nav *
     &:focus-visible
       outline-offset: -1px

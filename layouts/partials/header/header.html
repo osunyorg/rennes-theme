@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <nav class="primary-menu ecosystem-menu" aria-label="{{ i18n "commons.menu.main" }}" role="navigation" >
+    <div class="primary-menu ecosystem-menu">
         <div class="container">
             {{ partial "header/logo.html" }}
 
@@ -43,7 +43,7 @@
 
             {{ if $ecosystem_menu }}
                 {{ partial "header/button.html" }}
-                <div class="menu" id="navigation">
+                <nav class="menu" id="navigation" aria-label="{{ i18n "commons.menu.main" }}" role="navigation">
                     {{ partial "commons/menu.html"
                         (dict
                             "items" $ecosystem_menu.items
@@ -52,10 +52,10 @@
                             "level" 1
                             "context" .
                     )}}
-                </div>
+                </nav>
             {{ end }}
         </div>
-    </nav>
+    </div>
 
     {{ if $thematic_menu }}
         <nav class="thematic-menu" aria-label="{{ i18n "commons.menu.upper" }}">
