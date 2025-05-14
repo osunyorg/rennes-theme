@@ -16,6 +16,10 @@
     <!-- Thematic logo on top on mobile -->
     <div class="header-mobile-logo">
         <div class="container">
+            {{ if not site.Params.custom.is_main }}
+                {{ partial "header/logo.html" }}
+            {{ end }}
+
             {{ partial "commons/logo.html" }}
         </div>
     </div>
