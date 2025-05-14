@@ -42,6 +42,7 @@ params:
     active: false
     positions:
       - custom-menu
+      - thematic-menu
   # We can also specify this options for each sharable Section
   share_links:
     enabled: true
