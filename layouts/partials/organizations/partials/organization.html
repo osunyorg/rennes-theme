@@ -8,6 +8,7 @@
 {{ $with_geolocation := .with_geolocation | default false }}
 
 {{ with $organization }}
+{{ $type := site.GetPage .Type }}
 
   {{ $title := partial "PrepareHTML" .Title }}
   <article class="organization"
@@ -37,6 +38,14 @@
           </a>
         {{- end -}}
       {{ $heading_tag.close }}
+
+      {{ if $type }}
+        <p class="organization-chip">
+          <a href="{{ $type.Permalink }}" class="chip">
+            {{- safeHTML $type.LinkTitle | title -}}
+          </a>
+        </p>
+      {{ end }}
 
       {{ if and $options.summary .Params.summary }}
         <div class="organization-summary">
