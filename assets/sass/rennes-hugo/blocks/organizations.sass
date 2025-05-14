@@ -9,13 +9,11 @@
       .organization-content
         @extend %grid-card-content
 
-        display: flex
-        flex-direction: column
-
-        .organization-chip
-          order: -1
-          margin-block: 0 space(4) !important
-          z-index: 3
+        &::before
+          @extend .chip
+          content: $organization-custom-tag
+          margin-bottom: space(4)
+          display: inline-block
 
         .organization-title
           @include h3
