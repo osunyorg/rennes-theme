@@ -23,7 +23,7 @@
     <div class="header-mobile-nav">
         <div class="container">
             <!-- Home CTA (current site or external) -->
-            <a href="{{ site.Params.custom.external_logo_link.url }}" class="home">Accueil</a>
+            <a href="{{ site.Params.custom.external_logo_link.url }}" class="home">{{ i18n "custom.home" }}</a>
 
             <!-- Search CTA (native or custom) -->
             {{ partial "commons/search/button.html" "custom-menu" }}

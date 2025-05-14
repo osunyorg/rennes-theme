@@ -2,5 +2,7 @@ commons:
   menu:
     upper: Menu thématique
 dates:
-  published : Publié le
+  published: Publié le
   updated: Mis à jour le
+custom:
+  home: Accueil
