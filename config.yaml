@@ -16,7 +16,7 @@ params:
       url: "https://chercher.metropole.rennes.fr"
     footer_europe: "/assets/images/footer_europe.png"
     footer_europe_link: "https://www.europe-en-france.gouv.fr/"
-    footer_europe_alt: "Union Européenne"
+    footer_europe_alt: "Union Européenne - Unaniezh Europa, l'Europe s'engage en Bretagne, avec le fonds européen de développement régional"
     contact_link: "https://metropole.rennes.fr/contact"
     pages:
       taxonomy_display_as_chip: "rubrique"
