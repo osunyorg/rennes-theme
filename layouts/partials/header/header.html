@@ -32,7 +32,7 @@
             <!-- Search CTA (native or custom) -->
             {{ partial "commons/search/button.html" "custom-menu" }}
             {{ if site.Params.custom.search_global.active }}
-            <a href="{{ site.Params.custom.search_global.url }}?q=&return_url={{ .Permalink }}" class="search-button">Recherche</a>
+                <a id="search-link" href="{{ site.Params.custom.search_global.url }}?q=&return_url={{ .Permalink }}" class="search-button">Recherche</a>
             {{ end }}
         </div>
     </div>
@@ -77,7 +77,7 @@
                     )}}
                 </div>
 
-                {{ partial "commons/search/button.html" "custom-menu" }}
+                {{ partial "commons/search/button.html" "thematic-menu" }}
             </div>
         </nav>
     {{ end }}
