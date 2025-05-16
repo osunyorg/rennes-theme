@@ -1,5 +1,7 @@
 <!-- @DEV inspired by Osuny commons/logo.html-->
-{{ $logo := . }}
+{{ $logo := .logo }}
+{{ $title := .title }}
+{{ $link_href := .link_href }}
 {{ $file := false }}
 {{ $file_darkmode := false }}
 {{ if eq (printf "%T" $logo) "string" }}
@@ -10,24 +12,24 @@
 {{ end }}
 
 <a class="logo {{- if $file_darkmode }} with-darkmode {{ end -}}"
-   href="{{ site.Params.custom.external_logo_link.url }}"
-   title="{{ i18n "custom.home" }} - {{ site.Params.custom.external_logo_link.title }}">
+   href="{{ $link_href }}"
+   title="{{ i18n "custom.home" }} - {{ $title }}">
 
     {{ if $file }}
         {{ $fileDimensions := partial "GetImageDimensions" (dict "context" . "file" $file "static" true) }}
         <img src="{{ $file }}"
-             alt="{{ site.Params.custom.external_logo_link.title }}"
+             alt="{{ $title }}"
              height="{{ index $fileDimensions 1 }}"
              width="{{ index $fileDimensions 0 }}">
         {{ if $file_darkmode }}
             {{ $fileDimensions := partial "GetImageDimensions" (dict "context" . "file" $file_darkmode "static" true) }}
             <img class="logo-darkmode"
                  src="{{ $file_darkmode }}"
-                 alt="{{ site.Params.custom.external_logo_link.title }}"
+                 alt="{{ $title }}"
                  height="{{ index $fileDimensions 1 }}"
                  width="{{ index $fileDimensions 0 }}">
         {{ end }}
     {{ else }}
-        <span class="logo-text">{{ site.Params.custom.external_logo_link.title }}</span>
+        <span class="logo-text">{{ $title }}</span>
     {{ end }}
 </a>

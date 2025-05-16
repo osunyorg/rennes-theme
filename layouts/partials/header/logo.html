@@ -1,5 +1,9 @@
 {{ if site.Params.custom.external_logo_link.active }}
-    {{ partial "commons/logo-external.html" site.Params.logo.header }}
+    {{ partial "commons/logo-custom.html" (dict
+        "logo" site.Params.logo.header
+        "title" site.Params.custom.external_logo_link.title
+        "link_href" site.Params.custom.external_logo_link.url
+    ) }}
 {{ else }}
     {{ partial "commons/logo.html" site.Params.logo.header }}
 {{ end }}

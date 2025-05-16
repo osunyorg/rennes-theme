@@ -5,6 +5,7 @@ dates:
   published: Publié le
   updated: Mis à jour le
 custom:
+  site: ''
   home: Accueil
   search:
     label: Rechercher sur le site
