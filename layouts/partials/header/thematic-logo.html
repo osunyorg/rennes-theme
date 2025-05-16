@@ -1,0 +1,6 @@
+{{ $site_title := i18n "custom.site" }}
+
+{{ partial "commons/logo-custom.html" (dict
+    "title" $site_title
+    "link_href" site.Home.Permalink
+) }}
