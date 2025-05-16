@@ -7,8 +7,12 @@
 )}}
 {{ $with_geolocation := .with_geolocation | default false }}
 
+{{ $type := site.GetPage "organizations" }}
+{{- if $organization.Type -}}
+  {{ $type = site.GetPage $organization.Type }}
+{{- end -}}
+
 {{ with $organization }}
-{{ $type := site.GetPage .Type }}
 
   {{ $title := partial "PrepareHTML" .Title }}
   <article class="organization"
