@@ -42,6 +42,9 @@ params:
     active: false
     positions:
       - custom-menu
+  home:
+    head:
+      title: site # both | page | site
   # We can also specify this options for each sharable Section
   share_links:
     enabled: true
