@@ -2,6 +2,8 @@
 import './theme/';
 
 // Customisation
+import './orejime-config/';
+import './orejime-additional/';
 import './icon-nav/';
 import './canteen-menu/';
 import './custom-iframe-map';
