@@ -1,9 +1,17 @@
-.orejime
-  &-blocked
-    padding: $spacing-3
-    background-color: $color-text
+[class^="orejime-"]
+  font-size: var(--body-size)
 
-    p,
-    a
-      color: $color-background
-      text-decoration-color: currentColor
+.orejime-Env
+  --orejime-font-family: #{$body-font-family}
+  --orejime-color-background: var(--color-background)
+  --orejime-color-text: var(--color-text)
+  --orejime-color-interactive: var(--color-accent)
+  --orejime-radius: 0
+
+.orejime-Button
+  font-family: var(--btn-font-family)
+  border-radius: var(--btn-border-radius)
+  font-size: var(--btn-font-size)
+  padding: var(--btn-padding)
+  line-height: var(--btn-line-height)
+
