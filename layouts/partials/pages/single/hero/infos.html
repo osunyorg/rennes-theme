@@ -1,3 +1,13 @@
+<!-- Test if it has a taxonomy not displayed as chip-->
+{{ $displayTaxonomiesList := false }}
+{{ if .Params.taxonomies }}
+    {{ range .Params.taxonomies }}
+        {{ if and .categories (not (eq .slug site.Params.custom.pages.taxonomy_display_as_chip)) }}
+            {{ $displayTaxonomiesList = true }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
 <ul class="page-infos">
     {{ with .Params.contents_reading_time }}
         <li>
@@ -20,7 +30,7 @@
         </li>
     {{ end }}
 
-    {{ if eq site.Params.pages.single.taxonomies.position "hero" }}
+    {{ if and $displayTaxonomiesList (eq site.Params.pages.single.taxonomies.position "hero") }}
         <li>
             {{- partial "taxonomies/single-list.html" . -}}
         </li>
