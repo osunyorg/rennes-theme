@@ -6,7 +6,7 @@ window.orejimeConfig = {
   // The purposes will appear in the modal in the same order as defined here.
   purposes: [
     {
-      id: 'map',
+      id: 'video',
       title: 'Vidéos',
       // description: '…',
       purposes: [
@@ -87,18 +87,17 @@ window.orejimeConfig = {
     {
       id: 'map',
       title: 'Intégrations HTML',
-      // description: '…',
       purposes: [
         {
           id: 'umap',
-          title: 'Solutions de cartographie uMap',
+          title: 'Solution de cartographie uMap',
           cookies: [
             'sessionid',
           ],
         },
         {
           id: 'mviewer',
-          title: 'Solutions de cartographie Mviewer',
+          title: 'Solution de cartographie Mviewer',
           cookies: [
             'pk_id.1.fe48',
             'GS_FLOW_CONTROL',
