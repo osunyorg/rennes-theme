@@ -1,6 +1,8 @@
 commons:
   menu:
     upper: Menu thématique
+  search:
+    title: Rechercher une actualité
 dates:
   published: Publié le
   updated: Mis à jour le
