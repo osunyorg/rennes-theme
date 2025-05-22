@@ -88,7 +88,7 @@ params:
   image_sizes:
     design_system:
       lightbox:
-        disabled: false
+        disabled: true
     blocks:
       call_to_action:
         mobile: 500
