@@ -1,7 +1,7 @@
 {{- with (or site.Data.content_security_policy.allowed_domains site.Data.website.external_domains) -}}
 <meta http-equiv="Content-Security-Policy"
       content="
-        default-src 'self' {{ delimit . " " }}
+        default-src 'self' {{ delimit . " " }} cdn.matomo.cloud rennesmetropole.matomo.cloud
         {{ if or (not hugo.IsProduction) site.Params.debug.active }}'unsafe-inline'{{ end }}
         {{ if site.Params.search.active }}'wasm-unsafe-eval'{{ end }};
         style-src 'self' 'unsafe-inline';
