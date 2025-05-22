@@ -1,6 +1,9 @@
+{{- if os.FileExists "static/assets/js/matomo.js" -}}
+    <script src="/assets/js/matomo.js"></script>
+{{ end -}}
 {{- if os.FileExists "static/assets/js/orejime-standard-fr.js" -}}
-<script src="/assets/js/orejime-standard-fr.js"></script>
+    <script src="/assets/js/orejime-standard-fr.js"></script>
 {{ end -}}
 {{- if os.FileExists "static/assets/css/orejime-standard.css" -}}
-<link rel="stylesheet" href="/assets/css/orejime-standard.css"/>
+    <link rel="stylesheet" href="/assets/css/orejime-standard.css"/>
 {{ end -}}
