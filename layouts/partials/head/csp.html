@@ -4,5 +4,6 @@
         default-src 'self' {{ delimit . " " }}
         {{ if or (not hugo.IsProduction) site.Params.debug.active }}'unsafe-inline'{{ end }}
         {{ if site.Params.search.active }}'wasm-unsafe-eval'{{ end }};
+        style-src 'self' 'unsafe-inline';
       " />
 {{- end -}}
