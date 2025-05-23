@@ -25,15 +25,17 @@ window.rennes.OrejimeContextualConsent = function () {
       })
     })
 
-    // insert wrapper before iframe in the DOM tree + move iframe into wrapper
-    if (parentIframeElement.classList.contains('video-container')) {
-      var parent = parentIframeElement.closest('.block-content');
-      var content = parentIframeElement.closest('.video');
-      parent.insertBefore(wrapper, content);
-      wrapper.content.appendChild(content);
-    } else {
-      parentIframeElement.insertBefore(wrapper, iframeElement);
-      wrapper.content.appendChild(iframeElement);
+    // IF iframe should be blocked by orejime, add wrapper template around iframe
+    if (wrapper.dataset.purpose) {
+      if (parentIframeElement.classList.contains('video-container')) {
+        var parent = parentIframeElement.closest('.block-content');
+        var content = parentIframeElement.closest('.video');
+        parent.insertBefore(wrapper, content);
+        wrapper.content.appendChild(content);
+      } else {
+        parentIframeElement.insertBefore(wrapper, iframeElement);
+        wrapper.content.appendChild(iframeElement);
+      }
     }
   })
 }
@@ -56,8 +58,8 @@ window.rennes.OrejimeConsentModalLink = function () {
 
     // Simulate button
     link.setAttribute('role', 'button');
-    link.addEventListener('keydown', function(event){
-      if(event.keyCode === 32){
+    link.addEventListener('keydown', function (event) {
+      if (event.keyCode === 32) {
         window.orejime.prompt();
       }
     });
