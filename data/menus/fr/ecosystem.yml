@@ -7,57 +7,57 @@ items:
     new_tab: false
     children:
       - title: Rennes Ville et Métropole
-        target: https://metropole.rennes.osuny.site/
+        target: https://metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Aides, solidarités et égalité
-        target: https://aides.rennes.osuny.site/
+        target: https://aides.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Démarches administratives
-        target: https://demarches.rennes.osuny.site/
+        target: https://demarches.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Transports et circulation
-        target: https://transport.rennes.osuny.site/
+        target: https://transport.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Enfance, éducation, jeunesse
-        target: https://education-jeunesse.rennes.osuny.site/
+        target: https://education-jeunesse.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Déchets et propreté
-        target: https://dechets.rennes.osuny.site/
+        target: https://dechets.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Logement et urbanisme
-        target: https://logement.rennes.osuny.site/
+        target: https://logement.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Numérique et recherche
-        target: https://numerique-recherche.rennes.osuny.site/
+        target: https://numerique-recherche.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Santé et environnement
-        target: https://environnement-sante.rennes.osuny.site/
+        target: https://environnement-sante.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Économie et emploi
-        target: https://economie.rennes.osuny.site/
+        target: https://economie.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
       - title: Culture et Sports
-        target: https://culture-sports.rennes.osuny.site/
+        target: https://culture-sport.metropole.rennes.fr/
         kind: url
         new_tab: false
         children: []
@@ -67,32 +67,32 @@ items:
     new_tab: false
     children:
       - title: Les institutions de la Ville et de la Métropole
-        target: https://metropole.fr/les-institutions-de-la-ville-et-de-la-metropole/
+        target: https://metropole.rennes.fr/les-institutions-de-la-ville-et-de-la-metropole/
         kind: url
         new_tab: false
         children: []
       - title: Participation citoyenne
-        target: https://metropole.fr/participation-citoyenne/
+        target: https://metropole.rennes.fr/participation-citoyenne/
         kind: url
         new_tab: false
         children: []
       - title: Appels à projets, partenariats et coopérations
-        target: https://metropole.fr/appels-a-projets-partenariats-et-cooperations/
+        target: https://metropole.rennes.fr/appels-a-projets-partenariats-et-cooperations/
         kind: url
         new_tab: false
         children: []
       - title: Marchés publics et documents réglementaires
-        target: "https://metropole.fr/marches-publics-et-documents-reglementaires/"
+        target: "https://metropole.rennes.fr/marches-publics-et-documents-reglementaires/"
         kind: url
         new_tab: false
         children: []
   - title: Votre commune
-    target: "https://metropole.fr/votre-commune/"
+    target: "https://metropole.rennes.fr/votre-commune/"
     kind: url
     new_tab: false
     children: []
   - title: Votre quartier
-    target: "https://metropole.fr/votre-quartier/"
+    target: "https://metropole.rennes.fr/votre-quartier/"
     kind: url
     new_tab: false
     children: []
