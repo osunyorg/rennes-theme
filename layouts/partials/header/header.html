@@ -47,7 +47,7 @@
 
             {{ if $ecosystem_menu }}
                 {{ partial "header/button.html" }}
-                <div class="menu" id="navigation" tabindex="-1">
+                <div class="menu" id="navigation">
                     {{ partial "commons/menu.html"
                         (dict
                             "items" $ecosystem_menu.items
