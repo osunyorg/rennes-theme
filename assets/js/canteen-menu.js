@@ -35,23 +35,25 @@ window.rennes.MenuCanteen = function () {
                     }
                 });
 
-                item.innerHTML = '';
-                const span = document.createElement('span');
-                span.textContent = itemContent;
-                item.appendChild(span);
+                setTimeout(() => {
+                    item.innerHTML = '';
+                    const span = document.createElement('span');
+                    span.textContent = itemContent;
+                    item.appendChild(span);
 
-                if (icons.length === 1) {
-                    item.appendChild(icons[0]);
+                    if (icons.length === 1) {
+                        item.appendChild(icons[0]);
 
-                } else if (icons.length > 1) {
-                    const iconContainer = document.createElement('ul');
-                    icons.forEach((icon) => {
-                        const li = document.createElement('li');
-                        li.appendChild(icon);
-                        iconContainer.appendChild(li);
-                    });
-                    item.appendChild(iconContainer);
-                }
+                    } else if (icons.length > 1) {
+                        const iconContainer = document.createElement('ul');
+                        icons.forEach((icon) => {
+                            const li = document.createElement('li');
+                            li.appendChild(icon);
+                            iconContainer.appendChild(li);
+                        });
+                        item.appendChild(iconContainer);
+                    }
+                }, 1000);
             });
         });
 
@@ -71,11 +73,14 @@ window.rennes.MenuCanteen = function () {
                         icon.alt = labelAlts[label];
                     }
                 });
-                const container = desc.closest('div');
-                container.insertBefore(icon, desc);
-                const p = document.createElement('p');
-                p.textContent = descContent;
-                desc.replaceWith(p);
+
+                if (icon) {
+                    const container = desc.closest('div');
+                    container.insertBefore(icon, desc);
+                    const p = document.createElement('p');
+                    p.textContent = descContent;
+                    desc.replaceWith(p);
+                }
             });
         });
     }
