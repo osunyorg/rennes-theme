@@ -35,6 +35,7 @@ params:
         title:
           active: true
   breadcrumb:
+    extendable: true
     position: hero-start
   summary:
     position: hero
