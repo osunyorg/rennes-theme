@@ -78,11 +78,23 @@ params:
     single:
       options:
         categories: true
+    sitemap:
+      ignore_children: true
 
   events:
     single:
       taxonomies:
         position: hero
+    sitemap:
+      ignore_children: true
+
+  persons:
+    sitemap:
+      ignore_children: true
+
+  organizations:
+    sitemap:
+      ignore_children: true
   # BLOCKS
 
   # IMAGES SIZES
