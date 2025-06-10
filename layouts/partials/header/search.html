@@ -1,7 +1,7 @@
 <form role="search" class="search-form" accept-charset="UTF-8" action="{{ site.Params.custom.search_global.url }}" method="GET">
     <div class="search-form-input">
         <label for="search-input" class="sr-only">{{ i18n "custom.search.label" }}</label>
-        <input id="search-input" type="search" name="q" placeholder="{{ i18n "custom.search.placeholder" }}">
+        <input id="search-input" type="search" minlength="3" name="q" placeholder="{{ i18n "custom.search.placeholder" }}">
     </div>
     <input type="hidden" name="return_url" value="{{ .Permalink }}">
     <div class="search-form-button">
