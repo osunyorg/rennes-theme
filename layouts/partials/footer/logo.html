@@ -1,9 +1,11 @@
 {{ if site.Params.custom.external_logo_link.active }}
-    {{ partial "commons/logo-custom.html" (dict
+    {{ partial "commons/logo.html" (dict
         "logo" site.Params.logo.footer
         "title" site.Params.custom.external_logo_link.title
         "link_href" site.Params.custom.external_logo_link.url
     ) }}
 {{ else }}
-    {{ partial "commons/logo.html" site.Params.logo.footer }}
+    {{ partial "commons/logo.html" (dict
+        "logo" site.Params.logo.footer
+    ) }}
 {{ end }}
