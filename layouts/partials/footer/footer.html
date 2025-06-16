@@ -38,10 +38,12 @@
         <div>
             <p class="footer-menu-label">Un site soutenu par</p>
             <div class="footer-europe-link">
-                <a href="{{ site.Params.custom.footer_europe_link }}"
-                   target="_blank" title="{{ site.Params.custom.footer_europe_alt }} - nouvelle fenêtre">
-                    <img src="{{ site.Params.custom.footer_europe }}" alt="{{ site.Params.custom.footer_europe_alt }}">
-                </a>
+                {{ partial "commons/logo.html" (dict
+                    "logo" site.Params.custom.footer_europe_logo
+                    "title" site.Params.custom.footer_europe_alt
+                    "link_href" site.Params.custom.footer_europe_link
+                    "link_external" true
+                ) }}
             </div>
             <p class="footer-menu-label">
                 Un site éco-conçu par
