@@ -23,8 +23,8 @@ params:
 
   # DESIGN SYSTEM
   logo:
-    header: "/assets/images/logo-black.svg"
-    footer: "/assets/images/logo-white.svg"
+    header: "/assets/images/rennes-ville-metropole_noir.svg"
+    footer: "/assets/images/rennes-ville-metropole_blanc.svg"
   menu:
     ecosystem:
       level_2:
