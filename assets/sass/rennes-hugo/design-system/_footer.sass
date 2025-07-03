@@ -8,6 +8,7 @@
 
 .footer-menu-news
   li
+    @extend %icons-spacing
     &::before
       font-size: 1rem
     &.facebook
@@ -32,11 +33,15 @@ footer#document-footer
       li
         a
           @include hover-translate-icon(after)
+
           &:not([target="_blank"])
             @include icon(arrow-right-line, after, true)
 
   ul
     li
+      a[target="_blank"]
+        @extend %icons-spacing
+
       a, span
         font-family: $heading-font-family
         font-size: pxToRem(14)
