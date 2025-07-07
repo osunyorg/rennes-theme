@@ -3,13 +3,18 @@
   @include list-reset
   @include grid(3, md)
   width: 100%
+  margin-top: var(--heading-margin-top)
 
   @include media-breakpoint-up(md)
-    width: 75%
+    width: 73%
 
-  &,
   & + .taxonomies-single
     margin-top: var(--heading-margin-top)
+
+    @include media-breakpoint-up(md)
+      width: 27%
+      padding-left: var(--grid-gutter)
+
     .terms
       line-height: 1
 
