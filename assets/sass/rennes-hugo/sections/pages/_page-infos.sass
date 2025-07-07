@@ -1,10 +1,17 @@
 .page-infos
   @include meta
   @include list-reset
-  @include grid(4, md)
+  @include grid(3, md)
   width: 100%
 
-  margin-top: var(--heading-margin-top)
+  @include media-breakpoint-up(md)
+    width: 75%
+
+  &,
+  & + .taxonomies-single
+    margin-top: var(--heading-margin-top)
+    .terms
+      line-height: 1
 
   li
     display: flex
@@ -22,6 +29,7 @@
       @include media-breakpoint-up(md)
         font-size: pxToRem(18)
 
+  & + .taxonomies-single,
   & > li:not(:first-child)
     @include media-breakpoint-down(md)
       margin-top: $spacing-3
