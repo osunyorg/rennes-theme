@@ -31,3 +31,8 @@
     @include in-page-with-sidebar
       .grid
         @include grid(2, lg)
+
+    .grid
+      @include media-breakpoint-down(sm)
+        grid-template-columns: 1fr
+
