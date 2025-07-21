@@ -31,8 +31,8 @@
 
             <!-- Search CTA (native or custom) -->
             {{ partial "commons/search/button.html" "custom-menu" }}
-            {{ if site.Params.custom.search_global.active }}
-            <a href="{{ site.Params.custom.search_global.url }}?return_url={{ .Permalink }}" class="search-button">Recherche</a>
+            {{ if site.Params.custom.search.active }}
+            <a href="{{ site.Params.custom.search.url }}?return_url={{ .Permalink }}" class="search-button">Recherche</a>
             {{ end }}
         </div>
     </div>
@@ -41,7 +41,7 @@
         <div class="container">
             {{ partial "header/logo.html" }}
 
-            {{ if site.Params.custom.search_global.active }}
+            {{ if site.Params.custom.search.active }}
                 {{ partial "header/search.html" . }}
             {{ end }}
 

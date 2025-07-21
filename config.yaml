@@ -11,7 +11,7 @@ params:
       active: true
       url: "https://metropole.rennes.fr"
       title: "Rennes Ville et Métropole"
-    search_global:
+    search:
       active: true
       url: "https://chercher.metropole.rennes.fr"
     footer_europe: "/assets/images/footer_europe.png"
