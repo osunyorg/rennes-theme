@@ -32,7 +32,15 @@
             <!-- Search CTA (native or custom) -->
             {{ partial "commons/search/button.html" "custom-menu" }}
             {{ if site.Params.custom.search.active }}
-            <a href="{{ site.Params.custom.search.url }}{{ if site.Params.custom.search.index }}?index={{ site.Params.custom.search.index }}{{ end }}?return_url={{ .Permalink }}" class="search-button">Recherche</a>
+                {{ if site.Params.custom.search.index }}
+                    <a href="{{ site.Params.custom.search.url }}?index={{ site.Params.custom.search.index }}&return_url={{ .Permalink }}" class="search-button">
+                        Recherche
+                    </a>
+                {{ else }}
+                    <a href="{{ site.Params.custom.search.url }}?return_url={{ .Permalink }}" class="search-button">
+                        Recherche
+                    </a>
+                {{ end }}
             {{ end }}
         </div>
     </div>
