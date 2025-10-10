@@ -194,3 +194,19 @@ header#document-header
   .header-mobile-nav *
     &:focus-visible
       outline-offset: -1px
+
+  /* METROPOLE HOME (V2) */
+  .page-home-metropole &:not(.is-sticky)
+    background-color: transparent
+
+    .search-form-input
+      [type="search"]
+        background-color: transparent
+
+        &::placeholder,
+        &::-webkit-input-placeholder
+            color: var(--color-text)
+            opacity: 1
+        
+        &::-moz-placeholder
+            color: var(--color-text)
