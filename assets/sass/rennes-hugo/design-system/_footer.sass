@@ -16,8 +16,8 @@ footer#document-footer
 
   @include media-breakpoint-down(desktop)
     margin-bottom: var(--header-height)
-    padding-bottom: space(9)
-    padding-top: space(9)
+    padding-bottom: $spacing-4
+    padding-top: $spacing-4
   a
     &:has(img)
       &::after
@@ -52,10 +52,14 @@ footer#document-footer
       text-underline-offset: 4px
       text-decoration-thickness: 1px
 
+      &:not([target="_blank"])
+        @include icon(arrow-right-line, after)
+        @include hover-translate-icon(after)
+
       &::after
         display: inline-block
+        margin-left: space()
         vertical-align: middle
-
 
   .footer-contact
     @include icon(arrow-right-line, after)
@@ -121,7 +125,7 @@ footer#document-footer
 
   .footer-credits
     display: flex
-    gap: space(9) var(--grid-gutter)
+    gap: $spacing-4 var(--grid-gutter)
     
     > .footer-menu-label
       margin-bottom: 0
