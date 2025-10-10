@@ -35,11 +35,16 @@
       @include media-breakpoint-down(xl)
         font-size: pxToRem(30)
 
-  // home v2
+  // metropole: home v2
   .page-home-metropole &
     padding-bottom: var(--grid-gutter)
     h1
       max-width: 16ch
+
+      @include media-breakpoint-up(xl)
+        @include media-breakpoint-down(xxl)
+          font-size: var(--lead-size)
+          line-height: var(--lead-line-height)
     
     .content
       display: flex

@@ -5,6 +5,8 @@
 
 .footer-menu-thematic
   @extend %icon-containing-class
+  li::before
+    margin-right: space()
 
 .footer-menu-news
   li
@@ -60,8 +62,11 @@ footer#document-footer
     @include icon(arrow-right-line, after)
     @include hover-translate-icon(after)
     display: block
-    margin-top: $spacing-1
+    margin-top: space(5)
     text-decoration: none
+
+    @include media-breakpoint-up(desktop)
+      margin-top: space(8)
 
   .footer-menu-label
     color: alphaColor(var(--color-background), 0.7)
