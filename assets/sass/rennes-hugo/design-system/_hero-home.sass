@@ -1,17 +1,15 @@
 .hero
-  .page-home-metropole &
-    margin-bottom: 0
+  .page-home-post &
+    padding-bottom: 0
 
   .page-home-metropole &,
   .page-home-post &
-    padding-bottom: 0
     background-color: var(--color-background-accent)
 
   .content
     .page__home &
       align-items: center
 
-    .page-home-metropole &,
     .page-home-post &
       margin-top: 0
       padding-top: 0
@@ -36,3 +34,58 @@
     .page__home &
       @include media-breakpoint-down(xl)
         font-size: pxToRem(30)
+
+  // home v2
+  .page-home-metropole &
+    h1
+      max-width: 16ch
+    .content
+      display: flex
+      flex-wrap: wrap
+      row-gap: var(--grid-gutter)
+      figure
+        order: -1
+        width: 100%
+
+    // links menu
+    .hero-menu
+      &-title
+        @include meta
+        color: var(--color-text-alt)
+        margin-bottom: $spacing-3
+      &-links
+        @include list-reset
+        @include grid(1, $gap-y: space(5))
+        @include grid(2, xxl, $gap-y: space(8))
+        a
+          align-items: baseline
+          display: flex
+          flex-wrap: wrap
+          column-gap: space()
+          text-decoration: none
+          em
+            color: var(--color-text-alt)
+            font-style: normal
+            order: 2
+            width: 100%
+          &:not([target="_blank"])
+            @include icon(arrow-right-line, after)
+    @include media-breakpoint-down(md)
+      padding-bottom: space(4)
+      .hero-menu
+        display: flex
+        gap: var(--grid-gutter)
+        width: 100%
+        &-title
+          width: columns(4)
+        &-links
+          flex: 1
+    @include media-breakpoint-up(md)
+      padding-bottom: $spacing-5
+      .content
+        align-items: flex-start
+      .hero-text,
+      .hero-menu
+          width: columns(6)
+      .hero-menu-title
+        margin-top: $spacing-1
