@@ -49,7 +49,6 @@
         @include media-breakpoint-up(xl)
           @include media-breakpoint-down(xxl)
             font-size: var(--lead-size)
-            line-height: var(--lead-line-height)
     
       figure
         order: -1
@@ -60,10 +59,10 @@
           width: calc(100% + (var(--grid-gutter) * 2))
 
           img
-            width: calc(100% + (#{$spacing-6}* 2))
             margin-left: -$spacing-6
             margin-right: -$spacing-6
             max-width: unset
+            width: calc(100% + (#{$spacing-6}* 2))
 
         @include media-breakpoint-up(desktop)
           img
