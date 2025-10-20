@@ -30,11 +30,25 @@
     width: 100%
 
     input[type="search"]
-      width: 100%
+      background: transparent
+      font-size: pxToRem(16)
       margin: 0
       padding: $spacing-1
       padding-right: $spacing-4
-      font-size: pxToRem(16)
+      transition: background $header-sticky-transition
+      width: 100%
+
+      &::placeholder,
+      &::-webkit-input-placeholder
+        color: var(--color-text)
+        opacity: 1
+      
+      &::-moz-placeholder
+        color: var(--color-text)
+
+      html:not(.has-menu-opened) &
+        &:not(.is-sticky)
+          background-color: transparent
 
       @include media-breakpoint-down(lg)
         display: none

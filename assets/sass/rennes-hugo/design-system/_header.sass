@@ -195,26 +195,9 @@ header#document-header
     &:focus-visible
       outline-offset: -1px
 
-  /* METROPOLE HOME (V2) */
-
-.page-home-metropole 
-  header#document-header
-    .search-form-input
-      input[type="search"]
-        transition: background $header-sticky-transition
-
+  /* SPECIFIC RENDER */
+  /* Metropole home */
+  .page-home-metropole &
     html:not(.has-menu-opened) &
       &:not(.is-sticky)
         background-color: transparent
-
-        .search-form-input
-          input[type="search"]
-            background: transparent
-
-            &::placeholder,
-            &::-webkit-input-placeholder
-                color: var(--color-text)
-                opacity: 1
-            
-            &::-moz-placeholder
-                color: var(--color-text)
