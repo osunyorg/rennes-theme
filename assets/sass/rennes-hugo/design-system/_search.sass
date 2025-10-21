@@ -35,7 +35,6 @@
       margin: 0
       padding: $spacing-1
       padding-right: $spacing-4
-      transition: background $header-sticky-transition
       width: 100%
 
       &::placeholder,
@@ -45,10 +44,6 @@
       
       &::-moz-placeholder
         color: var(--color-text)
-
-      html:not(.has-menu-opened) &
-        &:not(.is-sticky)
-          background-color: transparent
 
       @include media-breakpoint-down(lg)
         display: none
