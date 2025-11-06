@@ -194,3 +194,10 @@ header#document-header
   .header-mobile-nav *
     &:focus-visible
       outline-offset: -1px
+
+  /* SPECIFIC RENDER */
+  /* Metropole home */
+  .page-home-metropole &
+    html:not(.has-menu-opened) &
+      &:not(.is-sticky)
+        background-color: transparent
