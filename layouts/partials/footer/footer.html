@@ -5,50 +5,52 @@
 
             <a href="{{ site.Params.custom.contact_link }}" class="footer-contact icon-arrow-right" target="_blank" title="Nous contacter (Ouverture dans une nouvele fenêtre)">Nous contacter</a>
         </div>
-
-        {{- partial "footer/nav.html"
-            (dict
-                "nav" true
-                "menu" "footer-vos-services-par-thematiques"
-                "name" "thematic"
-            )
-        . -}}
-
-        {{- partial "footer/nav.html"
-            (dict
-                "menu" "footer-nos-sites-pour-les-professionnels"
-                "name" "pro"
-            )
-        . -}}
-
-        {{- partial "footer/nav.html"
-            (dict
-                "menu" "footer-actualites-et-reseaux-sociaux"
-                "name" "news"
-            )
-        . -}}
-
-        {{- partial "footer/nav.html"
-            (dict
-                "menu" "footer-a-propos-du-site"
-                "name" "apropos"
-            )
-        . -}}
-
-        <div>
-            <p class="footer-menu-label">Un site soutenu par</p>
-            <div class="footer-europe-link">
-                <a href="{{ site.Params.custom.footer_europe_link }}"
-                   target="_blank" title="{{ site.Params.custom.footer_europe_alt }} - nouvelle fenêtre">
-                    <img src="{{ site.Params.custom.footer_europe }}" alt="{{ site.Params.custom.footer_europe_alt }}">
-                </a>
+        
+        <div class="footer-navigation">
+            {{- partial "footer/nav.html"
+                (dict
+                    "nav" true
+                    "menu" "footer-vos-services-par-thematiques"
+                    "name" "thematic"
+                )
+            . -}}
+    
+            {{- partial "footer/nav.html"
+                (dict
+                    "menu" "footer-nos-sites-pour-les-professionnels"
+                    "name" "pro"
+                )
+            . -}}
+    
+            {{- partial "footer/nav.html"
+                (dict
+                    "menu" "footer-actualites-et-reseaux-sociaux"
+                    "name" "news"
+                )
+            . -}}
+    
+            {{- partial "footer/nav.html"
+                (dict
+                    "menu" "footer-a-propos-du-site"
+                    "name" "apropos"
+                )
+            . -}}
+    
+            <div class="footer-credits">
+                <div class="footer-europe-link">
+                    <p class="footer-menu-label">Un site soutenu par l'UE</p>
+                    <a href="{{ site.Params.custom.footer_europe_link }}"
+                       target="_blank" title="{{ site.Params.custom.footer_europe_alt }} - nouvelle fenêtre">
+                        <img src="{{ site.Params.custom.footer_europe }}" alt="{{ site.Params.custom.footer_europe_alt }}">
+                    </a>
+                </div>
+                <p class="footer-menu-label">
+                    Un site éco-conçu par
+                    <a href="https://cocoricommun.fr/" target="_blank" title="cocoricommun.fr - nouvelle fenêtre">Cocoricommun</a>
+                    avec
+                    <a href="https://www.osuny.org/" title="osuny.org - nouvelle fenêtre" target="_blank">Osuny</a>
+                </p>
             </div>
-            <p class="footer-menu-label">
-                Un site éco-conçu par
-                <a href="https://cocoricommun.fr/" target="_blank" title="cocoricommun.fr - nouvelle fenêtre">Cocoricommun</a>
-                avec
-                <a href="https://www.osuny.org/" title="osuny.org - nouvelle fenêtre" target="_blank">Osuny</a>
-            </p>
         </div>
     </div>
 </footer>

@@ -1,0 +1,99 @@
+/* METROPOLE HOME (V2 - noesya) */
+.page-home-metropole
+  .hero
+    padding-bottom: var(--grid-gutter)
+  
+    .content
+      display: flex
+      flex-wrap: wrap
+      row-gap: var(--grid-gutter)
+      
+      h1
+        max-width: 16ch
+
+        @include media-breakpoint-up(xl)
+          @include media-breakpoint-down(xxl)
+            font-size: var(--lead-size)
+    
+      figure
+        order: -1
+        width: 100%
+
+        @include media-breakpoint-down(desktop)
+          overflow: hidden
+          width: calc(100% + (var(--grid-gutter) * 2))
+
+          img
+            margin-left: -$spacing-6
+            margin-right: -$spacing-6
+            max-width: unset
+            width: calc(100% + (#{$spacing-6}* 2))
+
+        @include media-breakpoint-up(desktop)
+          img
+            max-height: 60vh
+            object-fit: contain
+
+    // links menu
+    .hero-menu
+      &-title
+        @include meta
+        margin-bottom: $spacing-3
+      
+      &-links
+        @include list-reset
+        @include grid(1, $gap-y: space(5))
+        @include grid(2, xxl, $gap-y: space(8))
+      
+        a
+          @extend %underline-on-hover
+          align-items: baseline
+          column-gap: space()
+          display: flex
+          flex-wrap: wrap
+          
+          em
+            color: var(--color-text-alt)
+            font-style: normal
+            order: 2
+            width: 100%
+
+          &::after
+            overflow: hidden
+          
+          &:not([target="_blank"])
+            @include icon(arrow-right-line, after)
+
+    @include media-breakpoint-down(md)
+      .hero-menu
+        width: 100%
+        @include media-breakpoint-up(sm)
+          &-links
+            @include grid(2)
+
+      @include media-breakpoint-up(md)
+        .hero-menu
+          display: flex
+          gap: var(--grid-gutter)
+        
+          &-title
+            width: columns(4)
+        
+          &-links
+            flex: 1
+    
+    @include media-breakpoint-up(sm)
+      padding-bottom: $spacing-6
+      
+    @include media-breakpoint-up(md)
+      .content
+        align-items: flex-start
+        padding-top: 0
+        margin-top: $spacing-1
+
+      .hero-text,
+      .hero-menu
+          width: columns(6)
+      
+      .hero-menu-title
+        margin-top: $spacing-1
