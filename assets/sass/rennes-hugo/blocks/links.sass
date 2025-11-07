@@ -1,11 +1,15 @@
 .block-links
-  &--cards
-    li
-      border: 1px solid var(--color-border)
-      border-radius: pxToRem(2)
+  li
+    border: 1px solid var(--color-border)
+    border-radius: pxToRem(2)
 
-      .link-content
-        min-height: pxToRem(112)
+    .link-content
+      min-height: pxToRem(112)
 
-    a:not([target="_blank"])
-      @include icon(arrow-right-line, after)
+  a:not([target="_blank"])
+    @include icon(arrow-right-line, after)
+
+  body.page-home-metropole &
+    &:first-child
+      background-color: var(--color-background-accent)
+      padding-block: $spacing-5
