@@ -40,11 +40,20 @@ window.rennes.OrejimeContextualConsent = function () {
   })
 }
 
+window.rennes.OrejimeUpdateVideoPlayer = function () {
+  if (window.osuny.VideoPlayerFactory) { 
+    // Handle theme legacy
+    new window.osuny.VideoPlayerFactory();
+  } else {
+    window.osuny.page.initComponents('videoPlayer');
+  }
+};
+
 window.rennes.OrejimeUpdateVideo = function () {
-  new window.osuny.VideoPlayerFactory();
+  window.rennes.OrejimeUpdateVideoPlayer();
 
   window.orejime.manager.on('update', function (updatedConsents, allConsents) {
-    new window.osuny.VideoPlayerFactory();
+    window.rennes.OrejimeUpdateVideoPlayer();
   });
 }
 
