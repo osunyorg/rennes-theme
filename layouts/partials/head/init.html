@@ -1,12 +1,13 @@
 {{- if os.FileExists "/assets/resources/js/matomo.js" -}}
     {{- $matomo_js := resources.Get "/resources/js/matomo.js" | fingerprint }}
     <script src="{{ $matomo_js.RelPermalink }}" integrity="{{ $matomo_js.Data.Integrity }}"></script>
-    <script src="https://cdn.matomo.cloud/rennesmetropole.matomo.cloud/container_dvngWAaV.js" loading="async"></script>
 {{ end -}}
+
 {{- if os.FileExists "/assets/resources/js/orejime-standard-fr.js" -}}
     {{- $orejime_js := resources.Get "/resources/js/orejime-standard-fr.js" | fingerprint }}
     <script src="{{ $orejime_js.RelPermalink }}" integrity="{{ $orejime_js.Data.Integrity }}"></script>
 {{ end -}}
+
 {{- if os.FileExists "/assets/resources/css/orejime-standard.css" -}}
     {{- $orejime_css := resources.Get "/resources/css/orejime-standard.css" | fingerprint -}}
     <link rel="stylesheet" href="{{ $orejime_css.Permalink }}" integrity="{{ $orejime_css.Data.Integrity }}"/>
