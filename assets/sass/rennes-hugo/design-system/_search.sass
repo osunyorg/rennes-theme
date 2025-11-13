@@ -30,11 +30,20 @@
     width: 100%
 
     input[type="search"]
-      width: 100%
+      background: transparent
+      font-size: pxToRem(16)
       margin: 0
       padding: $spacing-1
       padding-right: $spacing-4
-      font-size: pxToRem(16)
+      width: 100%
+
+      &::placeholder,
+      &::-webkit-input-placeholder
+        color: var(--color-text)
+        opacity: 1
+      
+      &::-moz-placeholder
+        color: var(--color-text)
 
       @include media-breakpoint-down(lg)
         display: none
@@ -44,6 +53,8 @@
       @extend .button-alt
       @include button-icon(search-line)
 
+      --btn-border: none
+      --btn-hover-border: none
       background-color: var(--color-text)
 
       @include media-breakpoint-up(desktop)
