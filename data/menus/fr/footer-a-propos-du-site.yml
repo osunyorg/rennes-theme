@@ -6,41 +6,26 @@ items:
   kind: url
   new_tab: false
   children: []
-  path: "/pages/mentions-legales"
-  file: content/fr/pages/mentions-legales/_index.html
 - title: Écoconception
-  target: https://metropole.rennes.fr/ecoconception
+  target: https://metropole.rennes.fr/ecoconception/
   kind: url
   new_tab: false
   children: []
-  path: "/"
-  file:
 - title: Accessibilité
-  target: https://metropole.rennes.fr/accessibilite
+  target: https://metropole.rennes.fr/accessibilite/
   kind: url
   new_tab: false
   children: []
-  path: "/pages/accessibilite"
-  file: content/fr/pages/accessibilite/_index.html
-- title: Déclaration Numérique d'Intérêt Général
-  target: https://metropole.rennes.fr/declaration-numerique-dinteret-general
-  kind: url
-  new_tab: false
-  children: []
-  path: "/"
-  file:
 - title: Politique de confidentialité
-  target: https://metropole.rennes.fr/politique-de-confidentialite
+  target: https://metropole.rennes.fr/protection-donnees-personnelles/
   kind: url
   new_tab: false
   children: []
-- title: Licence
-  target: https://metropole.rennes.fr/licence
+- title: Design system
+  target: https://metropole.rennes.fr/licence/
   kind: url
   new_tab: false
   children: []
-  path: "/"
-  file:
 - title: Plan du site
   target: "/plan-du-site/"
   kind: page
@@ -53,6 +38,3 @@ items:
   kind: url
   new_tab: false
   children: []
-  path: "/"
-  file:
-
