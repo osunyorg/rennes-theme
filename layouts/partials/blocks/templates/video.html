@@ -9,6 +9,10 @@
       <div class="block-content">
         {{ partial "blocks/top.html" $block.top }}
 
+        <!-- Start specific -->
+        {{ partial "blocks/templates/media/impact-info.html" . }}
+        <!-- End specific -->
+
         {{ if .url }}
           {{ $title := "video" }}
           {{ with .video_title }}

@@ -8,6 +8,11 @@
     <div class="container">
       <div class="block-content">
         {{ partial "blocks/top.html" $block.top }}
+
+        <!-- Start specific -->
+        {{ partial "blocks/templates/media/impact-info.html" . }}
+        <!-- End specific -->
+
         <div>
           {{ if .file }}
             {{ $file := partial "GetMedia" .file.id }}

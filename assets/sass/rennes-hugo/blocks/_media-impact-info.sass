@@ -1,0 +1,22 @@
+.media-impact-info
+  grid-column: 8 span
+  background: #f2f2f2
+  border-radius: pxToRem(8)
+  margin-bottom: var(--block-space-y)
+  padding: space(4)
+
+  // Class to add in BO to hide this part
+  .hide-media-impact-info &
+    display: none
+
+  &__title
+    margin-bottom: $spacing-1
+
+    @include custom-icon(info, before)
+      margin-right: space(1)
+
+  &__title,
+  p,
+  a
+    font-size: var(--h6-size)
+    line-height: 1.33
