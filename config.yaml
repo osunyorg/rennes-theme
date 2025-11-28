@@ -94,6 +94,9 @@ params:
       ignore_children: true
 
   organizations:
+    index:
+      options:
+        logo: false
     sitemap:
       ignore_children: true
   # BLOCKS

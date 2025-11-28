@@ -1,7 +1,7 @@
 .block-pages
-  .cards article,
-  .grid article,
-  .large .page-content
+  &--cards article.page,
+  &--grid article.page,
+  &--large .page .page-content
     display: flex
     flex-direction: column
     .page-chip
@@ -11,8 +11,8 @@
     .media
       order: -2
 
-  &.block-pages--cards
-    .card
+  &--cards
+    article.page
       border: 1px solid var(--color-border)
       border-radius: pxToRem(2)
       min-height: unset
@@ -24,6 +24,7 @@
       .more
         font-size: 0 // Hide text
         line-height: pxToRem(16)
+        padding-top: 0
         &::after
           opacity: 1
           font-size: pxToRem(24)
