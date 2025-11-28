@@ -9,10 +9,12 @@
 @include font-face("DMSans", DMSans-Italic, $style: italic, $exts: (woff2 woff))
 @include font-face("DMSans", DMSans-Bold, $weight: bold, $exts: (woff2 woff))
 
+$icon-path: '/assets/fonts/Icomoon-1125/'
+
 // Icons
 @font-face
   font-display: block
   font-family: 'Icomoon'
   font-style: normal
   font-weight: 400
-  src: url('/assets/fonts/Icomoon/icomoon.woff2') format("woff2"), url('/assets/fonts/custom-icon/icomoon.woff') format("woff"), url('/assets/fonts/custom-icon/icomoon.ttf') format("truetype")
+  src: url('#{$icon-path}icomoon.woff2') format("woff2"), url('#{$icon-path}icomoon.woff') format("woff"), url('#{$icon-path}icomoon.ttf') format("truetype")
