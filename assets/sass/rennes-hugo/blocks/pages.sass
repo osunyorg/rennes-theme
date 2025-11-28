@@ -1,7 +1,7 @@
 .block-pages
-  .cards article,
-  .grid article,
-  .large .page-content
+  &--cards article.page,
+  &--grid article.page,
+  &--large .page .page-content
     display: flex
     flex-direction: column
     .page-chip
@@ -12,7 +12,7 @@
       order: -2
 
   &.block-pages--cards
-    .card
+    .page
       border: 1px solid var(--color-border)
       border-radius: pxToRem(2)
       min-height: unset
