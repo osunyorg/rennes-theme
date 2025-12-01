@@ -20,6 +20,8 @@ params:
     contact_link: "https://metropole.rennes.fr/contact"
     pages:
       taxonomy_display_as_chip: "rubrique"
+    media_econception_link: "https://metropole.rennes.fr/ecoconception/"
+
   additional_csp: 'rennesmetropole.matomo.cloud'
 
   # DESIGN SYSTEM

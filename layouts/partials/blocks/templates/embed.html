@@ -1,0 +1,27 @@
+{{- $block := .block -}}
+{{- $block_class := partial "GetBlockClass" .block -}}
+{{- $block_index := .index -}}
+
+{{- with .block.data -}}
+  <div class="{{ $block_class }}">
+    <div class="container">
+      <div class="block-content">
+        {{ partial "blocks/top.html" $block.top }}
+
+        <!-- Start specific -->
+        {{ partial "blocks/templates/media/impact-info.html" . }}
+        <!-- End specific -->
+
+        {{- if .code }}
+          {{ partial "PrepareHTML" .code }}
+        {{ end -}}
+
+        {{ partial "commons/transcription" ( dict
+            "block_index" $block_index
+            "title" .transcription_title
+            "transcription" .transcription
+          ) }}
+      </div>
+    </div>
+  </div>
+{{- end -}}
