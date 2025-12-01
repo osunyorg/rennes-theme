@@ -13,3 +13,8 @@ custom:
     label: Rechercher sur le site
     placeholder: Rechercher...
     submit: Rechercher sur le site
+  impact-info:
+    title: Information
+    text: Le contenu ci-dessous (vidéo, audio ou élément externe) est consommateur de données et d'énergie.<br>
+      Pour une navigation plus sobre, vous pouvez choisir de ne pas l'activer.
+    more: En savoir plus sur la sobriété numérique
