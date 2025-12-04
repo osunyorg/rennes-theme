@@ -96,15 +96,18 @@ params:
       ignore_children: true
 
   organizations:
+    index:
+      options:
+        logo: false
     sitemap:
       ignore_children: true
   # BLOCKS
 
   # IMAGES SIZES
+  components:
+    lightbox:
+      disabled: true
   image_sizes:
-    design_system:
-      lightbox:
-        disabled: true
     blocks:
       call_to_action:
         mobile: 500

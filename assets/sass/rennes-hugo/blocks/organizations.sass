@@ -1,38 +1,40 @@
-.block-organizations
-  &.block-organizations--grid
-    .organization
-      @extend %grid-card
+.organizations
+  .organization
+    @extend %grid-card
+    display: flex
+    flex-direction: column
+    gap: 0
+    height: 100%
+
+    .organization-content
+      @extend %grid-card-content
+
       display: flex
       flex-direction: column
-      gap: 0
 
-      .organization-content
-        @extend %grid-card-content
+      .organization-chip
+        order: -1
+        margin-block: 0 space(4) !important
+        z-index: 3
 
-        display: flex
-        flex-direction: column
+      .organization-title
+        @include h3
+        @include icon(arrow-right-line, before)
+          @extend %grid-card-icon
+        @include hover-translate-icon(before)
 
-        .organization-chip
-          order: -1
-          margin-block: 0 space(4) !important
-          z-index: 3
+      .organization-summary
+        font-size: var(--body-size)
+        line-height: var(--body-line-height)
+        margin-top: $spacing-2
 
-        .organization-title
-          @include h3
-          @include icon(arrow-right-line, before)
-            @extend %grid-card-icon
-          @include hover-translate-icon(before)
+.organizations--grid
+  @include in-page-with-sidebar
+      @include grid(2, lg)
+  @include media-breakpoint-down(sm)
+    grid-template-columns: 1fr
 
-        .organization-summary
-          font-size: var(--body-size)
-          line-height: var(--body-line-height)
-          margin-top: $spacing-2
 
-    @include in-page-with-sidebar
-      .grid
-        @include grid(2, lg)
-
-    .grid
-      @include media-breakpoint-down(sm)
-        grid-template-columns: 1fr
-
+.organizations__section
+  .organization-chip
+    display: none
