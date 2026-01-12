@@ -22,7 +22,8 @@ params:
       taxonomy_display_as_chip: "rubrique"
     media_econception_link: "https://metropole.rennes.fr/ecoconception/"
 
-  additional_csp: 'rennesmetropole.matomo.cloud'
+  # GLOBAL SETTINGS
+  additional_csp: "rennesmetropole.matomo.cloud cdn.matomo.cloud 'style-src' 'self' 'unsafe-inline'"
 
   # DESIGN SYSTEM
   logo:
