@@ -23,7 +23,7 @@ params:
     media_econception_link: "https://metropole.rennes.fr/ecoconception/"
 
   # GLOBAL SETTINGS
-  additional_csp: "rennesmetropole.matomo.cloud cdn.matomo.cloud 'style-src' 'self' 'unsafe-inline'"
+  additional_csp: "rennesmetropole.matomo.cloud cdn.matomo.cloud; style-src 'self' 'unsafe-inline';"
 
   # DESIGN SYSTEM
   logo:
