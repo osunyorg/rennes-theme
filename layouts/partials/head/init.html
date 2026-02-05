@@ -1,8 +1,10 @@
+<!-- Matomo -->
 {{- if os.FileExists "/assets/resources/js/matomo.js" -}}
     {{- $matomo_js := resources.Get "/resources/js/matomo.js" | fingerprint }}
     <script src="{{ $matomo_js.RelPermalink }}" integrity="{{ $matomo_js.Data.Integrity }}"></script>
 {{ end -}}
 
+<!-- Orejime -->
 {{- if os.FileExists "/assets/resources/js/orejime-standard-fr.js" -}}
     {{- $orejime_js := resources.Get "/resources/js/orejime-standard-fr.js" | fingerprint }}
     <script src="{{ $orejime_js.RelPermalink }}" integrity="{{ $orejime_js.Data.Integrity }}"></script>
@@ -12,3 +14,6 @@
     {{- $orejime_css := resources.Get "/resources/css/orejime-standard.css" | fingerprint -}}
     <link rel="stylesheet" href="{{ $orejime_css.Permalink }}" integrity="{{ $orejime_css.Data.Integrity }}"/>
 {{ end -}}
+
+<!-- For newsletter form iframes -->
+<script defer src="https://my.express-mailing.com/landing-elements/elements.js"></script>
