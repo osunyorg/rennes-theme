@@ -24,6 +24,8 @@ params:
 
   # GLOBAL SETTINGS
   additional_csp: "rennesmetropole.matomo.cloud cdn.matomo.cloud; style-src 'self' 'unsafe-inline';"
+  seo:
+    head_no_referrer: false
 
   # DESIGN SYSTEM
   logo:
