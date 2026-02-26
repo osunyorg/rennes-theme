@@ -1,98 +1,51 @@
 ---
-title: Menu principal
 items:
   - title: Vos services
-    target: ''
-    kind: blank
-    new_tab: false
     children:
       - title: Rennes Ville et Métropole
-        target: https://metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://metropole.rennes.fr
+        class: rennes-ville-et-metropole
       - title: Aides, solidarités et égalité
-        target: https://aides.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://aides.metropole.rennes.fr
+        class: aides-solidarites-et-egalite
       - title: Démarches administratives
-        target: https://demarches.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://demarches.metropole.rennes.fr
+        class: demarches-administratives
       - title: Transports et circulation
-        target: https://transport.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://transport.metropole.rennes.fr
+        class: transports-et-circulation
       - title: Enfance, éducation, jeunesse
-        target: https://education-jeunesse.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://education-jeunesse.metropole.rennes.fr
+        class: enfance-education-jeunesse
       - title: Déchets et propreté
-        target: https://dechets.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://dechets.metropole.rennes.fr
+        class: dechets-et-proprete
       - title: Logement et urbanisme
-        target: https://logement.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://logement.metropole.rennes.fr
+        class: logement-et-urbanisme
       - title: Numérique et recherche
-        target: https://numerique-recherche.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://numerique-recherche.metropole.rennes.fr
+        class: numerique-et-recherche
       - title: Santé et environnement
-        target: https://environnement-sante.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://environnement-sante.metropole.rennes.fr
+        class: sante-et-environnement
       - title: Économie et emploi
-        target: https://economie.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://economie.metropole.rennes.fr
+        class: economie-et-emploi
       - title: Culture et Sports
-        target: https://culture-sport.metropole.rennes.fr/
-        kind: url
-        new_tab: false
-        children: []
+        target: https://culture-sport.metropole.rennes.fr
+        class: culture-et-sports
   - title: Vos institutions
-    target: ''
-    kind: blank
-    new_tab: false
     children:
       - title: Les institutions de la Ville et de la Métropole
         target: https://metropole.rennes.fr/les-institutions-de-la-ville-et-de-la-metropole/
-        kind: url
-        new_tab: false
-        children: []
       - title: Participation citoyenne
         target: https://metropole.rennes.fr/participation-citoyenne/
-        kind: url
-        new_tab: false
-        children: []
       - title: Appels à projets, partenariats et coopérations
         target: https://metropole.rennes.fr/appels-a-projets-partenariats-et-cooperations/
-        kind: url
-        new_tab: false
-        children: []
       - title: Marchés publics et documents réglementaires
         target: "https://metropole.rennes.fr/marches-publics-et-documents-reglementaires/"
-        kind: url
-        new_tab: false
-        children: []
   - title: Votre commune
     target: "https://metropole.rennes.fr/votre-commune/"
-    kind: url
-    new_tab: false
-    children: []
   - title: Votre quartier
     target: "https://metropole.rennes.fr/votre-quartier/"
-    kind: url
-    new_tab: false
-    children: []

@@ -52,20 +52,9 @@
             {{ if site.Params.custom.search.active }}
                 {{ partial "header/search.html" . }}
             {{ end }}
-
-            {{ if $ecosystem_menu }}
-                {{ partial "header/button.html" }}
-                <nav class="menu" id="navigation" aria-label="{{ i18n "commons.menu.main" }}" role="navigation">
-                    {{ partial "commons/menu.html"
-                        (dict
-                            "items" $ecosystem_menu.items
-                            "options" site.Params.menu.ecosystem
-                            "dropdown" true
-                            "level" 1
-                            "context" .
-                    )}}
-                </nav>
-            {{ end }}
+            
+            {{ partial "header/button.html" }}
+            {{ partial "custom/menus/ecosystem.html" }}
         </div>
     </div>
 
