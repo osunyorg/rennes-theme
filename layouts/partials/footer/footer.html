@@ -2,40 +2,13 @@
     <div class="container">
         <div class="footer-logo">
             {{ partial "footer/logo.html" }}
-
             <a href="{{ site.Params.custom.contact_link }}" class="footer-contact icon-arrow-right" target="_blank" title="Nous contacter (Ouverture dans une nouvele fenêtre)">Nous contacter</a>
         </div>
-        
         <div class="footer-navigation">
-            {{- partial "footer/nav.html"
-                (dict
-                    "nav" true
-                    "menu" "footer-vos-services-par-thematiques"
-                    "name" "thematic"
-                )
-            . -}}
-    
-            {{- partial "footer/nav.html"
-                (dict
-                    "menu" "footer-nos-sites-pour-les-professionnels"
-                    "name" "pro"
-                )
-            . -}}
-    
-            {{- partial "footer/nav.html"
-                (dict
-                    "menu" "footer-actualites-et-reseaux-sociaux"
-                    "name" "news"
-                )
-            . -}}
-    
-            {{- partial "footer/nav.html"
-                (dict
-                    "menu" "footer-a-propos-du-site"
-                    "name" "apropos"
-                )
-            . -}}
-    
+            {{ partial "custom/menus/footer/nav.html" "thematic" }}
+            {{ partial "custom/menus/footer/div.html" "pro" }}
+            {{ partial "custom/menus/footer/div.html" "news" }}
+            {{ partial "custom/menus/footer/div.html" "apropos" }}
             <div class="footer-credits">
                 <div class="footer-europe-link">
                     <p class="footer-menu-label">Un site soutenu par l'UE</p>

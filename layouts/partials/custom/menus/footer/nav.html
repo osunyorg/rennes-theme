@@ -1,0 +1,9 @@
+{{ $menu := index site.Data.menus.fr.footer . }}
+<nav class="footer-menu footer-menu-{{ . }}" aria-labelledby="menu-label-{{ . }}">
+    <p id="menu-label-{{ . }}" class="footer-menu-label" role="heading" aria-level="2">{{ $menu.title }}</p>
+    <ul class="nav-level-1">
+      {{ range $menu.items }}
+        <li class="{{ .slug }}"><a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a></li>
+      {{ end }}
+    </ul>
+</nav>

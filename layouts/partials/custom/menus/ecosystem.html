@@ -1,6 +1,7 @@
-<nav class="menu" id="navigation" aria-label="Menu principal" role="navigation">
+{{ $menu := site.Data.menus.fr.ecosystem }}
+<nav class="menu" id="navigation" aria-label="{{ $menu.title }}" role="navigation">
   <ul class="nav-level-1">
-    {{ range site.Data.menus.fr.ecosystem.items }}
+    {{ range $menu.items }}
       {{ if .children }}
         <li class="has-children">
           <span id="dropdown-{{ .slug }}" role="button" aria-expanded="false" tabindex="0">{{ .title }}</span>
