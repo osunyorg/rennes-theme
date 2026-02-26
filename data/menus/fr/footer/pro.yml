@@ -1,24 +1,17 @@
 ---
 title: Nos sites pour les professionnels
+slug: pro
 items:
 - title: Espace presse
-  target: https://www.presse.metropole.rennes.fr/
-  kind: url
+  target: https://www.presse.metropole.rennes.fr
   new_tab: true
-  children: []
 - title: Rennes Demain
-  target: https://www.entreprendre-rennes.fr/
-  kind: url
+  target: https://www.entreprendre-rennes.fr
   new_tab: true
-  children: []
 - title: Portail Open Data
   target: https://data.rennesmetropole.fr/page/home/
-  kind: url
   new_tab: true
-  children: []
 - title: Communication numérique
-  target: https://comnum.rennes.fr/
-  kind: url
+  target: https://comnum.rennes.fr
   new_tab: true
-  children: []
 
