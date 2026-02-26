@@ -33,10 +33,14 @@ params:
     footer: "/assets/images/rennes-ville-metropole_blanc.svg"
   menu:
     ecosystem:
+      level_1:
+        dropdown: true
       level_2:
         title:
           active: true
     thematic:
+      level_1:
+        dropdown: true
       level_2:
         title:
           active: true

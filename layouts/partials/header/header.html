@@ -56,14 +56,11 @@
             {{ if $ecosystem_menu }}
                 {{ partial "header/button.html" }}
                 <nav class="menu" id="navigation" aria-label="{{ i18n "commons.menu.main" }}" role="navigation">
-                    {{ partial "commons/menu.html"
-                        (dict
-                            "items" $ecosystem_menu.items
-                            "options" site.Params.menu.ecosystem
-                            "dropdown" true
-                            "level" 1
-                            "context" .
-                    )}}
+                    {{ partial "commons/menu.html" (dict
+                        "kind" "ecosystem"
+                        "options" site.Params.menu.ecosystem
+                        "context" .
+                    ) }}
                 </nav>
             {{ end }}
         </div>
@@ -76,13 +73,11 @@
 
                 <div class="menu">
                     {{ partial "commons/menu.html" (dict
-                        "items" $thematic_menu.items
+                        "kind" "primary"
                         "options" site.Params.menu.thematic
-                        "dropdown" true
-                        "level" 1
                         "ignore_externals" true
                         "context" .
-                    )}}
+                    ) }}
                 </div>
 
                 {{ partial "commons/search/button.html" "custom-menu" }}
