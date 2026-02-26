@@ -1,41 +1,43 @@
 ---
 items:
   - title: Vos services
+    slug: vos-services
     children:
       - title: Rennes Ville et Métropole
         target: https://metropole.rennes.fr
-        class: rennes-ville-et-metropole
+        slug: rennes-ville-et-metropole
       - title: Aides, solidarités et égalité
         target: https://aides.metropole.rennes.fr
-        class: aides-solidarites-et-egalite
+        slug: aides-solidarites-et-egalite
       - title: Démarches administratives
         target: https://demarches.metropole.rennes.fr
-        class: demarches-administratives
+        slug: demarches-administratives
       - title: Transports et circulation
         target: https://transport.metropole.rennes.fr
-        class: transports-et-circulation
+        slug: transports-et-circulation
       - title: Enfance, éducation, jeunesse
         target: https://education-jeunesse.metropole.rennes.fr
-        class: enfance-education-jeunesse
+        slug: enfance-education-jeunesse
       - title: Déchets et propreté
         target: https://dechets.metropole.rennes.fr
-        class: dechets-et-proprete
+        slug: dechets-et-proprete
       - title: Logement et urbanisme
         target: https://logement.metropole.rennes.fr
-        class: logement-et-urbanisme
+        slug: logement-et-urbanisme
       - title: Numérique et recherche
         target: https://numerique-recherche.metropole.rennes.fr
-        class: numerique-et-recherche
+        slug: numerique-et-recherche
       - title: Santé et environnement
         target: https://environnement-sante.metropole.rennes.fr
-        class: sante-et-environnement
+        slug: sante-et-environnement
       - title: Économie et emploi
         target: https://economie.metropole.rennes.fr
-        class: economie-et-emploi
+        slug: economie-et-emploi
       - title: Culture et Sports
         target: https://culture-sport.metropole.rennes.fr
-        class: culture-et-sports
+        slug: culture-et-sports
   - title: Vos institutions
+    slug: vos-institutions
     children:
       - title: Les institutions de la Ville et de la Métropole
         target: https://metropole.rennes.fr/les-institutions-de-la-ville-et-de-la-metropole/

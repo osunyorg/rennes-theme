@@ -3,7 +3,7 @@
     {{ range site.Data.menus.fr.ecosystem.items }}
       {{ if .children }}
         <li class="has-children">
-          <span id="dropdown-vos-services" role="button" aria-expanded="false" tabindex="0">{{ .title }}</span>
+          <span id="dropdown-{{ .slug }}" role="button" aria-expanded="false" tabindex="0">{{ .title }}</span>
           <div class="dropdown-menu is-titled">
             <div class="container">
               <div class="dropdown-menu-heading">
@@ -11,7 +11,7 @@
               </div>
               <ul class="nav-level-2">
                 {{ range .children }}
-                  <li class="{{ .class }}">
+                  <li class="{{ .slug }}">
                     <a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a>
                   </li>
                 {{ end }}
