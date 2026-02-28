@@ -1,0 +1,28 @@
+{{ $menu := site.Data.menus.fr.ecosystem }}
+<nav class="menu" id="navigation" aria-label="{{ $menu.title }}" role="navigation">
+  <ul class="nav-level-1">
+    {{ range $menu.items }}
+      {{ if .children }}
+        <li class="has-children">
+          <span id="dropdown-{{ .slug }}" role="button" aria-expanded="false" tabindex="0">{{ .title }}</span>
+          <div class="dropdown-menu is-titled">
+            <div class="container">
+              <div class="dropdown-menu-heading">
+                <p class="dropdown-menu-title">{{ .title }}</p>
+              </div>
+              <ul class="nav-level-2">
+                {{ range .children }}
+                  <li class="{{ .slug }}">
+                    <a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </li>
+      {{ else }}
+        <li><a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>

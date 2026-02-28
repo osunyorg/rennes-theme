@@ -1,12 +1,3 @@
-{{ $ecosystem_menu := partial "GetMenu" "ecosystem" }}
-{{ $thematic_menu := partial "GetMenu" "primary" }}
-
-<!-- Use BO primary menu on main website -->
-{{ if site.Params.custom.is_main }}
-    {{ $ecosystem_menu = partial "GetMenu" "primary" }}
-    {{ $thematic_menu = false }}
-{{ end }}
-
 {{ $home_url := site.Home.Permalink  }}
 {{ if site.Params.custom.external_logo_link.active }}
     {{ $home_url = site.Params.custom.external_logo_link.url }}
@@ -17,9 +8,8 @@
     <div class="header-mobile-logo">
         <div class="container">
             {{ partial "header/logo.html" }}
-
             {{ if not site.Params.custom.is_main }}
-                {{ partial "header/thematic-logo.html" }}
+                {{ partial "custom/header/thematic-logo.html" }}
             {{ end }}
         </div>
     </div>
@@ -48,35 +38,21 @@
     <div class="primary-menu ecosystem-menu">
         <div class="container">
             {{ partial "header/logo.html" }}
-
             {{ if site.Params.custom.search.active }}
                 {{ partial "header/search.html" . }}
             {{ end }}
-
-            {{ if $ecosystem_menu }}
-                {{ partial "header/button.html" }}
-                <nav class="menu" id="navigation" aria-label="{{ i18n "commons.menu.main" }}" role="navigation">
-                    {{ partial "commons/menu.html"
-                        (dict
-                            "items" $ecosystem_menu.items
-                            "options" site.Params.menu.ecosystem
-                            "dropdown" true
-                            "level" 1
-                            "context" .
-                    )}}
-                </nav>
-            {{ end }}
+            {{ partial "header/button.html" }}
+            {{ partial "custom/menus/ecosystem.html" }}
         </div>
     </div>
 
-    {{ if $thematic_menu }}
+    {{ if not site.Params.custom.is_main }}
         <nav class="thematic-menu" aria-label="{{ i18n "commons.menu.upper" }}">
             <div class="container">
-                {{ partial "header/thematic-logo.html" }}
-
+                {{ partial "custom/header/thematic-logo.html" }}
                 <div class="menu">
                     {{ partial "commons/menu.html" (dict
-                        "items" $thematic_menu.items
+                        "kind" "primary"
                         "options" site.Params.menu.thematic
                         "dropdown" true
                         "level" 1
@@ -84,7 +60,6 @@
                         "context" .
                     )}}
                 </div>
-
                 {{ partial "commons/search/button.html" "custom-menu" }}
             </div>
         </nav>

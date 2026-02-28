@@ -1,0 +1,16 @@
+{{ $menu := index site.Data.menus.fr.footer . }}
+{{ $new_tab := $menu.new_tab }}
+<div class="footer-menu footer-menu-{{ . }}">
+    <p class="footer-menu-label" role="heading" aria-level="2">{{ $menu.title }}</p>
+    <ul class="nav-level-1">
+      {{ range $menu.items }}
+        <li>
+            {{ if $new_tab }}
+                <a href="{{ .target }}" target="_blank" rel="noreferrer" title="{{ .title }} - lien externe">{{ .title }}</a>
+            {{ else }}
+                <a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a>
+            {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+</div>
