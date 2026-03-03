@@ -3,6 +3,11 @@ _merge: deep
 pagination:
   pagerSize: 20
 params:
+  # pagedjs error
+  outputFormats:
+    html:
+      weight: 2
+
   # RENNES THEME CUSTOM
   custom:
     active_custom_map: true
