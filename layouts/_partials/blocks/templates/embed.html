@@ -13,7 +13,7 @@
         <!-- End specific -->
 
         {{- if .code }}
-          {{ partial "PrepareHTML" .code }}
+          {{ safeHTML .code }}
         {{ end -}}
 
         {{ partial "commons/transcription" ( dict
