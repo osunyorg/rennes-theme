@@ -16,13 +16,13 @@
    title="{{ i18n "custom.home" }} - {{ $title }}">
 
     {{ if $file }}
-        {{ $fileDimensions := partial "GetImageDimensions" (dict "context" . "file" $file "static" true) }}
+        {{ $fileDimensions := partial "commons/image/helpers/GetDimensions" (dict "context" . "file" $file "static" true) }}
         <img src="{{ $file }}"
              alt="{{ $title }}"
              height="{{ index $fileDimensions 1 }}"
              width="{{ index $fileDimensions 0 }}">
         {{ if $file_darkmode }}
-            {{ $fileDimensions := partial "GetImageDimensions" (dict "context" . "file" $file_darkmode "static" true) }}
+            {{ $fileDimensions := partial "commons/image/helpers/GetDimensions" (dict "context" . "file" $file_darkmode "static" true) }}
             <img class="logo-darkmode"
                  src="{{ $file_darkmode }}"
                  alt="{{ $title }}"
