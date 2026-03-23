@@ -4,7 +4,7 @@
     {{ range $menu.items }}
       {{ if .children }}
         <li class="has-children">
-          <span id="dropdown-{{ .slug }}" role="button" aria-expanded="false" tabindex="0">{{ .title }}</span>
+          <span id="dropdown-{{ .id }}" role="button" aria-expanded="false" tabindex="0">{{ .title }}</span>
           <div class="dropdown-menu is-titled">
             <div class="container">
               <div class="dropdown-menu-heading">
@@ -12,7 +12,7 @@
               </div>
               <ul class="nav-level-2">
                 {{ range .children }}
-                  <li class="{{ .slug }}">
+                  <li class="{{ .class }}">
                     <a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a>
                   </li>
                 {{ end }}
