@@ -1,0 +1,19 @@
+---
+title: À propos du site
+items:
+- title: Mentions légales
+  target: https://metropole.rennes.fr/mentions-legales/
+- title: Écoconception
+  target: https://metropole.rennes.fr/ecoconception/
+- title: Accessibilité
+  target: https://metropole.rennes.fr/accessibilite/
+- title: Déclaration Numérique d'Intérêt Général
+  target: https://metropole.rennes.fr/declaration-numerique-dinteret-general/
+- title: Politique de confidentialité
+  target: https://metropole.rennes.fr/protection-donnees-personnelles/
+- title: Design system
+  target: https://metropole.rennes.fr/licence/
+- title: Plan du site
+  target: "/plan-du-site/"
+- title: Gestion des cookies
+  target: "#orejime-consent-modal"

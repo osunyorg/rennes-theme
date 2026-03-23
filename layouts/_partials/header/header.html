@@ -1,0 +1,67 @@
+{{ $home_url := site.Home.Permalink  }}
+{{ if site.Params.custom.external_logo_link.active }}
+    {{ $home_url = site.Params.custom.external_logo_link.url }}
+{{ end }}
+
+<header id="document-header" role="banner">
+    <!-- Thematic logo on top on mobile -->
+    <div class="header-mobile-logo">
+        <div class="container">
+            {{ partial "header/logo.html" }}
+            {{ if not site.Params.custom.is_main }}
+                {{ partial "custom/header/thematic-logo.html" }}
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="header-mobile-nav">
+        <div class="container">
+            <!-- Home CTA (current site or external) -->
+            <a href="{{ site.Params.custom.external_logo_link.url }}" class="home">{{ i18n "custom.home" }}</a>
+
+            <!-- Search CTA (native or custom) -->
+            {{ partial "commons/search/button.html" "custom-menu" }}
+            {{ if site.Params.custom.search.active }}
+                {{ if site.Params.custom.search.index }}
+                    <a href="{{ site.Params.custom.search.url }}?index={{ site.Params.custom.search.index }}&return_url={{ .Permalink }}" class="search-button">
+                        Recherche
+                    </a>
+                {{ else }}
+                    <a href="{{ site.Params.custom.search.url }}?return_url={{ .Permalink }}" class="search-button">
+                        Recherche
+                    </a>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="primary-menu ecosystem-menu">
+        <div class="container">
+            {{ partial "header/logo.html" }}
+            {{ if site.Params.custom.search.active }}
+                {{ partial "header/search.html" . }}
+            {{ end }}
+            {{ partial "header/button.html" }}
+            {{ partial "custom/menus/ecosystem.html" }}
+        </div>
+    </div>
+
+    {{ if not site.Params.custom.is_main }}
+        <nav class="thematic-menu" aria-label="{{ i18n "commons.menu.upper" }}">
+            <div class="container">
+                {{ partial "custom/header/thematic-logo.html" }}
+                <div class="menu">
+                    {{ partial "commons/menu.html" (dict
+                        "kind" "primary"
+                        "options" site.Params.menu.thematic
+                        "dropdown" true
+                        "level" 1
+                        "ignore_externals" true
+                        "context" .
+                    )}}
+                </div>
+                {{ partial "commons/search/button.html" "custom-menu" }}
+            </div>
+        </nav>
+    {{ end }}
+</header>
