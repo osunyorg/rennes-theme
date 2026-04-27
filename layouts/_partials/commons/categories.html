@@ -1,3 +1,5 @@
+<!-- @DEV override to remove "taxonomy display as chip" from category list -->
+
 {{ $kind := .kind | singularize }}
 {{/*  TODO: rename all call from this partial to `type` instead of `kind`.  */}}
 {{ $type := ( .type | singularize ) | default $kind }}
