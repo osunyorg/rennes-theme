@@ -52,3 +52,6 @@ items:
     target: "https://metropole.rennes.fr/votre-commune/"
   - title: Votre quartier
     target: "https://metropole.rennes.fr/votre-quartier/"
+  - title: Vos actus
+    target: "https://ici.rennes.fr/"
+    class: news

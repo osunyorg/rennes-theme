@@ -111,10 +111,12 @@ params:
       ignore_children: true
   # BLOCKS
 
-  # IMAGES SIZES
+  # COMPONENTS
   components:
     lightbox:
       disabled: true
+
+  # IMAGES SIZES
   image_sizes:
     blocks:
       call_to_action:
@@ -122,8 +124,13 @@ params:
         tablet: 605
         desktop: 768
     sections:
+      home:
+        hero:
+          mobile: 400
+          tablet: 800
+          desktop: 850
       posts:
         item:
           mobile: 350
           tablet: 800
-          desktop: 858
+          desktop: 900

@@ -139,6 +139,33 @@ header#document-header
               margin: 0 !important
               line-height: 1
 
+    .container
+      @include media-breakpoint-down(desktop)
+        padding-inline: 0
+
+      @include media-breakpoint-up(desktop)
+        gap: 0.75rem
+
+      //  display: grid
+      //  grid-template-columns: repeat(2, 1fr)
+      //  grid-template-rows: repeat(2, 1fr)
+      //  grid-template-areas:
+
+    //.menu
+    //  @include media-breakpoint-up(desktop)
+    //    margin-left: auto
+
+    .nav-level-1 > li
+      @include media-breakpoint-down(desktop)
+        padding-inline: var(--grid-gutter)
+
+    .news
+      background-color: #FFCCBF
+
+      @include media-breakpoint-up(desktop)
+        margin-left: 0.75rem
+        padding-right: 0.75rem
+
   /* THEMATIC NAV */
   .thematic-menu
     //
