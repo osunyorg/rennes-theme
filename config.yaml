@@ -79,16 +79,20 @@ params:
         categories: true
         image: false
     single:
-      taxonomies:
+      meta:
         position: hero
-
+        options:
+          reading_time: true
+          share: false
   posts:
     index:
       options:
         categories: true
     single:
-      options:
-        categories: true
+      meta:
+        position: hero
+        options:
+          reading_time: true
     sitemap:
       ignore_children: true
 

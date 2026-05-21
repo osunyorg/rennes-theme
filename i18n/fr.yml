@@ -1,9 +1,13 @@
 commons:
   menu:
     upper: Menu thématique
+  published_at: Publié le
+  updated_at: Mis à jour le
+
 dates:
   published: Publié le
   updated: Mis à jour le
+
 custom:
   site: ''
   home: Accueil
@@ -18,3 +22,4 @@ custom:
     more:
       label: En savoir plus sur la sobriété numérique
       url: https://metropole.rennes.fr/ecoconception/
+
