@@ -1,7 +1,17 @@
 .hero-meta
     .reading-time
         order: -1
+
+    &, .taxonomies > ul
+        > li
+            @include meta-alt
+            span:first-of-type
+                @include meta
     @include media-breakpoint-down(desktop)
-        .reading-time
-            border-top: 0
-            border-bottom: var(--border-width) solid var(--color-border)
+        &, .taxonomies > ul
+            > li
+                border: none !important
+                flex-direction: column
+                gap: space() !important
+                > ul
+                    text-align: left !important
