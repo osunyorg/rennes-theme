@@ -8,7 +8,7 @@
   "title" $title
   "image" .Params.image
   "sizes" site.Params.image_sizes.sections.pages.hero
-  "meta" ( partial "pages/single/hero/meta.html" . )
   "hero_text_complement" ( partial "custom/hero/page/chip.html" . )
+  "hero_complement" ( partial "pages/single/hero/meta.html" . )
   "context" .
 ) -}}
