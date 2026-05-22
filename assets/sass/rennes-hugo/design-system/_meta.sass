@@ -11,11 +11,11 @@ $free-width: true
                 span:first-of-type
                     @include meta
         @include media-breakpoint-down(desktop)
+            margin-top: $spacing-1
+            padding-bottom: $spacing-1
             &, .taxonomies > ul
                 > li
                     border: none
-                    // flex-direction: column
-                    gap: space()
                     > ul
                         text-align: left
         @include media-breakpoint-up(desktop)
@@ -32,9 +32,7 @@ $free-width: true
                 max-width: columns(12) !important
                 &, .taxonomies > ul
                     row-gap: $spacing-3
-                    // > li
-                    //     width: auto
-                    //     &.taxonomies
-                    //         width: auto
+                    > li.taxonomies
+                        width: auto
                         &.social-share
                             order: 3
