@@ -1,17 +1,26 @@
-.hero-meta
-    .reading-time
-        order: -1
+.hero
+    .hero-meta.with-labels
+        .reading-time
+            order: -1
 
-    &, .taxonomies > ul
-        > li
-            @include meta-alt
-            span:first-of-type
-                @include meta
-    @include media-breakpoint-down(desktop)
         &, .taxonomies > ul
             > li
-                border: none !important
-                flex-direction: column
-                gap: space() !important
-                > ul
-                    text-align: left !important
+                @include meta-alt
+                span:first-of-type
+                    @include meta
+        @include media-breakpoint-down(desktop)
+            &, .taxonomies > ul
+                > li
+                    border: none
+                    flex-direction: column
+                    gap: space()
+                    > ul
+                        text-align: left
+        @include media-breakpoint-up(desktop)
+            width: 100%
+            &, .taxonomies > ul
+                row-gap: $spacing-3
+                > li
+                    width: auto
+                    &.taxonomies
+                        width: auto
