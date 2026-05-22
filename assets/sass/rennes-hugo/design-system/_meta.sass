@@ -1,5 +1,3 @@
-$free-width: true
-
 .hero
     .hero-meta.with-labels
         @include container
@@ -26,18 +24,10 @@ $free-width: true
         @include media-breakpoint-up(desktop)
             padding-left: 0
             padding-right: 0
+            width: columns(12)
             &, .taxonomies > ul
-                row-gap: $spacing-3 !important
-
-@if $free-width
-    .hero
-        .hero-meta.with-labels
-            @include media-breakpoint-up(desktop)
-                width: columns(12) !important
-                max-width: columns(12) !important
-                &, .taxonomies > ul
-                    row-gap: $spacing-3
-                    > li.taxonomies
-                        width: auto
-                        &.social-share
-                            order: 3
+                row-gap: $spacing-3
+                > li.taxonomies
+                    width: auto
+                    &.social-share
+                        order: 3
