@@ -2,7 +2,6 @@
     .hero-meta.with-labels
         .reading-time
             order: -1
-
         &, .taxonomies > ul
             > li
                 @include meta-alt
@@ -16,11 +15,19 @@
                     gap: space()
                     > ul
                         text-align: left
-        @include media-breakpoint-up(desktop)
-            width: 100%
-            &, .taxonomies > ul
-                row-gap: $spacing-3
-                > li
-                    width: auto
-                    &.taxonomies
+
+$free-width: true
+
+@if $free-width
+    .pages__section
+        .hero
+            @include media-breakpoint-up(desktop)
+                width: 100%
+                &, .taxonomies > ul
+                    row-gap: $spacing-3
+                    > li
                         width: auto
+                        &.taxonomies
+                            width: auto
+                        &.social-share
+                            order: 3
