@@ -1,7 +1,10 @@
 {{ $search_positions := site.Params.search.positions }}
 <nav aria-label="{{ i18n "commons.accessibility.shortcut_navigation" }}" class="nav-accessibility" id="nav-accessibility">
   <ul>
-    <li><a href="#main">{{ i18n "commons.accessibility.main_content" }}</a></li>
+    <!-- @DEV Rennes override START -->
+    <!-- Add id="auditive-tracker" for a11y infos on Matomo -->
+    <li><a href="#main" id="auditive-tracker">{{ i18n "commons.accessibility.main_content" }}</a></li>
+    <!-- @DEV Rennes override END -->
 
     {{ if site.Params.search.active }}
       {{ if not (and (in $search_positions "primary") (in $search_positions "upper-menu")) }}
