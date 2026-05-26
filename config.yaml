@@ -7,7 +7,6 @@ params:
   outputFormats:
     html:
       weight: 2
-
   # RENNES THEME CUSTOM
   custom:
     active_custom_map: true
@@ -79,16 +78,21 @@ params:
         categories: true
         image: false
     single:
-      taxonomies:
+      meta:
         position: hero
-
+        options:
+          reading_time: true
+          share: false
   posts:
+    date_format: "02/01/2006"
     index:
       options:
         categories: true
     single:
-      options:
-        categories: true
+      meta:
+        position: hero
+        options:
+          reading_time: true
     sitemap:
       ignore_children: true
 
