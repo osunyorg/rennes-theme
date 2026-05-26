@@ -1,0 +1,21 @@
+workflow:
+  rules:
+    - if: $CI_COMMIT_TAG
+
+stages: ["trigger"]
+
+trigger:
+  stage: trigger
+  image: alpine:3.23
+  allow_failure: false
+  tags: ["osuny-build"]
+  before_script:
+    - apk add curl jq 1>/dev/null
+  script:
+    - >
+      curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${PROJECT_ID}/pipeline?ref=main" | jq -r '.status, .web_url'
+  parallel:
+    matrix:
+      - PROJECT_ID: ["2301", "2318"]
+  variables:
+    GIT_STRATEGY: none
