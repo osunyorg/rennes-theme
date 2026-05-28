@@ -19,3 +19,4 @@ trigger:
       - PROJECT_ID: ["2301", "2318"]
   variables:
     GIT_STRATEGY: none
+
