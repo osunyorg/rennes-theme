@@ -1,0 +1,5 @@
+<!-- Matomo -->
+{{- if os.FileExists "/assets/resources/js/matomo-a11y.js" -}}
+{{- $matomoA11y_js := resources.Get "/resources/js/matomo-a11y.js" | fingerprint }}
+<script src="{{ $matomoA11y_js.RelPermalink }}" integrity="{{ $matomoA11y_js.Data.Integrity }}"></script>
+{{ end -}}

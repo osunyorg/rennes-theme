@@ -15,9 +15,9 @@
 {{- if $categories -}}
   <ul class="{{ $class }}" aria-label="{{ i18n "categories.label" }}">
     {{- range $categories -}}
-      <!-- @DEV start rennes-theme override -->
+      <!-- @DEV Rennes override START -->
       {{ if not (strings.Contains .Slug site.Params.custom.pages.taxonomy_display_as_chip) }}
-      <!-- @DEV end override -->
+      <!-- @DEV Rennes override END -->
 
         <li {{ with .Params.bodyclass }}class="{{ . }}"{{ end }}>
           {{ $id := printf "%s-children-list" ( .Slug | anchorize) }}
@@ -39,9 +39,9 @@
           {{ end }}
         </li>
 
-      <!-- @DEV start rennes-theme override -->
+      <!-- @DEV Rennes override START -->
       {{ end }}
-      <!-- @DEV end override -->
+      <!-- @DEV Rennes override END -->
     {{- end }}
   </ul>
 {{- end -}}
