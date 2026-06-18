@@ -7,12 +7,12 @@ errors:
   error_404:
     title: Désolée, la page que vous recherchez est introuvable.
     text: >-
-      Veuillez nous excuser pour la gêne occasionnée.</p>
+      <p>Veuillez nous excuser pour la gêne occasionnée.</p>
       <p>Nous vous invitons à :</p>
-      <ul>
+      <ol>
         <li>utiliser <a href="https://chercher.metropole.rennes.fr/">le moteur de recherche</a> du site pour trouver une autre page correspondant à votre recherche ;</li>
         <li>consulter <a href="https://metropole.rennes.fr/">notre page d’accueil</a> et nos rubriques thématiques :
-          <ul>
+          <ol>
             <li><a href="https://aides.metropole.rennes.fr/">Aides, solidarités et égalité</a> ;</li>
             <li><a href="https://demarches.metropole.rennes.fr/">Démarches administratives</a> ;</li>
             <li><a href="https://transport.metropole.rennes.fr/">Transports et circulation</a> ;</li>
@@ -23,12 +23,12 @@ errors:
             <li><a href="https://environnement-sante.metropole.rennes.fr/">Santé et environnement</a> ;</li>
             <li><a href="https://economie.metropole.rennes.fr/">Économie et emploi</a> ;</li>
             <li><a href="https://culture-sport.metropole.rennes.fr/">Culture et sports.</a></li>
-          </ul>
+          </ol>
         </li>
-      </ul>
+      </ol>
       <p>Vous pouvez également <a href="https://metropole.rennes.fr/contact">nous contacter</a> si vous avez des questions ou des suggestions à nous soumettre.</p>
       <p>Merci pour votre compréhension.</p>
-      <p>L’équipe éditoriale du site Rennes Ville & Métropole.
+      <p>L’équipe éditoriale du site Rennes Ville & Métropole.</p>
 custom:
   site: ''
   home: Accueil
