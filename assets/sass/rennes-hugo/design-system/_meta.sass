@@ -1,7 +1,5 @@
 .hero
     .hero-meta.with-labels
-        @include container
-
         .reading-time
             order: -1
 
@@ -29,8 +27,6 @@
                         text-align: left
 
         @include media-breakpoint-up(desktop)
-            padding-left: 0
-            padding-right: 0
             width: columns(12)
 
             &, .taxonomies > ul
@@ -39,3 +35,8 @@
                     width: auto
                     &.social-share
                         order: 3
+
+    .posts__page &,
+    .pages__section &
+        .hero-meta.with-labels
+            @include container
