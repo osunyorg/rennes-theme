@@ -87,13 +87,18 @@ params:
   posts:
     date_format: "02/01/2006"
     index:
+      layout: grid # grid | list
       options:
         categories: true
+        summary: false
+        image: false
     single:
       meta:
         position: hero
         options:
           reading_time: true
+    share_links:
+      enabled: false
     sitemap:
       ignore_children: true
 
