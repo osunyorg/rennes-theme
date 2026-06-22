@@ -4,8 +4,10 @@
       height: $spacing-6
 
     &-nav
-      @include media-breakpoint-down(desktop)
-        padding-top: $spacing-2
+      padding-top: $spacing-2
+
+      @include media-breakpoint-up(desktop)
+        padding-top: $spacing-5
 
   .content
     margin-top: pxToRem(20)
