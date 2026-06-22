@@ -1,8 +1,9 @@
 {{- $title := or .Params.header_text .Title -}}
 {{- partial "header/hero.html" (dict
-    "title" $title
-    "image" .Params.image
-    "context" .
-    "sizes" site.Params.image_sizes.sections.persons.hero_single
-    "hero_text_complement" ( partial "custom/hero/chip.html" . )
+  "title" $title
+  "image" .Params.image
+  "context" .
+  "sizes" site.Params.image_sizes.sections.persons.hero_single
+  "meta" ( partial "persons/single/meta.html" . )
+  "hero_text_complement" ( partial "custom/hero/chip.html" . )
 ) -}}
