@@ -1,7 +1,5 @@
 .hero
     .hero-meta.with-labels
-        .reading-time
-            order: -1
 
         &, .taxonomies > ul
             > li
@@ -28,6 +26,9 @@
 
         @include media-breakpoint-up(desktop)
             width: columns(12)
+
+            .reading-time
+                order: -1
 
             &, .taxonomies > ul
                 row-gap: $spacing-3
