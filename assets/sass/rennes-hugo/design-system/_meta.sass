@@ -1,9 +1,5 @@
 .hero
     .hero-meta.with-labels
-        @include container
-
-        .reading-time
-            order: -1
 
         &, .taxonomies > ul
             > li
@@ -12,7 +8,6 @@
                     @include meta
 
         @include media-breakpoint-down(desktop)
-            margin-top: $spacing-1
             padding-bottom: $spacing-1
 
             &, .taxonomies > ul
@@ -29,9 +24,10 @@
                         text-align: left
 
         @include media-breakpoint-up(desktop)
-            padding-left: 0
-            padding-right: 0
             width: columns(12)
+
+            .reading-time
+                order: -1
 
             &, .taxonomies > ul
                 row-gap: $spacing-3
@@ -39,3 +35,10 @@
                     width: auto
                     &.social-share
                         order: 3
+
+    .posts__page &,
+    .pages__section &
+        .hero-meta.with-labels
+            @include container
+            @include media-breakpoint-down(desktop)
+                margin-top: $spacing-1

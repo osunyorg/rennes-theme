@@ -7,11 +7,11 @@
 {{ end }}
 
 {{- partial "header/hero.html" (dict
-      "title" $title
-      "image" .Params.image
-      "sizes" site.Params.image_sizes.sections.posts.hero_single
-      "context" .
-      "hero_text_complement" ( partial "custom/hero/chip.html" . )
-      "hero_complement" ( partial "posts/single/meta.html" . )
+  "title" $title
+  "image" .Params.image
+  "sizes" site.Params.image_sizes.sections.posts.hero_single
+  "context" .
+  "hero_text_complement" ( partial "custom/hero/chip.html" . )
+  "hero_complement" ( partial "posts/single/meta.html" . )
 ) -}}
 

@@ -7,7 +7,7 @@ errors:
   error_404:
     title: Désolée, la page que vous recherchez est introuvable.
     text: >-
-      Veuillez nous excuser pour la gêne occasionnée.</p>
+      <p>Veuillez nous excuser pour la gêne occasionnée.</p>
       <p>Nous vous invitons à :</p>
       <ul>
         <li>utiliser <a href="https://chercher.metropole.rennes.fr/">le moteur de recherche</a> du site pour trouver une autre page correspondant à votre recherche ;</li>
@@ -28,7 +28,7 @@ errors:
       </ul>
       <p>Vous pouvez également <a href="https://metropole.rennes.fr/contact">nous contacter</a> si vous avez des questions ou des suggestions à nous soumettre.</p>
       <p>Merci pour votre compréhension.</p>
-      <p>L’équipe éditoriale du site Rennes Ville & Métropole.
+      <p>L’équipe éditoriale du site Rennes Ville & Métropole.</p>
 custom:
   site: ''
   home: Accueil
