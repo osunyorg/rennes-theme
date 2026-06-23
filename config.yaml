@@ -110,6 +110,9 @@ params:
       ignore_children: true
 
   persons:
+    single:
+      meta:
+        position: hero
     sitemap:
       ignore_children: true
 
