@@ -1,0 +1,44 @@
+.hero
+    .hero-meta.with-labels
+
+        &, .taxonomies > ul
+            > li
+                @include meta-alt
+                span:first-of-type
+                    @include meta
+
+        @include media-breakpoint-down(desktop)
+            padding-bottom: $spacing-1
+
+            &, .taxonomies > ul
+                > li
+                    border: none
+                    padding-bottom: space(2)
+                    padding-top: space(2)
+
+                    &.taxonomies
+                        padding-bottom: 0
+                        padding-top: 0
+
+                    > ul
+                        text-align: left
+
+        @include media-breakpoint-up(desktop)
+            width: columns(12)
+
+            .reading-time
+                order: -1
+
+            &, .taxonomies > ul
+                row-gap: $spacing-3
+                > li.taxonomies
+                    width: auto
+                    &.social-share
+                        order: 3
+
+    .posts__page &,
+    .pages__section &
+        .hero-meta.with-labels
+            @include container
+            @include media-breakpoint-down(desktop)
+                margin-top: $spacing-1

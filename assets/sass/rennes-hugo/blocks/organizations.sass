@@ -29,8 +29,14 @@
         margin-top: $spacing-2
 
 .organizations--grid
+  @include grid(2, md)
+
   @include in-page-with-sidebar
-      @include grid(2, lg)
+    @include grid(2, lg)
+
+  @include in-page-without-sidebar
+    @include grid(3, xl)
+
   @include media-breakpoint-down(sm)
     grid-template-columns: 1fr
 

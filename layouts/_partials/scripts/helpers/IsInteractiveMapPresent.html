@@ -22,12 +22,12 @@
   {{ $is_interactive_map_present = true }}
 {{ end }}
 
-<!-- Rennes override START -->
+<!-- @DEV Rennes override START -->
 {{ if isset .Site.Params.custom "active_custom_map" }}
   {{ if .Site.Params.custom.active_custom_map }}
     {{ $is_interactive_map_present = true }}
   {{ end }}
 {{ end }}
-<!-- Rennes override END -->
+<!--  @DEV Rennes override END -->
 
 {{ return $is_interactive_map_present }}

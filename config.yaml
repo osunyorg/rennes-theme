@@ -7,7 +7,6 @@ params:
   outputFormats:
     html:
       weight: 2
-
   # RENNES THEME CUSTOM
   custom:
     active_custom_map: true
@@ -79,16 +78,27 @@ params:
         categories: true
         image: false
     single:
-      taxonomies:
+      meta:
         position: hero
-
+        options:
+          published_at: true
+          reading_time: true
+          updated_at: true
   posts:
+    date_format: "02/01/2006"
     index:
+      layout: grid # grid | list
       options:
         categories: true
+        summary: false
+        image: false
     single:
-      options:
-        categories: true
+      meta:
+        position: hero
+        options:
+          reading_time: true
+    share_links:
+      enabled: false
     sitemap:
       ignore_children: true
 
@@ -100,6 +110,9 @@ params:
       ignore_children: true
 
   persons:
+    single:
+      meta:
+        position: hero
     sitemap:
       ignore_children: true
 
@@ -107,6 +120,9 @@ params:
     index:
       options:
         logo: false
+    single:
+      meta:
+        position: hero
     sitemap:
       ignore_children: true
   # BLOCKS

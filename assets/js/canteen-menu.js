@@ -68,9 +68,19 @@ window.rennes.MenuCanteen = function () {
                     if (descContent.includes(label)) {
                         descContent = descContent.replace(label, '').trim();
                         const cleanLabel = label.replace(/\[|\]/g, '');
-                        icon = document.createElement('img');
-                        icon.src = `/assets/images/icons/${cleanLabel}.png`;
-                        icon.alt = labelAlts[label];
+
+                        const figure = document.createElement('figure');
+                        const picture = document.createElement('picture');
+                        const img = document.createElement('img');
+
+                        figure.classList.add('media', 'media--icon');
+                        picture.classList.add('is-png');
+                        img.src = `/assets/images/icons/${cleanLabel}.png`;
+                        img.alt = labelAlts[label];
+
+                        picture.appendChild(img);
+                        figure.appendChild(picture);
+                        icon = figure;
                     }
                 });
 

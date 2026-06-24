@@ -28,3 +28,23 @@
 
           img
             aspect-ratio: 1
+
+.posts--grid
+  .post
+    @extend %grid-card
+
+    .post-content
+      @extend %grid-card-content
+
+    .post-title
+      @include icon(arrow-right-line, before)
+        @extend %grid-card-icon
+      @include hover-translate-icon(before)
+
+    time
+      color: inherit
+
+    &:hover
+      .post-subtitle,
+      .post-meta
+        color: $block-links-card-hover-color
