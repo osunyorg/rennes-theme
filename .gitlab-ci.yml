@@ -16,7 +16,7 @@ trigger:
       curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${PROJECT_ID}/pipeline?ref=main" | jq -r '.status, .web_url'
   parallel:
     matrix:
-      - PROJECT_ID: ["2301", "2318"]
+      - PROJECT_ID: ["2301", "2318", "2333"]
   variables:
     GIT_STRATEGY: none
 
