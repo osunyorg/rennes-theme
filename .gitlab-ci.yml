@@ -17,20 +17,20 @@ trigger:
   parallel:
     matrix:
       - PROJECT_ID:
-        - 2318
-        - 2333
-        - 2337
-        - 2338
-        - 2339
-        - 2340
-        - 2341
-        - 2342
-        - 2343
-        - 2344
-        - 2345
-        - 2346
-        - 2347
-        - 2348
+        - 2318 # Sandbox - ICI Rennes
+        - 2333 # Numerique Recherche
+        - 2337 # Ici Rennes
+        - 2338 # Aides
+        - 2339 # Culture Sports
+        - 2340 # Dechets
+        - 2341 # Demarches
+        - 2342 # Economie
+        - 2343 # Education Jeunesse
+        - 2344 # Environnement Sante
+        - 2345 # Logement
+        - 2346 # Presse
+        - 2347 # Transport
+        - 2348 # Metropole
   variables:
     GIT_STRATEGY: none
 
