@@ -1,0 +1,24 @@
+.pagination
+  gap: pxToRem(8)
+
+  li
+    a
+      border-radius: pxToRem(8)
+      @include media-breakpoint-down(desktop)
+        line-height: 2rem
+        min-width: 2rem
+        min-height: 2rem
+      &::before
+        @include media-breakpoint-down(desktop)
+          line-height: 2rem!important
+          width: 2rem!important
+          height: 2rem!important
+      @include media-breakpoint-up(desktop)
+        line-height: 2.75rem
+
+    &:not(.disabled)
+      &.active a,
+      a:hover,
+      a:focus-visible
+        background: var(--color-text)
+        color: var(--color-background)
