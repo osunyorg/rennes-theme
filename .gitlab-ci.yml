@@ -11,14 +11,14 @@ stages: ["trigger"]
       when: manual
   before_script:
     - apk add curl jq 1>/dev/null
-  script:
-    - >
-      curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${PROJECT_ID}/pipeline?ref=main" | jq -r '.status, .name, .web_url'
   variables:
     GIT_STRATEGY: none
 
 update_production:
   extends: [".trigger"]
+  script:
+    - >
+      curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${PROJECT_ID}/pipeline?ref=main" | jq -r '.status, .name, .web_url'
   parallel:
     matrix:
       - PROJECT_ID:
@@ -38,8 +38,11 @@ update_production:
 
 update_sandbox:
   extends: [".trigger"]
+  script:
+    - >
+      curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${SANDBOX_PROJECT_ID}/pipeline?ref=main" | jq -r '.status, .name, .web_url'
   parallel:
     matrix:
-      - PROJECT_ID:
+      - SANDBOX_PROJECT_ID:
         - 2301 # Sandbox
         - 2318 # Sandbox - ICI Rennes
