@@ -4,6 +4,7 @@ stages:
 
 .trigger:
   image: alpine:3.23
+  needs: []
   allow_failure: true
   tags: ["osuny-build"]
   rules:
