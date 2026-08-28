@@ -11,6 +11,7 @@ params:
   custom:
     active_custom_map: true
     is_main: false
+    header_ecosystem_menu: true # Use 'primary' BO menu as main menu (no secondary menu)
     external_logo_link:
       active: true
       url: "https://metropole.rennes.fr"

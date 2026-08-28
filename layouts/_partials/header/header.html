@@ -38,15 +38,34 @@
     <div class="primary-menu ecosystem-menu">
         <div class="container">
             {{ partial "header/logo.html" }}
+
             {{ if site.Params.custom.search.active }}
                 {{ partial "custom/header/search.html" . }}
             {{ end }}
+
             {{ partial "header/button.html" }}
-            {{ partial "custom/menus/ecosystem.html" }}
+
+            <!-- Ecosystem menu or BO Primary -->
+            {{ if site.Params.custom.header_ecosystem_menu }}
+                {{ partial "custom/menus/ecosystem.html" }}
+            {{ else }}
+                <nav class="menu" id="navigation" aria-label="{{ site.Data.menus.fr.primary.title }}" role="navigation">
+
+                    {{ partial "commons/menu.html" (dict
+                        "kind" "primary"
+                        "options" site.Params.menu.thematic
+                        "dropdown" true
+                        "level" 1
+                        "ignore_externals" true
+                        "context" .
+                    )}}
+                </nav>
+            {{ end }}
         </div>
     </div>
 
-    {{ if not site.Params.custom.is_main }}
+    <!-- Secondary -->
+    {{ if and (not site.Params.custom.is_main) (site.Params.custom.header_ecosystem_menu) }}
         <nav class="thematic-menu" aria-label="{{ i18n "commons.menu.upper" }}">
             <div class="container">
                 {{ partial "custom/header/thematic-logo.html" }}
