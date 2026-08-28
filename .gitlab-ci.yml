@@ -13,6 +13,7 @@ stages:
   before_script:
     - apk add curl jq 1>/dev/null
   script:
+    - sleep 3600
     - >
       curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${PROJECT_ID}/pipeline?ref=main"
   variables:
