@@ -14,7 +14,7 @@ stages:
     - apk add curl jq 1>/dev/null
   script:
     - >
-      curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${PROJECT_ID}/pipeline?ref=main" | jq -r '.status, .name, .web_url'
+      curl --request POST --fail --silent --header "PRIVATE-TOKEN: ${GL_API_TOKEN}" "${CI_API_V4_URL}/projects/${PROJECT_ID}/pipeline?ref=main"
   variables:
     GIT_STRATEGY: none
 
