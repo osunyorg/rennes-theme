@@ -110,8 +110,7 @@ header#document-header
   .ecosystem-menu
     z-index: $zindex-header + 1
     position: relative
-    @include media-breakpoint-down(desktop)
-      padding-block: 0
+    padding-block: 0
 
     // Move header collapsible button to the bottom nav
     .header-button
@@ -138,6 +137,45 @@ header#document-header
               font-size: pxToRem(22)
               margin: 0 !important
               line-height: 1
+
+    .container
+      @include media-breakpoint-down(desktop)
+        padding-inline: 0
+
+      @include media-breakpoint-up(desktop)
+        display: grid
+        grid-template-columns: auto 1fr
+        grid-template-rows: repeat(2, auto)
+        grid-template-areas: 'logo search' 'logo nav'
+        gap: $spacing-2
+        justify-items: end
+        align-items: center
+
+      @include media-breakpoint-up(xl)
+        grid-template-columns: repeat(3, auto)
+        grid-template-rows: auto
+        grid-template-areas: 'logo search nav'
+
+    .logo,
+    .search-form
+      @include media-breakpoint-up(desktop)
+        padding-top: pxToRem(16)
+
+      @include media-breakpoint-up(xl)
+        padding-block: pxToRem(16)
+
+    .logo
+      @include media-breakpoint-up(desktop)
+        grid-area: logo
+
+    .search-form
+      @include media-breakpoint-up(desktop)
+        grid-area: search
+
+    .menu
+      @include media-breakpoint-up(desktop)
+        grid-area: nav
+        align-self: stretch
 
   /* THEMATIC NAV */
   .thematic-menu

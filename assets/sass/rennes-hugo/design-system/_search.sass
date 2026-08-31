@@ -1,8 +1,7 @@
 .search-form
   display: flex
   align-items: center
-  margin-inline: $spacing-2
-  max-width: pxToRem(280)
+  max-width: pxToRem(200)
   width: 100%
 
   @include media-breakpoint-up(xxl)
@@ -10,10 +9,6 @@
 
   @include media-breakpoint-down(desktop)
     display: none
-
-  @include media-breakpoint-down(xl)
-    margin-inline: $spacing-1
-    max-width: pxToRem(200)
 
   @include media-breakpoint-down(lg)
     position: fixed

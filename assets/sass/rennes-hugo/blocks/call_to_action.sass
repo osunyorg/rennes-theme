@@ -9,6 +9,8 @@
         order: 1
 
   &.block-call_to_action--no_background
+    @include media-breakpoint-down(desktop)
+      background-color: var(--color-background-alt)
     @include in-page-with-or-without-sidebar
       background-color: var(--color-background-alt)
 
