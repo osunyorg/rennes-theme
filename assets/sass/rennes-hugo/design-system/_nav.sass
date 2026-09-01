@@ -4,27 +4,28 @@
     max-height: unset
 
   .nav-level-1
+    @include media-breakpoint-up(desktop)
+      align-items: center
+
     & > li
       @include media-breakpoint-down(desktop)
         border: none !important
         padding-inline: var(--grid-gutter)
 
-      &.menu-item-ici
+      &.menu-class-highlight,
+      &.menu-class-ici
         background-color: var(--color-background-accent)
         @include media-breakpoint-up(desktop)
+          max-width: pxToRem(156)
           margin-left: $spacing-2
           padding-right: $spacing-2 // force over :last-child default styles
 
       > a,
       > span
-        @include media-breakpoint-up(xl)
-          padding-block: pxToRem(28)
-
-        // Arrow icon à the right when text in 2 lines
-        &[aria-expanded]
-          display: flex
-          justify-content: space-between
-          align-items: center
+        text-wrap: balance
+        .primary-menu &
+          @include media-breakpoint-up(xl)
+            padding-block: pxToRem(28)
 
   // Dropdown menu
   .dropdown-menu
