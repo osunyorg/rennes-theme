@@ -8,7 +8,7 @@ header#document-header
     // Unset scroll sticky effect on mobile
     transform: none !important
 
-    // On mobile, show thematic menu before ecosystem menu
+    // On mobile, show thematic menu before primary menu
     display: flex
     flex-direction: column
     .primary-menu
@@ -48,7 +48,7 @@ header#document-header
       gap: $spacing-2
 
   // Desktop logos
-  .ecosystem-menu,
+  .primary-menu,
   .thematic-menu
     .logo
       @include media-breakpoint-down(desktop)
@@ -106,8 +106,8 @@ header#document-header
           &::before
             font-size: pxToRem(20)
 
-  /* ECOSYSTEM NAV */
-  .ecosystem-menu
+  /* PRIMARY NAV */
+  .primary-menu
     z-index: $zindex-header + 1
     position: relative
     padding-block: 0
@@ -228,7 +228,7 @@ header#document-header
             text-decoration-color: var(--color-background-active, var(--color-border))
 
   .menu *,
-  div.ecosystem-menu .header-button,
+  div.primary-menu .header-button,
   .header-mobile-nav *
     &:focus-visible
       outline-offset: -1px
