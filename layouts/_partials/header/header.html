@@ -7,7 +7,10 @@
     <!-- Thematic logo on top on mobile -->
     <div class="header-mobile-logo">
         <div class="container">
-            {{ partial "header/logo.html" }}
+            {{ if site.Params.custom.header_ecosystem_menu }}
+                {{ partial "header/logo.html" }}
+            {{ end }}
+
             {{ if not site.Params.custom.is_main }}
                 {{ partial "custom/header/thematic-logo.html" }}
             {{ end }}
@@ -17,7 +20,11 @@
     <div class="header-mobile-nav">
         <div class="container">
             <!-- Home CTA (current site or external) -->
-            <a href="{{ site.Params.custom.external_logo_link.url }}" class="home">{{ i18n "custom.home" }}</a>
+            {{ if and site.Params.custom.header_ecosystem_menu site.Params.custom.external_logo_link.active }}
+                <a href="{{ site.Params.custom.external_logo_link.url }}" class="home">{{ i18n "custom.home" }}</a>
+            {{ else }}
+                <a href="{{ site.Home.Permalink }}" class="home">{{ i18n "custom.home" }}</a>
+            {{ end }}
 
             <!-- Search CTA (native or custom) -->
             {{ partial "commons/search/button.html" "custom-menu" }}
@@ -35,9 +42,13 @@
         </div>
     </div>
 
-    <div class="primary-menu ecosystem-menu">
+    <div class="primary-menu {{ if site.Params.custom.header_ecosystem_menu }}ecosystem-menu{{ end }}">
         <div class="container">
-            {{ partial "header/logo.html" }}
+            {{ if site.Params.custom.header_ecosystem_menu }}
+                {{ partial "header/logo.html" }}
+            {{ else }}
+                {{ partial "custom/header/thematic-logo.html" }}
+            {{ end }}
 
             {{ if site.Params.custom.search.active }}
                 {{ partial "custom/header/search.html" . }}

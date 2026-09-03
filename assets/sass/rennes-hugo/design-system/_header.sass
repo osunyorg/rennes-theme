@@ -8,7 +8,7 @@ header#document-header
     // Unset scroll sticky effect on mobile
     transform: none !important
 
-    // On mobile, show thematic menu before ecosystem menu
+    // On mobile, show thematic menu before primary menu
     display: flex
     flex-direction: column
     .primary-menu
@@ -29,6 +29,10 @@ header#document-header
       display: flex
       align-items: center
       gap: space(1)
+      @include media-breakpoint-up(desktop)
+        max-width: pxToRem(200)
+      @include media-breakpoint-up(xxxl)
+        max-width: unset
       @include custom-icon($site-icon, before)
         font-size: 1.45em
     .logo-text
@@ -48,7 +52,7 @@ header#document-header
       gap: $spacing-2
 
   // Desktop logos
-  .ecosystem-menu,
+  .primary-menu,
   .thematic-menu
     .logo
       @include media-breakpoint-down(desktop)
@@ -106,11 +110,14 @@ header#document-header
           &::before
             font-size: pxToRem(20)
 
-  /* ECOSYSTEM NAV */
-  .ecosystem-menu
+  /* PRIMARY NAV */
+  .primary-menu
     z-index: $zindex-header + 1
     position: relative
-    padding-block: 0
+    @include media-breakpoint-down(desktop)
+      padding-block: 0
+    @include media-breakpoint-up(xl)
+      padding-block: 0
 
     // Move header collapsible button to the bottom nav
     .header-button
@@ -138,7 +145,7 @@ header#document-header
               margin: 0 !important
               line-height: 1
 
-    .container
+    & > .container
       @include media-breakpoint-down(desktop)
         padding-inline: 0
 
@@ -155,14 +162,7 @@ header#document-header
         grid-template-columns: repeat(3, auto)
         grid-template-rows: auto
         grid-template-areas: 'logo search nav'
-
-    .logo,
-    .search-form
-      @include media-breakpoint-up(desktop)
-        padding-top: pxToRem(16)
-
-      @include media-breakpoint-up(xl)
-        padding-block: pxToRem(16)
+        gap: $spacing-4
 
     .logo
       @include media-breakpoint-up(desktop)
@@ -228,7 +228,7 @@ header#document-header
             text-decoration-color: var(--color-background-active, var(--color-border))
 
   .menu *,
-  div.ecosystem-menu .header-button,
+  div.primary-menu .header-button,
   .header-mobile-nav *
     &:focus-visible
       outline-offset: -1px
