@@ -22,7 +22,13 @@
         </li>
       {{ else }}
         <li class="{{ .class }}">
-          <a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a>
+          {{ if .new_tab -}}
+            <a href="{{ .target }}"  target="_blank" rel="noreferrer" title="{{ .title }} - {{ i18n "commons.link.blank" }}">
+              {{ .title }}
+            </a>
+          {{ else }}
+            <a href="{{ .target }}" title="{{ .title }}">{{ .title }}</a>
+          {{ end }}
         </li>
       {{ end }}
     {{ end }}

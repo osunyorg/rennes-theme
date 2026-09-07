@@ -10,13 +10,19 @@
     & > li
       @include media-breakpoint-down(desktop)
         border: none !important
-        padding-inline: var(--grid-gutter)
+
+      .primary-menu &
+        @include media-breakpoint-down(desktop)
+          padding-inline: var(--grid-gutter)
+        @include media-breakpoint-up(xl)
+          max-width: pxToRem(176)
+        @include media-breakpoint-up(xxxl)
+          max-width: unset
 
       &.menu-class-highlight,
       &.menu-class-ici
         background-color: var(--color-background-accent)
         @include media-breakpoint-up(desktop)
-          max-width: pxToRem(156)
           margin-left: $spacing-2
           padding-right: $spacing-2 // force over :last-child default styles
 
@@ -68,6 +74,11 @@
 
   span:not([role="button"])
     cursor: auto
+
+  a[target="_blank"]
+    &::after
+      display: inline-block
+      margin-left: pxToRem(5)
 
   //  Add custom icons
   #dropdown-vos-services
