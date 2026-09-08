@@ -55,3 +55,4 @@ items:
   - title: Vos actualités
     target: "https://ici.rennes.fr/"
     class: menu-class-ici
+    new_tab: true
